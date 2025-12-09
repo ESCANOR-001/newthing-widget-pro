@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appBarLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:backgroundTint="@android:color/transparent" app:layout_constraintTop_toTopOf="parent" app:liftOnScroll="false" app:liftOnScrollColor="@android:color/transparent">
+        <FrameLayout android:id="@+id/title_container" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_scrollFlags="scroll|enterAlways|snap">
+            <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageButton android:layout_gravity="start" android:background="?attr/selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_drawer" android:layout_marginEnd="10dp"/>
+                <com.google.android.material.textview.MaterialTextView android:textSize="22dp" android:textColor="?attr/bgColorInVerse" android:layout_gravity="center" android:id="@+id/custom_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:textAllCaps="true" android:fontFamily="@font/nothing_5_7"/>
+                <ImageButton android:layout_gravity="end" android:id="@+id/news" android:background="?attr/selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="38.5dp" android:layout_height="48dp" android:src="@drawable/news" android:layout_marginEnd="20dp"/>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </FrameLayout>
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:backgroundTint="?attr/cardUI" app:cardCornerRadius="25dp" app:cardElevation="0dp" style="?attr/materialCardViewFilledStyle">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:padding="12dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_search" android:contentDescription="Search"/>
+                <EditText android:textSize="16sp" android:textColor="?attr/bgColorInVerse" android:textColorHint="?attr/bgColorInVerse" android:id="@+id/search_edit_text" android:background="@null" android:layout_width="0dp" android:layout_height="48dp" android:hint="Search widgets" android:maxLines="1" android:layout_weight="1" android:inputType="text" android:imeOptions="actionSearch" android:backgroundTint="?attr/bgColor1"/>
+                <ImageView android:id="@+id/clear_search" android:padding="12dp" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_clear" android:contentDescription="Clear"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/widgets_recycler" android:padding="0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

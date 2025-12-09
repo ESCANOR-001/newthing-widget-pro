@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/AppTheme"
+    android:gravity="center"
+    android:padding="0dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <AnalogClock
+        android:id="@+id/simpleAnalogClock"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dial="@drawable/analog_round"
+        android:hand_hour="@drawable/clock_analog_day_hour"
+        android:hand_minute="@drawable/clock_analog_simple_minute"
+        android:hand_second="@drawable/clock_analog_simple_second"/>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    
+    <!-- Red body/square -->
+    <path
+        android:fillColor="#FF0049"
+        android:pathData="M30,25 L70,25 Q75,25 75,30 L75,70 Q75,75 70,75 L30,75 Q25,75 25,70 L25,30 Q25,25 30,25 Z"/>
+    
+    <!-- Face - happy expression -->
+    <!-- Left eye -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,42 Q40,38 44,38 Q48,38 48,42 Q48,46 44,46 Q40,46 40,42 Z"/>
+    
+    <!-- Right eye -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,42 Q52,38 56,38 Q60,38 60,42 Q60,46 56,46 Q52,46 52,42 Z"/>
+    
+    <!-- Smile -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,55 Q50,65 62,55"
+        android:strokeWidth="3"
+        android:strokeColor="#FFFFFF"/>
+    
+    <!-- Left leg -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,75 L35,90 L38,90 L38,75 Z"/>
+    
+    <!-- Right leg -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,75 L62,90 L65,90 L65,75 Z"/>
+    
+    <!-- Left arm waving -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,40 L15,30 L18,27 L28,37 Z"/>
+    
+    <!-- Right arm -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,45 L85,50 L84,54 L74,49 Z"/>
+    
+</vector>

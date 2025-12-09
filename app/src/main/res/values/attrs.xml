@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom theme attributes -->
+    <attr name="bgColor" format="color|reference"/>
+    <attr name="bgColor1" format="color|reference"/>
+    <attr name="bgColor1Dark" format="color|reference"/>
+    <attr name="bgColor2" format="color|reference"/>
+    <attr name="bgColor2Dark" format="color|reference"/>
+    <attr name="bgColor3" format="color|reference"/>
+    <attr name="bgColorInVerse" format="color|reference"/>
+    <attr name="bgColorOnlyUI" format="color|reference"/>
+    <attr name="cardUI" format="color|reference"/>
+    <attr name="redColor" format="color|reference"/>
+    <attr name="redColorLight" format="color|reference"/>
+</resources>
