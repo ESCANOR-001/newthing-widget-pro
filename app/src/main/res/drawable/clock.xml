@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="170dp"
+    android:width="170dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    
+    <!-- Background Circle -->
+    <path
+        android:fillColor="?attr/bgColor"
+        android:pathData="M85,85m-85,0a85,85 0,1 1,170 0a85,85 0,1 1,-170 0"/>
+
+    <!-- Hour Hand (White, Short, 10 o'clock / -60 degrees) -->
+    <group
+        android:pivotX="85"
+        android:pivotY="85"
+        android:rotation="300">
+        <path
+            android:fillColor="?attr/bgColorInVerse"
+            android:pathData="M87.91,76.74V37.11A2.91,2.91 0,0 0,85 34.2h0a2.91,2.91 0,0 0,-2.91 2.91V76.74a8.75,8.75 0,1 0,5.82 0Z"/>
+    </group>
+
+    <!-- Minute Hand (White, Long, 2 o'clock / 60 degrees) -->
+    <group
+        android:pivotX="85"
+        android:pivotY="85"
+        android:rotation="60">
+        <path
+            android:fillColor="?attr/bgColorInVerse"
+            android:pathData="M87.91,76.74V24.11A2.91,2.91 0,0 0,85 21.2h0a2.91,2.91 0,0 0,-2.91 2.91V76.74a8.75,8.75 0,1 0,5.82 0Z"/>
+    </group>
+
+    <!-- Second Hand (Red, Thin, 12 o'clock / 0 degrees) -->
+    <group
+        android:pivotX="85"
+        android:pivotY="85"
+        android:rotation="0">
+        <!-- Thin rounded rectangle for second hand -->
+        <path
+            android:fillColor="?attr/redColor"
+            android:pathData="M83.5,85 L83.5,20 A1.5,1.5 0 0 1 86.5,20 L86.5,85 Z"/>
+    </group>
+    
+    <!-- Central Red Dot -->
+    <path
+        android:fillColor="?attr/redColor"
+        android:pathData="M85,85m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
+
+</vector>

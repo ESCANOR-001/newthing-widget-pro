@@ -66,6 +66,31 @@ class WidgetListAdapter(
             widgetPreview.setImageResource(widget.previewDrawable)
             widgetName.text = widget.name
             widgetSize.text = widget.size
+            
+            // Enforce uniform sizing for all app icons
+            val context = itemView.context
+            val density = context.resources.displayMetrics.density
+            
+            if (widget.size == "1x1") {
+                // For 1x1 app icons: fixed size with consistent padding
+                val iconSize = (80 * density).toInt() // Fixed icon display size
+                val params = widgetPreview.layoutParams
+                params.width = iconSize
+                params.height = iconSize
+                widgetPreview.layoutParams = params
+                widgetPreview.scaleType = android.widget.ImageView.ScaleType.FIT_CENTER
+                widgetPreview.setPadding(0, 0, 0, 0)
+            } else {
+                // For larger widgets: use full container size
+                val containerSize = (145 * density).toInt()
+                val params = widgetPreview.layoutParams
+                params.width = containerSize
+                params.height = containerSize
+                widgetPreview.layoutParams = params
+                widgetPreview.scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
+                val padding = (16 * density).toInt()
+                widgetPreview.setPadding(padding, padding, padding, padding)
+            }
         }
     }
 }

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    android:layout_marginBottom="14dp"
+    android:backgroundTint="?attr/cardUI"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp"
+    style="?attr/materialCardViewFilledStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <!-- Left side - Apps label -->
+        <TextView
+            android:id="@+id/label_apps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Apps"
+            android:textColor="?attr/bgColorInVerse"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Right side dark card with app icons -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_apps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:backgroundTint="?attr/bgColor2"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="?attr/materialCardViewFilledStyle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp">
+
+                <!-- Row 1 -->
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/message"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/phone"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@id/icon1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/threads"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@id/icon2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon4"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/facebook"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@id/icon3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="8dp" />
+
+                <!-- Row 2 -->
+                <ImageView
+                    android:id="@+id/icon5"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/x"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icon1"
+                    android:layout_marginTop="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon6"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/youtube"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@id/icon5"
+                    app:layout_constraintTop_toBottomOf="@id/icon2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <!-- More icon (circle with dots) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/icon_more"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:backgroundTint="?attr/cardUI"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="?attr/materialCardViewFilledStyle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/dot_white"
+                            android:layout_margin="1dp" />
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/dot_white"
+                            android:layout_margin="1dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Row 3 -->
+                <ImageView
+                    android:id="@+id/icon7"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/google"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icon5"
+                    android:layout_marginTop="8dp" />
+
+                <ImageView
+                    android:id="@+id/icon8"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/discord"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@id/icon7"
+                    app:layout_constraintTop_toBottomOf="@id/icon6"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
