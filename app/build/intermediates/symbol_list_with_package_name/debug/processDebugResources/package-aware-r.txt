@@ -3072,6 +3072,7 @@ drawable clock_analog_simple_second
 drawable clock_face_6
 drawable contact
 drawable copilot
+drawable custom_drawable
 drawable deepseek
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3213,6 +3214,7 @@ drawable photos
 drawable playstore
 drawable reddit
 drawable rounded_folder
+drawable rounded_for_all_r
 drawable search_box
 drawable second_6
 drawable settings
@@ -3310,6 +3312,7 @@ id aligned
 id all
 id allStates
 id always
+id amazon_icon
 id animateToEnd
 id animateToStart
 id antiClockwise
@@ -3619,6 +3622,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id real_work
 id rectangles
 id report_drawn
 id reverseSawtooth
@@ -3892,6 +3896,7 @@ layout activity_main
 layout activity_widget_detail
 layout analog2_widget
 layout analog5_widget
+layout app_launcher_widget
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -5421,3 +5426,4 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml analog2_widget_info
 xml analog5_widget_info
+xml app_launcher_widget_info

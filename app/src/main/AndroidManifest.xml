@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.newthingwidgets.clone">
+
+    <!-- Required for Android 11+ to query and launch other apps -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <!-- Declare intent queries for launching apps -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -34,6 +47,20 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/analog2_widget_info" />
+        </receiver>
+        
+        <!-- App Launcher Widget Provider -->
+        <receiver
+            android:name=".widgets.AppLauncherWidgetProvider"
+            android:exported="true"
+            android:label="App Launcher">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.newthingwidgets.clone.ACTION_LAUNCH_APP" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_launcher_widget_info" />
         </receiver>
         
     </application>

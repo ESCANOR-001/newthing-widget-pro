@@ -4,7 +4,7 @@
             "outputFile": "com.newthingwidgets.clone.app-mergeDebugResources-36:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\9.0-milestone-1\\transforms\\1f49910d3b08d8a71ca9000de73490d8\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\9.0-milestone-1\\transforms\\5dc7286fe4ee7999632551765ea69602\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -32,12 +32,37 @@ class WidgetListAdapter(
             val context = view.context
             val appWidgetManager = AppWidgetManager.getInstance(context)
             
-            // All analog clocks use the same provider
-            val componentName = ComponentName(context, AnalogClockProvider::class.java)
+            // Determine which provider to use based on widget size
+            val componentName = if (widget.size == "1x1") {
+                // App launcher widgets
+                ComponentName(context, com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider::class.java)
+            } else {
+                // Analog clock widgets
+                ComponentName(context, AnalogClockProvider::class.java)
+            }
             
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 if (appWidgetManager.isRequestPinAppWidgetSupported) {
-                    appWidgetManager.requestPinAppWidget(componentName, null, null)
+                    if (widget.size == "1x1") {
+                        // For app launcher widgets, save config and request pin
+                        val appInfo = com.newthingwidgets.clone.AppPackages.getAppInfo(widget.name)
+                        if (appInfo != null) {
+                            // Create callback to save widget configuration after pinning
+                            val callbackIntent = android.content.Intent(context, com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider::class.java)
+                            callbackIntent.action = "android.appwidget.action.APPWIDGET_UPDATE"
+                            
+                            // Store pending config in SharedPreferences with app name
+                            val prefs = context.getSharedPreferences("PendingWidgetConfig", android.content.Context.MODE_PRIVATE)
+                            prefs.edit()
+                                .putString("pending_app_name", widget.name)
+                                .putInt("pending_drawable", appInfo.drawableRes)
+                                .apply()
+                            
+                            appWidgetManager.requestPinAppWidget(componentName, null, null)
+                        }
+                    } else {
+                        appWidgetManager.requestPinAppWidget(componentName, null, null)
+                    }
                 } else {
                     Toast.makeText(
                         context,

@@ -8,6 +8,18 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <!-- Required for Android 11+ to query and launch other apps -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <!-- Declare intent queries for launching apps -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
     <permission
         android:name="com.newthingwidgets.clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -50,6 +62,21 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/analog2_widget_info" />
+        </receiver>
+
+        <!-- App Launcher Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider"
+            android:exported="true"
+            android:label="App Launcher" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.newthingwidgets.clone.ACTION_LAUNCH_APP" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_launcher_widget_info" />
         </receiver>
 
         <provider

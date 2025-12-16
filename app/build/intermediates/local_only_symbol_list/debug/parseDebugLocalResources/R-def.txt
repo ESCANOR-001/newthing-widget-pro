@@ -96,6 +96,7 @@ drawable clock_analog_simple_second
 drawable clock_face_6
 drawable contact
 drawable copilot
+drawable custom_drawable
 drawable deepseek
 drawable dial
 drawable digital_clock_rounded_info
@@ -142,6 +143,7 @@ drawable photos
 drawable playstore
 drawable reddit
 drawable rounded_folder
+drawable rounded_for_all_r
 drawable search_box
 drawable second_6
 drawable settings
@@ -160,6 +162,7 @@ drawable youtube
 font nothing_5_7
 font poppins_regular
 font product_med
+id amazon_icon
 id appBarLayout
 id bottom_navigation
 id btn_back
@@ -186,6 +189,7 @@ id navigation_settings
 id navigation_wallpapers
 id navigation_widgets
 id news
+id real_work
 id search_edit_text
 id simpleAnalogClock
 id tab_responsive
@@ -206,6 +210,7 @@ layout activity_main
 layout activity_widget_detail
 layout analog2_widget
 layout analog5_widget
+layout app_launcher_widget
 layout fragment_widgets
 layout item_apps_card
 layout item_newly_added_card
@@ -221,3 +226,4 @@ style AppTheme
 style TextAppearance.MyApp.DisplaySmall
 xml analog2_widget_info
 xml analog5_widget_info
+xml app_launcher_widget_info
