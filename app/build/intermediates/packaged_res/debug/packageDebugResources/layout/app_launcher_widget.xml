@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:theme="@style/AppTheme" android:id="@+id/real_work" android:background="@drawable/rounded_for_all_r" android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView android:id="@+id/amazon_icon" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/custom_drawable" android:layout_centerInParent="true"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme"
+    android:id="@+id/real_work"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/amazon_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/custom_drawable"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

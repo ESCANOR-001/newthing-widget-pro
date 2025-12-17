@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="170dp"
+    android:width="170dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Hour Hand (White, Short) - Pill shaped with rounded end, pointing UP -->
+    <path
+        android:fillColor="#f1f1f1"
+        android:pathData="M87.91,76.74V37.11A2.91,2.91 0,0 0,85 34.2h0a2.91,2.91 0,0 0,-2.91 2.91V76.74a8.75,8.75 0,1 0,5.82 0Z"/>
+</vector>

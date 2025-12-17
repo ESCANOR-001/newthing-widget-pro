@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.newthingwidgets.clone.R
 import com.newthingwidgets.clone.WidgetItem
-import com.newthingwidgets.clone.widgets.AnalogClockProvider
+import com.newthingwidgets.clone.widgets.AnalogClockWidgetProvider
 
 class WidgetListAdapter(
     private val widgets: List<WidgetItem>
@@ -38,7 +38,7 @@ class WidgetListAdapter(
                 ComponentName(context, com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider::class.java)
             } else {
                 // Analog clock widgets
-                ComponentName(context, AnalogClockProvider::class.java)
+                ComponentName(context, AnalogClockWidgetProvider::class.java)
             }
             
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

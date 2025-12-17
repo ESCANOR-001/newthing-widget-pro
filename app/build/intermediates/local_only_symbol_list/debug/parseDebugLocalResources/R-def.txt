@@ -76,6 +76,7 @@ drawable analog_5
 drawable analog_6
 drawable analog_clock_1
 drawable analog_round
+drawable app_widget_circular_bg
 drawable asset_31_ic
 drawable bat_preview
 drawable battery_01
@@ -93,7 +94,11 @@ drawable clock2
 drawable clock_analog_day_hour
 drawable clock_analog_simple_minute
 drawable clock_analog_simple_second
+drawable clock_dial
 drawable clock_face_6
+drawable clock_hand_hour
+drawable clock_hand_minute
+drawable clock_hand_second
 drawable contact
 drawable copilot
 drawable custom_drawable
@@ -163,6 +168,7 @@ font nothing_5_7
 font poppins_regular
 font product_med
 id amazon_icon
+id analog_clock
 id appBarLayout
 id bottom_navigation
 id btn_back
@@ -210,6 +216,8 @@ layout activity_main
 layout activity_widget_detail
 layout analog2_widget
 layout analog5_widget
+layout analog_clock_widget
+layout app_launcher_clock_widget
 layout app_launcher_widget
 layout fragment_widgets
 layout item_apps_card
@@ -226,4 +234,5 @@ style AppTheme
 style TextAppearance.MyApp.DisplaySmall
 xml analog2_widget_info
 xml analog5_widget_info
+xml analog_clock_widget_info
 xml app_launcher_widget_info

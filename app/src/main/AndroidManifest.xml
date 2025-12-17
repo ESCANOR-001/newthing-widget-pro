@@ -38,7 +38,7 @@
         
         <!-- Analog Clock Widget Provider -->
         <receiver
-            android:name=".widgets.AnalogClockProvider"
+            android:name=".widgets.AnalogClockWidgetProvider"
             android:exported="true"
             android:label="Analog Clock">
             <intent-filter>
@@ -46,7 +46,7 @@
             </intent-filter>
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/analog2_widget_info" />
+                android:resource="@xml/analog_clock_widget_info" />
         </receiver>
         
         <!-- App Launcher Widget Provider -->

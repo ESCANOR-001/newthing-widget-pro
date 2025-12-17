@@ -94,10 +94,15 @@ class AppLauncherWidgetProvider : AppWidgetProvider() {
             val appName = getAppName(context, appWidgetId) ?: return
             val drawableRes = getDrawableRes(context, appWidgetId)
 
-            val views = RemoteViews(context.packageName, R.layout.app_launcher_widget)
-            
-            // Set the app icon
-            views.setImageViewResource(R.id.amazon_icon, drawableRes)
+            // Use different layout for Clock app (functional analog clock)
+            val views = if (appName == "Clock") {
+                RemoteViews(context.packageName, R.layout.app_launcher_clock_widget)
+            } else {
+                RemoteViews(context.packageName, R.layout.app_launcher_widget).also {
+                    // Set the app icon for non-clock widgets
+                    it.setImageViewResource(R.id.amazon_icon, drawableRes)
+                }
+            }
 
             // Create click intent - pass app name for dynamic discovery at launch time
             val clickIntent = Intent(context, AppLauncherWidgetProvider::class.java).apply {

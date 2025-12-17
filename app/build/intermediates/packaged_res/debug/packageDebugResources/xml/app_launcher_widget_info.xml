@@ -5,8 +5,9 @@
     android:minHeight="40dp"
     android:updatePeriodMillis="0"
     android:initialLayout="@layout/app_launcher_widget"
-    android:resizeMode="none"
-    android:widgetCategory="home_screen"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen|keyguard"
+    android:initialKeyguardLayout="@layout/app_launcher_widget"
     android:previewLayout="@layout/app_launcher_widget"
     android:targetCellWidth="1"
     android:targetCellHeight="1" />

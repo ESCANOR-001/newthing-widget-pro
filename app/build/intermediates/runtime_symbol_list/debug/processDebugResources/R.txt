@@ -3041,6 +3041,7 @@ int drawable analog_5 0x7f07007a
 int drawable analog_6 0x7f07007b
 int drawable analog_clock_1 0x7f07007c
 int drawable analog_round 0x7f07007d
+int drawable app_widget_circular_bg 0x7f07013d
 int drawable asset_31_ic 0x7f07007e
 int drawable avd_hide_password 0x7f07007f
 int drawable avd_show_password 0x7f070080
@@ -3068,7 +3069,11 @@ int drawable clock2 0x7f070095
 int drawable clock_analog_day_hour 0x7f070096
 int drawable clock_analog_simple_minute 0x7f070097
 int drawable clock_analog_simple_second 0x7f070098
+int drawable clock_dial 0x7f07013e
 int drawable clock_face_6 0x7f070099
+int drawable clock_hand_hour 0x7f07013f
+int drawable clock_hand_minute 0x7f070140
+int drawable clock_hand_second 0x7f070141
 int drawable contact 0x7f07009a
 int drawable copilot 0x7f07009b
 int drawable custom_drawable 0x7f07009c
@@ -3312,6 +3317,7 @@ int id all 0x7f090049
 int id allStates 0x7f09004a
 int id always 0x7f09004b
 int id amazon_icon 0x7f09004c
+int id analog_clock 0x7f09021e
 int id animateToEnd 0x7f09004d
 int id animateToStart 0x7f09004e
 int id antiClockwise 0x7f09004f
@@ -3895,6 +3901,8 @@ int layout activity_main 0x7f0c001c
 int layout activity_widget_detail 0x7f0c001d
 int layout analog2_widget 0x7f0c001e
 int layout analog5_widget 0x7f0c001f
+int layout analog_clock_widget 0x7f0c0075
+int layout app_launcher_clock_widget 0x7f0c0076
 int layout app_launcher_widget 0x7f0c0020
 int layout custom_dialog 0x7f0c0021
 int layout design_bottom_navigation_item 0x7f0c0022
@@ -7348,4 +7356,5 @@ int[] styleable include { 0x7f03013b }
 int styleable include_constraintSet 0
 int xml analog2_widget_info 0x7f130000
 int xml analog5_widget_info 0x7f130001
+int xml analog_clock_widget_info 0x7f130003
 int xml app_launcher_widget_info 0x7f130002
