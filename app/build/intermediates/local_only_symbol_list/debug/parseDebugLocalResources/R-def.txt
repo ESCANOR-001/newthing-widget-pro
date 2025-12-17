@@ -82,6 +82,7 @@ drawable bat_preview
 drawable battery_01
 drawable cal_01
 drawable calculator
+drawable calendar_widget_bg
 drawable call_contect
 drawable camera
 drawable chatgpt
@@ -173,6 +174,8 @@ id appBarLayout
 id bottom_navigation
 id btn_back
 id btn_info
+id calendar_bg
+id calendar_date
 id card_apps
 id card_recently_added
 id clear_search
@@ -217,6 +220,7 @@ layout activity_widget_detail
 layout analog2_widget
 layout analog5_widget
 layout analog_clock_widget
+layout app_launcher_calendar_widget
 layout app_launcher_clock_widget
 layout app_launcher_widget
 layout fragment_widgets
@@ -232,6 +236,7 @@ string first_fragment_label
 string second_fragment_label
 style AppTheme
 style TextAppearance.MyApp.DisplaySmall
+style Widget.CalendarDate
 xml analog2_widget_info
 xml analog5_widget_info
 xml analog_clock_widget_info

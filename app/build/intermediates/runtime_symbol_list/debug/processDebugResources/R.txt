@@ -3057,6 +3057,7 @@ int drawable btn_radio_on_mtrl 0x7f070089
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f07008a
 int drawable cal_01 0x7f07008b
 int drawable calculator 0x7f07008c
+int drawable calendar_widget_bg 0x7f070142
 int drawable call_contect 0x7f07008d
 int drawable camera 0x7f07008e
 int drawable chatgpt 0x7f07008f
@@ -3346,6 +3347,8 @@ int id btn_back 0x7f090065
 int id btn_info 0x7f090066
 int id buttonPanel 0x7f090067
 int id cache_measures 0x7f090068
+int id calendar_bg 0x7f09021f
+int id calendar_date 0x7f090220
 int id callMeasure 0x7f090069
 int id cancel_button 0x7f09006a
 int id card_apps 0x7f09006b
@@ -3902,6 +3905,7 @@ int layout activity_widget_detail 0x7f0c001d
 int layout analog2_widget 0x7f0c001e
 int layout analog5_widget 0x7f0c001f
 int layout analog_clock_widget 0x7f0c0075
+int layout app_launcher_calendar_widget 0x7f0c0077
 int layout app_launcher_clock_widget 0x7f0c0076
 int layout app_launcher_widget 0x7f0c0020
 int layout custom_dialog 0x7f0c0021
@@ -4974,6 +4978,7 @@ int style Widget_AppCompat_TextView 0x7f11032a
 int style Widget_AppCompat_TextView_SpinnerItem 0x7f11032b
 int style Widget_AppCompat_Toolbar 0x7f11032c
 int style Widget_AppCompat_Toolbar_Button_Navigation 0x7f11032d
+int style Widget_CalendarDate 0x7f11045e
 int style Widget_Compat_NotificationActionContainer 0x7f11032e
 int style Widget_Compat_NotificationActionText 0x7f11032f
 int style Widget_Design_AppBarLayout 0x7f110330

@@ -3058,6 +3058,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cal_01
 drawable calculator
+drawable calendar_widget_bg
 drawable call_contect
 drawable camera
 drawable chatgpt
@@ -3347,6 +3348,8 @@ id btn_back
 id btn_info
 id buttonPanel
 id cache_measures
+id calendar_bg
+id calendar_date
 id callMeasure
 id cancel_button
 id card_apps
@@ -3903,6 +3906,7 @@ layout activity_widget_detail
 layout analog2_widget
 layout analog5_widget
 layout analog_clock_widget
+layout app_launcher_calendar_widget
 layout app_launcher_clock_widget
 layout app_launcher_widget
 layout custom_dialog
@@ -4975,6 +4979,7 @@ style Widget_AppCompat_TextView
 style Widget_AppCompat_TextView_SpinnerItem
 style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
+style Widget_CalendarDate
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Design_AppBarLayout

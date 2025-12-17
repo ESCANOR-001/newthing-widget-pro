@@ -5,10 +5,16 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Typeface
 import android.net.Uri
 import android.widget.RemoteViews
+import androidx.core.content.res.ResourcesCompat
 import com.newthingwidgets.clone.AppPackages
 import com.newthingwidgets.clone.R
+import java.util.Calendar
 
 /**
  * App Launcher Widget Provider
@@ -42,9 +48,23 @@ class AppLauncherWidgetProvider : AppWidgetProvider() {
     override fun onReceive(context: Context, intent: Intent) {
         super.onReceive(context, intent)
         
-        if (intent.action == ACTION_LAUNCH_APP) {
-            val appName = intent.getStringExtra(EXTRA_APP_NAME) ?: return
-            launchOrInstallApp(context, appName)
+        when (intent.action) {
+            ACTION_LAUNCH_APP -> {
+                val appName = intent.getStringExtra(EXTRA_APP_NAME) ?: return
+                launchOrInstallApp(context, appName)
+            }
+            Intent.ACTION_DATE_CHANGED, Intent.ACTION_TIME_CHANGED, Intent.ACTION_TIMEZONE_CHANGED -> {
+                // Refresh all calendar widgets when date changes
+                val appWidgetManager = AppWidgetManager.getInstance(context)
+                val componentName = android.content.ComponentName(context, AppLauncherWidgetProvider::class.java)
+                val widgetIds = appWidgetManager.getAppWidgetIds(componentName)
+                for (widgetId in widgetIds) {
+                    val appName = getAppName(context, widgetId)
+                    if (appName == "Calendar") {
+                        updateAppWidget(context, appWidgetManager, widgetId)
+                    }
+                }
+            }
         }
     }
 
@@ -94,12 +114,16 @@ class AppLauncherWidgetProvider : AppWidgetProvider() {
             val appName = getAppName(context, appWidgetId) ?: return
             val drawableRes = getDrawableRes(context, appWidgetId)
 
-            // Use different layout for Clock app (functional analog clock)
-            val views = if (appName == "Clock") {
-                RemoteViews(context.packageName, R.layout.app_launcher_clock_widget)
-            } else {
-                RemoteViews(context.packageName, R.layout.app_launcher_widget).also {
-                    // Set the app icon for non-clock widgets
+            // Use different layout for Clock app (functional analog clock) and Calendar app (real-time date)
+            val views = when (appName) {
+                "Clock" -> RemoteViews(context.packageName, R.layout.app_launcher_clock_widget)
+                "Calendar" -> RemoteViews(context.packageName, R.layout.app_launcher_calendar_widget).also {
+                    // Render date with custom font as bitmap
+                    val dateBitmap = createDateBitmap(context)
+                    it.setImageViewBitmap(R.id.calendar_date, dateBitmap)
+                }
+                else -> RemoteViews(context.packageName, R.layout.app_launcher_widget).also {
+                    // Set the app icon for other widgets
                     it.setImageViewResource(R.id.amazon_icon, drawableRes)
                 }
             }
@@ -121,6 +145,44 @@ class AppLauncherWidgetProvider : AppWidgetProvider() {
             views.setOnClickPendingIntent(R.id.real_work, pendingIntent)
 
             appWidgetManager.updateAppWidget(appWidgetId, views)
+        }
+
+        /**
+         * Create a bitmap with the current date using custom font
+         */
+        private fun createDateBitmap(context: Context): Bitmap {
+            val dayOfMonth = Calendar.getInstance().get(Calendar.DAY_OF_MONTH).toString()
+            
+            // Load custom font
+            val typeface = ResourcesCompat.getFont(context, R.font.nothing_5_7) ?: Typeface.DEFAULT_BOLD
+            
+            // Create paint with custom font
+            val paint = Paint().apply {
+                this.typeface = typeface
+                textSize = 400f
+                color = android.graphics.Color.WHITE
+                isAntiAlias = true
+                textAlign = Paint.Align.CENTER
+            }
+            
+            // Measure text bounds
+            val textBounds = android.graphics.Rect()
+            paint.getTextBounds(dayOfMonth, 0, dayOfMonth.length, textBounds)
+            
+            // Create bitmap with padding
+            val padding = 40
+            val width = textBounds.width() + padding * 2
+            val height = textBounds.height() + padding * 2
+            
+            val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+            val canvas = Canvas(bitmap)
+            
+            // Draw text centered
+            val x = width / 2f
+            val y = height / 2f - textBounds.exactCenterY()
+            canvas.drawText(dayOfMonth, x, y, paint)
+            
+            return bitmap
         }
 
         /**

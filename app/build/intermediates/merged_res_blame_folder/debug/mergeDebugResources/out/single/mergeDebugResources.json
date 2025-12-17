@@ -20,10 +20,6 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\contact.xml"
     },
     {
-        "merged": "com.newthingwidgets.clone.app-debug-38:/drawable_clock_dial.xml.flat",
-        "source": "com.newthingwidgets.clone.app-main-40:/drawable/clock_dial.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_app_widget_circular_bg.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\app_widget_circular_bg.xml"
     },
@@ -38,10 +34,6 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_open_email.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\open_email.xml"
-    },
-    {
-        "merged": "com.newthingwidgets.clone.app-debug-38:/drawable_clock_hand_hour.xml.flat",
-        "source": "com.newthingwidgets.clone.app-main-40:/drawable/clock_hand_hour.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_x.xml.flat",
@@ -124,10 +116,6 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.newthingwidgets.clone.app-debug-38:/drawable_clock_hand_second.xml.flat",
-        "source": "com.newthingwidgets.clone.app-main-40:/drawable/clock_hand_second.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\xml_app_launcher_widget_info.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\xml\\app_launcher_widget_info.xml"
     },
@@ -156,8 +144,8 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\second_6.xml"
     },
     {
-        "merged": "com.newthingwidgets.clone.app-debug-38:/drawable_clock_hand_minute.xml.flat",
-        "source": "com.newthingwidgets.clone.app-main-40:/drawable/clock_hand_minute.xml"
+        "merged": "com.newthingwidgets.clone.app-debug-38:/layout_app_launcher_calendar_widget.xml.flat",
+        "source": "com.newthingwidgets.clone.app-main-40:/layout/app_launcher_calendar_widget.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_tiktok.xml.flat",
@@ -428,6 +416,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\analog_round.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_calendar_widget_bg.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\calendar_widget_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\xml_analog_clock_widget_info.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\xml\\analog_clock_widget_info.xml"
     },
@@ -446,6 +438,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\xml_analog2_widget_info.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\xml\\analog2_widget_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\layout_app_launcher_calendar_widget.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\app_launcher_calendar_widget.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_google.xml.flat",

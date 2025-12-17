@@ -143,4 +143,9 @@
     <style name="TextAppearance.MyApp.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
         <item name="android:fontFamily">@font/nothing_5_7</item>
     </style>
+    <style name="Widget.CalendarDate" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/nothing_5_7</item>
+        <item name="fontFamily">@font/nothing_5_7</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/real_work"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:theme="@style/AppTheme">
+
+    <!-- Background circle -->
+    <ImageView
+        android:id="@+id/calendar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/calendar_widget_bg" />
+
+    <!-- Date display as ImageView (rendered with custom font programmatically) -->
+    <ImageView
+        android:id="@+id/calendar_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="30dp"
+        android:scaleType="centerInside" />
+
+</RelativeLayout>
