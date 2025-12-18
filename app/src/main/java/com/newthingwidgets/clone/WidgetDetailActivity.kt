@@ -41,8 +41,13 @@ class WidgetDetailActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         
         val categoryName = intent.getStringExtra(EXTRA_CATEGORY_NAME) ?: "Newly Added"
+        val widgets = getWidgetsForCategory(categoryName)
         
-        val widgets = when (categoryName) {
+        recyclerView.adapter = WidgetListAdapter(widgets)
+    }
+    
+    private fun getWidgetsForCategory(categoryName: String): List<WidgetItem> {
+        return when (categoryName) {
             "Apps" -> listOf(
                 // App widgets - all 42 from user's list with corrected icons
                 WidgetItem("Amazon", "1x1", R.drawable.amazon),
@@ -88,6 +93,17 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Google Lens", "1x1", R.drawable.google_lens),
                 WidgetItem("Perplexity", "1x1", R.drawable.perplexity_ai)
             )
+            "Battery" -> listOf(
+                // All battery widgets - matching the reference image order
+                WidgetItem("Battery 1", "2x2", R.drawable.bat_preview),
+                WidgetItem("Battery 2", "2x2", R.drawable.battery_emoji_info),
+                WidgetItem("Battery 3", "2x2", R.drawable.bat_dot),
+                WidgetItem("Battery 4", "2x2", R.drawable.bat_5),
+                WidgetItem("Battery 5", "2x2", R.drawable.bat_info),
+                WidgetItem("Battery 6", "2x2", R.drawable.battery_01),
+                WidgetItem("Battery 7", "2x2", R.drawable.battery_prog),
+                WidgetItem("Battery 8", "2x2", R.drawable.bat_oval_main_r)
+            )
             else -> listOf(
                 // Clocks
                 WidgetItem("Analog Clock 2", "2x2", R.drawable.analog_2),
@@ -120,8 +136,6 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Alarm Clock", "2x2", R.drawable.alarm_widget_p)
             )
         }
-        
-        recyclerView.adapter = WidgetListAdapter(widgets)
     }
 }
 
@@ -130,3 +144,4 @@ data class WidgetItem(
     val size: String,
     val previewDrawable: Int
 )
+

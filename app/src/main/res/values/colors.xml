@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Dark Theme Colors -->
-    <color name="bg_color">#1d1d1d</color>
-    <color name="bg_color_1">#2c2b2d</color>
-    <color name="bg_color_1_dark">#2c2b2d</color>
-    <color name="bg_color_2">#3b393e</color>
-    <color name="bg_color_2_dark">#3b393e</color>
-    <color name="bg_color_3">#6c696d</color>
+    <color name="bg_color">#1C1E1F</color>
+    <color name="bg_color_1">#2A2D2E</color>
+    <color name="bg_color_1_dark">#2A2D2E</color>
+    <color name="bg_color_2">#6A6A6B</color>
+    <color name="bg_color_2_dark">#6A6A6B</color>
+    <color name="bg_color_3">#3A3B3D</color>
     <color name="bg_color_inverse">#f1f1f1</color>
     <color name="bg_color_ui">#ececec</color>
     <color name="card_ui">#2c2b2d</color>
     
     <!-- Accent Colors -->
-    <color name="redf">#ff0049</color>
+    <color name="redf">#E22E31</color>
     <color name="red_light">#f1f1f1</color>
-    <color name="red_color">#ff0049</color>
+    <color name="red_color">#E22E31</color>
     
     <!-- Material Theme Colors -->
     <color name="md_theme_background">#1d1d1d</color>

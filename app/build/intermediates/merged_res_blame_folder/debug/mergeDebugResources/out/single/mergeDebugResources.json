@@ -12,6 +12,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\reddit.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_bat_preview_widget.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\bat_preview_widget.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_01.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_01.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_app_widget_circular_bg.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\app_widget_circular_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\layout_item_battery_card.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\item_battery_card.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_chrome.xml.flat",
@@ -44,12 +52,20 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\rounded_folder.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_emoji_widget.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_emoji_widget.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_photos.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\photos.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\layout_app_launcher_clock_widget.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\app_launcher_clock_widget.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_bat_dot.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\bat_dot.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_analog_simple_second.xml.flat",
@@ -88,6 +104,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\item_widget_category.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_bat_5.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\bat_5.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_phone_icon_1.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\phone_icon_1.xml"
     },
@@ -98,6 +118,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_gamini_icon.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\gamini_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_prog.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_prog.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_asset_31_ic.xml.flat",
@@ -144,10 +168,6 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\second_6.xml"
     },
     {
-        "merged": "com.newthingwidgets.clone.app-debug-38:/layout_app_launcher_calendar_widget.xml.flat",
-        "source": "com.newthingwidgets.clone.app-main-40:/layout/app_launcher_calendar_widget.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_tiktok.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\tiktok.xml"
     },
@@ -168,6 +188,10 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\instagram.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_widget_mini_icon.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_widget_mini_icon.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_gamini_iconss.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\gamini_iconss.xml"
     },
@@ -182,6 +206,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_dial.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\dial.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_oval_info.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_oval_info.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_camera.xml.flat",
@@ -200,16 +228,16 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\chatgpt_ai_voice.xml"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_dot_white.xml.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\dot_white.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_face_6.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\clock_face_6.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_threads.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\threads.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_dot_white.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\dot_white.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_open_cal_m.xml.flat",
@@ -264,16 +292,24 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\font\\nothing_5_7.ttf"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_hand_hour.xml.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\clock_hand_hour.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_ic_wallpaper.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\ic_wallpaper.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_hand_hour.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\clock_hand_hour.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_call_contect.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\call_contect.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_prog_y.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_prog_y.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_rounded_for_all.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\rounded_for_all.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_hand_second.xml.flat",
@@ -304,12 +340,12 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\clock_hand_minute.xml"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_dial.xml.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\clock_dial.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\xml_analog5_widget_info.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\xml\\analog5_widget_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_clock_dial.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\clock_dial.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_hybrid_clock_info.xml.flat",
@@ -328,20 +364,28 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\hour_face_6.xml"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_mascot_red.xml.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\mascot_red.xml"
+        "merged": "com.newthingwidgets.clone.app-debug-38:/layout_item_widget_preview.xml.flat",
+        "source": "com.newthingwidgets.clone.app-main-40:/layout/item_widget_preview.xml"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_youtube.xml.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\youtube.xml"
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_mascot_red.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\mascot_red.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_open_cal.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\open_cal.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_youtube.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\youtube.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_rounded_for_all_r.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\rounded_for_all_r.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_01_info.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_01_info.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_calculator.xml.flat",
@@ -364,6 +408,14 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\google_search.xml"
     },
     {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_bat_oval_main_r.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\bat_oval_main_r.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_battery_emoji_info.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\battery_emoji_info.xml"
+    },
+    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\layout_analog_clock_widget.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\analog_clock_widget.xml"
     },
@@ -374,6 +426,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_analog_clock_1.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\analog_clock_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_bat_info.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\bat_info.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_open_grok.xml.flat",
@@ -446,6 +502,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_google.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\google.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_bat_dot_y.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\bat_dot_y.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_weather_squar.xml.flat",

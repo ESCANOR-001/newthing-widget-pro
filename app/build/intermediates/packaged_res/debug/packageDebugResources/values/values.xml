@@ -11,12 +11,12 @@
     <attr format="color|reference" name="cardUI"/>
     <attr format="color|reference" name="redColor"/>
     <attr format="color|reference" name="redColorLight"/>
-    <color name="bg_color">#1d1d1d</color>
-    <color name="bg_color_1">#2c2b2d</color>
-    <color name="bg_color_1_dark">#2c2b2d</color>
-    <color name="bg_color_2">#3b393e</color>
-    <color name="bg_color_2_dark">#3b393e</color>
-    <color name="bg_color_3">#6c696d</color>
+    <color name="bg_color">#1C1E1F</color>
+    <color name="bg_color_1">#2A2D2E</color>
+    <color name="bg_color_1_dark">#2A2D2E</color>
+    <color name="bg_color_2">#6A6A6B</color>
+    <color name="bg_color_2_dark">#6A6A6B</color>
+    <color name="bg_color_3">#3A3B3D</color>
     <color name="bg_color_inverse">#f1f1f1</color>
     <color name="bg_color_ui">#ececec</color>
     <color name="card_ui">#2c2b2d</color>
@@ -66,9 +66,9 @@
     <color name="md_theme_tertiaryContainer">#2c2b2d</color>
     <color name="md_theme_tertiaryFixed">#2c2b2d</color>
     <color name="md_theme_tertiaryFixedDim">#232224</color>
-    <color name="red_color">#ff0049</color>
+    <color name="red_color">#E22E31</color>
     <color name="red_light">#f1f1f1</color>
-    <color name="redf">#ff0049</color>
+    <color name="redf">#E22E31</color>
     <string name="app_name">NEWTHING WIDGETS PRO</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="clock">Clock Widget</string>

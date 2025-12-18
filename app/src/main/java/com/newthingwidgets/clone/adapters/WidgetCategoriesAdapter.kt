@@ -13,15 +13,17 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
     companion object {
         private const val VIEW_TYPE_NEWLY_ADDED = 0
         private const val VIEW_TYPE_APPS = 1
+        private const val VIEW_TYPE_BATTERY = 2
     }
 
-    // Show Newly Added and Apps cards
-    private val itemCount = 2
+    // Show Newly Added, Apps, and Battery cards
+    private val itemCount = 3
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
             0 -> VIEW_TYPE_NEWLY_ADDED
             1 -> VIEW_TYPE_APPS
+            2 -> VIEW_TYPE_BATTERY
             else -> VIEW_TYPE_NEWLY_ADDED
         }
     }
@@ -32,6 +34,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.item_apps_card, parent, false)
                 AppsViewHolder(view)
+            }
+            VIEW_TYPE_BATTERY -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_battery_card, parent, false)
+                BatteryViewHolder(view)
             }
             else -> {
                 val view = LayoutInflater.from(parent.context)
@@ -61,6 +68,15 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                     context.startActivity(intent)
                 }
             }
+            is BatteryViewHolder -> {
+                holder.itemView.setOnClickListener { view ->
+                    val context = view.context
+                    val intent = Intent(context, WidgetDetailActivity::class.java).apply {
+                        putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Battery")
+                    }
+                    context.startActivity(intent)
+                }
+            }
         }
     }
 
@@ -68,4 +84,5 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
 
     class NewlyAddedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     class AppsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class BatteryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

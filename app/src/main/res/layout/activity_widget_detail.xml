@@ -58,45 +58,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="end"
-            android:paddingEnd="16dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
             android:visibility="gone">
 
-            <TextView
-                android:id="@+id/tab_square"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Square"
-                android:textColor="?attr/bgColorInVerse"
-                android:textSize="14sp"
-                android:alpha="0.6"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="4dp" />
-
+            <!-- Square Tab -->
             <LinearLayout
+                android:id="@+id/tab_square_container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginEnd="24dp">
+
+                <TextView
+                    android:id="@+id/tab_square"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Square"
+                    android:textColor="?attr/bgColorInVerse"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp" />
+
+                <View
+                    android:id="@+id/tab_square_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/redf"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <!-- Responsive Tab -->
+            <LinearLayout
+                android:id="@+id/tab_responsive_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="24dp">
 
                 <TextView
                     android:id="@+id/tab_responsive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Responsive"
-                    android:textColor="#FF0000"
+                    android:textColor="?attr/bgColorInVerse"
                     android:textSize="14sp"
-                    android:paddingHorizontal="12dp"
-                    android:paddingTop="4dp" />
+                    android:fontFamily="@font/poppins_regular"
+                    android:alpha="0.6"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp" />
 
                 <View
+                    android:id="@+id/tab_responsive_indicator"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_marginHorizontal="12dp"
-                    android:layout_marginTop="2dp"
-                    android:background="#FF0000" />
+                    android:layout_marginTop="4dp"
+                    android:background="@color/redf"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
