@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/app_name"
+    android:minWidth="110dp"
+    android:minHeight="110dp"
+    android:maxResizeWidth="180dp"
+    android:maxResizeHeight="180dp"
+    android:minResizeWidth="110dp"
+    android:minResizeHeight="110dp"
+    android:updatePeriodMillis="1800000"
+    android:initialLayout="@layout/battery_bolt_widget"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen|keyguard"
+    android:initialKeyguardLayout="@layout/battery_bolt_widget"
+    android:previewLayout="@layout/battery_bolt_widget"
+    android:targetCellWidth="3"
+    android:targetCellHeight="2" />

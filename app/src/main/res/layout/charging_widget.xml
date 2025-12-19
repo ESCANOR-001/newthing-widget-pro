@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:foregroundGravity="center"
+    android:padding="8dp">
+
+    <!-- Main card background -->
+    <LinearLayout
+        android:id="@+id/charging_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/charging_widget_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Charging status row - fixed size header -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Lightning bolt icon -->
+            <ImageView
+                android:id="@+id/charging_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Charging"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_charging_bolt"
+                tools:ignore="ContentDescription" />
+
+            <!-- Charging text -->
+            <TextView
+                android:id="@+id/charging_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Charging..."
+                android:textColor="#808080"
+                android:textSize="16sp"
+                tools:text="Charging..." />
+        </LinearLayout>
+
+        <!-- Battery percentage and time remaining - responsive weight -->
+        <ImageView
+            android:id="@+id/battery_info_image"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="2"
+            android:contentDescription="Battery info"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+        <!-- Scale labels using TextViews for proper positioning -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="0%"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="50%"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="100%"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!-- Progress bar - responsive weight -->
+        <ProgressBar
+            android:id="@+id/progress_bar_view"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1.5"
+            android:contentDescription="Battery progress"
+            android:max="100"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:progressDrawable="@drawable/charging_progress_drawable"
+            tools:ignore="ContentDescription"
+            tools:progress="65" />
+
+    </LinearLayout>
+
+</FrameLayout>
+

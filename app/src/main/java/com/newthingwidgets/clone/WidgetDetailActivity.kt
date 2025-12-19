@@ -94,15 +94,19 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Perplexity", "1x1", R.drawable.perplexity_ai)
             )
             "Battery" -> listOf(
-                // All battery widgets - matching the reference image order
-                WidgetItem("Battery 1", "2x2", R.drawable.bat_preview),
-                WidgetItem("Battery 2", "2x2", R.drawable.battery_emoji_info),
+                // Charging widget with real-time updates
+                WidgetItem("Charging", "3x2", R.drawable.charging_widget_preview),
+                // Square battery widget with segmented bars
+                WidgetItem("Battery Square", "2x2", R.drawable.bat_preview),
+                // Battery Bolt with lightning bolt fill
+                WidgetItem("Battery Bolt", "2x2", R.drawable.bat_preview),
+                // Battery Status with progress bar
+                WidgetItem("Battery Status", "2x2", R.drawable.bat_preview),
+                // Battery Meter with horizontal segments
+                WidgetItem("Battery Meter", "2x2", R.drawable.bat_preview),
+                // Battery widgets
                 WidgetItem("Battery 3", "2x2", R.drawable.bat_dot),
-                WidgetItem("Battery 4", "2x2", R.drawable.bat_5),
-                WidgetItem("Battery 5", "2x2", R.drawable.bat_info),
-                WidgetItem("Battery 6", "2x2", R.drawable.battery_01),
-                WidgetItem("Battery 7", "2x2", R.drawable.battery_prog),
-                WidgetItem("Battery 8", "2x2", R.drawable.bat_oval_main_r)
+                WidgetItem("Battery 4", "2x2", R.drawable.bat_5)
             )
             else -> listOf(
                 // Clocks

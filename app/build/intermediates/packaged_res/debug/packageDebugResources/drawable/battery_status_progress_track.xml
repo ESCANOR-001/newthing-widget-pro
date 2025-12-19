@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Track (dark gray) -->
+    <item android:gravity="center_vertical|fill_horizontal">
+        <shape android:shape="rectangle">
+            <solid android:color="#333333" />
+            <corners android:radius="2dp" />
+            <size android:height="4dp" />
+        </shape>
+    </item>
+</layer-list>

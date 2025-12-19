@@ -32,13 +32,36 @@ class WidgetListAdapter(
             val context = view.context
             val appWidgetManager = AppWidgetManager.getInstance(context)
             
-            // Determine which provider to use based on widget size
-            val componentName = if (widget.size == "1x1") {
-                // App launcher widgets
-                ComponentName(context, com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider::class.java)
-            } else {
-                // Analog clock widgets
-                ComponentName(context, AnalogClockWidgetProvider::class.java)
+            // Determine which provider to use based on widget name/size
+            val componentName = when {
+                widget.size == "1x1" -> {
+                    // App launcher widgets
+                    ComponentName(context, com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider::class.java)
+                }
+                widget.name == "Charging" -> {
+                    // Charging widget with real-time battery updates
+                    ComponentName(context, com.newthingwidgets.clone.widgets.ChargingWidgetProvider::class.java)
+                }
+                widget.name == "Battery Square" -> {
+                    // Square battery widget with segmented bars
+                    ComponentName(context, com.newthingwidgets.clone.widgets.SquareBatteryWidgetProvider::class.java)
+                }
+                widget.name == "Battery Bolt" -> {
+                    // Battery Bolt with lightning bolt fill
+                    ComponentName(context, com.newthingwidgets.clone.widgets.BatteryBoltWidgetProvider::class.java)
+                }
+                widget.name == "Battery Status" -> {
+                    // Battery Status with progress bar
+                    ComponentName(context, com.newthingwidgets.clone.widgets.BatteryStatusWidgetProvider::class.java)
+                }
+                widget.name == "Battery Meter" -> {
+                    // Battery Meter with horizontal segments
+                    ComponentName(context, com.newthingwidgets.clone.widgets.BatteryMeterWidgetProvider::class.java)
+                }
+                else -> {
+                    // Analog clock widgets
+                    ComponentName(context, AnalogClockWidgetProvider::class.java)
+                }
             }
             
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -88,14 +111,37 @@ class WidgetListAdapter(
         private val widgetSize: TextView = itemView.findViewById(R.id.widget_size)
 
         fun bind(widget: WidgetItem) {
-            widgetPreview.setImageResource(widget.previewDrawable)
+            val context = itemView.context
+            val density = context.resources.displayMetrics.density
+            
+            // Check if widget has a dynamic layout preview
+            if (com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.hasDynamicPreview(widget.name)) {
+                // Render layout as bitmap for preview with proper proportions
+                try {
+                    val bitmap = com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.renderWidgetPreview(
+                        context,
+                        widget.name,
+                        targetSizeDp = 140
+                    )
+                    if (bitmap != null) {
+                        widgetPreview.setImageBitmap(bitmap)
+                        widgetPreview.scaleType = android.widget.ImageView.ScaleType.FIT_CENTER
+                    } else {
+                        widgetPreview.setImageResource(widget.previewDrawable)
+                    }
+                } catch (e: Exception) {
+                    // Fallback to static drawable if rendering fails
+                    widgetPreview.setImageResource(widget.previewDrawable)
+                }
+            } else {
+                // Use static drawable for widgets without layout (Battery 3, 4, etc.)
+                widgetPreview.setImageResource(widget.previewDrawable)
+            }
+            
             widgetName.text = widget.name
             widgetSize.text = widget.size
             
             // Enforce uniform sizing for all app icons
-            val context = itemView.context
-            val density = context.resources.displayMetrics.density
-            
             if (widget.size == "1x1") {
                 // For 1x1 app icons: fixed size with consistent padding
                 val iconSize = (80 * density).toInt() // Fixed icon display size
@@ -113,7 +159,7 @@ class WidgetListAdapter(
                 params.height = containerSize
                 widgetPreview.layoutParams = params
                 widgetPreview.scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
-                val padding = (16 * density).toInt()
+                val padding = (8 * density).toInt()
                 widgetPreview.setPadding(padding, padding, padding, padding)
             }
         }

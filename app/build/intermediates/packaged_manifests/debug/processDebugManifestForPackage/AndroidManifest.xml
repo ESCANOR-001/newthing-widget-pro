@@ -11,6 +11,16 @@
     <!-- Required for Android 11+ to query and launch other apps -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
+    <!-- Required for foreground service (widget real-time updates) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Background service permissions -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <!-- Declare intent queries for launching apps -->
     <queries>
         <intent>
@@ -33,7 +43,6 @@
         android:extractNativeLibs="false"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.newthingwidgets.clone.MainActivity"
@@ -81,6 +90,96 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_launcher_widget_info" />
         </receiver>
+
+        <!-- Charging Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.ChargingWidgetProvider"
+            android:exported="true"
+            android:label="Charging Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/charging_widget_info" />
+        </receiver>
+
+        <!-- Battery State Receiver for Charging Widget updates -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.BatteryStateReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Square Battery Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.SquareBatteryWidgetProvider"
+            android:exported="true"
+            android:label="Square Battery Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/square_battery_widget_info" />
+        </receiver>
+
+        <!-- Battery Bolt Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.BatteryBoltWidgetProvider"
+            android:exported="true"
+            android:label="Battery Bolt Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/battery_bolt_widget_info" />
+        </receiver>
+
+        <!-- Battery Status Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.BatteryStatusWidgetProvider"
+            android:exported="true"
+            android:label="Battery Status Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/battery_status_widget_info" />
+        </receiver>
+
+        <!-- Battery Meter Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.BatteryMeterWidgetProvider"
+            android:exported="true"
+            android:label="Battery Meter Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/battery_meter_widget_info" />
+        </receiver>
+
+        <!-- Universal Widget Update Service -->
+        <service
+            android:name="com.newthingwidgets.clone.services.WidgetUpdateService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" >
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="widget_updates" />
+        </service>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

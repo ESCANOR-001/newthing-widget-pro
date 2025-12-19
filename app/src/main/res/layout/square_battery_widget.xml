@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:padding="8dp">
+
+    <!-- Main card background -->
+    <LinearLayout
+        android:id="@+id/battery_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/square_battery_widget_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top: Lightning bolt + percentage -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Lightning bolt icon -->
+            <ImageView
+                android:id="@+id/charging_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Charging"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_charging_bolt"
+                android:visibility="gone"
+                tools:ignore="ContentDescription"
+                tools:visibility="visible" />
+
+            <!-- Battery percentage -->
+            <TextView
+                android:id="@+id/battery_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="52%"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                tools:text="52%" />
+        </LinearLayout>
+
+        <!-- Middle: 5 segment battery bar -->
+        <LinearLayout
+            android:id="@+id/segment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/battery_segment_container"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Segment 1 (0-20%) -->
+            <ImageView
+                android:id="@+id/segment_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery_segment_empty" />
+
+            <!-- Segment 2 (21-40%) -->
+            <ImageView
+                android:id="@+id/segment_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery_segment_empty" />
+
+            <!-- Segment 3 (41-60%) -->
+            <ImageView
+                android:id="@+id/segment_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery_segment_empty" />
+
+            <!-- Segment 4 (61-80%) -->
+            <ImageView
+                android:id="@+id/segment_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery_segment_empty" />
+
+            <!-- Segment 5 (81-100%) -->
+            <ImageView
+                android:id="@+id/segment_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/battery_segment_empty" />
+        </LinearLayout>
+
+        <!-- Bottom: Time remaining -->
+        <TextView
+            android:id="@+id/time_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="~2 hours"
+            android:textColor="#808080"
+            android:textSize="18sp"
+            tools:text="~2 hours" />
+
+    </LinearLayout>
+
+</FrameLayout>
