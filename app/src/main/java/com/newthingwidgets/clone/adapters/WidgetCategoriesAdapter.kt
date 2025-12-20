@@ -69,6 +69,7 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                 }
             }
             is BatteryViewHolder -> {
+                holder.bind()
                 holder.itemView.setOnClickListener { view ->
                     val context = view.context
                     val intent = Intent(context, WidgetDetailActivity::class.java).apply {
@@ -84,5 +85,25 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
 
     class NewlyAddedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     class AppsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-    class BatteryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class BatteryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val batteryPreview: android.widget.ImageView = itemView.findViewById(R.id.battery_preview)
+        
+        fun bind() {
+            // Dynamically render Battery Meter widget as preview
+            val context = itemView.context
+            try {
+                val bitmap = com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.renderWidgetPreview(
+                    context,
+                    "Battery Meter",
+                    targetSizeDp = 150
+                )
+                if (bitmap != null) {
+                    batteryPreview.setImageBitmap(bitmap)
+                }
+            } catch (e: Exception) {
+                // Fallback to static drawable
+                batteryPreview.setImageResource(R.drawable.bat_preview)
+            }
+        }
+    }
 }

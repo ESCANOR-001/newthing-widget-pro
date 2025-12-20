@@ -60,12 +60,12 @@
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\x.xml"
     },
     {
-        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_rounded_folder.xml.flat",
-        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\rounded_folder.xml"
-    },
-    {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\layout_battery_dot_matrix_widget.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\layout\\battery_dot_matrix_widget.xml"
+    },
+    {
+        "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_rounded_folder.xml.flat",
+        "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\rounded_folder.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\xml_battery_dot_matrix_widget_info.xml.flat",
@@ -182,10 +182,6 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\xml_app_launcher_widget_info.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\xml\\app_launcher_widget_info.xml"
-    },
-    {
-        "merged": "com.newthingwidgets.clone.app-debug-38:/layout_battery_meter_widget.xml.flat",
-        "source": "com.newthingwidgets.clone.app-main-40:/layout/battery_meter_widget.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\layout_item_newly_added_card.xml.flat",
@@ -478,6 +474,10 @@
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_hour_face_6.xml.flat",
         "source": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-main-40:\\drawable\\hour_face_6.xml"
+    },
+    {
+        "merged": "com.newthingwidgets.clone.app-debug-38:/layout_item_battery_card.xml.flat",
+        "source": "com.newthingwidgets.clone.app-main-40:/layout/item_battery_card.xml"
     },
     {
         "merged": "C:\\Users\\ADMIN\\.gradle\\daemon\\9.0-milestone-1\\com.newthingwidgets.clone.app-debug-38:\\drawable_mascot_red.xml.flat",
