@@ -58,6 +58,10 @@ class WidgetListAdapter(
                     // Battery Meter with horizontal segments
                     ComponentName(context, com.newthingwidgets.clone.widgets.BatteryMeterWidgetProvider::class.java)
                 }
+                widget.name == "Battery Dot Matrix" -> {
+                    // Battery Dot Matrix with dot grid
+                    ComponentName(context, com.newthingwidgets.clone.widgets.BatteryDotMatrixWidgetProvider::class.java)
+                }
                 else -> {
                     // Analog clock widgets
                     ComponentName(context, AnalogClockWidgetProvider::class.java)

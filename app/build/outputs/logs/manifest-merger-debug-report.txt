@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-166:12
-INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-166:12
+ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:2:1-179:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\5dc7286fe4ee7999632551765ea69602\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\37ecf920c934939be28824da2f25b2bf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\eae36dae97d9cc420928194300cfc765\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -106,8 +106,8 @@ ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\new
 	android:name
 		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:24:23-70
 application
-ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-164:19
-INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-164:19
+ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-177:19
+INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-177:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\5dc7286fe4ee7999632551765ea69602\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\5dc7286fe4ee7999632551765ea69602\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\37ecf920c934939be28824da2f25b2bf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -256,20 +256,28 @@ ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\new
 		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:144:13-36
 	android:name
 		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:143:13-63
-service#com.newthingwidgets.clone.services.WidgetUpdateService
-ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:155:9-162:19
+receiver#com.newthingwidgets.clone.widgets.BatteryDotMatrixWidgetProvider
+ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:155:9-165:20
+	android:label
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:158:13-54
 	android:exported
-		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:157:13-37
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:157:13-36
+	android:name
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:156:13-67
+service#com.newthingwidgets.clone.services.WidgetUpdateService
+ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:168:9-175:19
+	android:exported
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:170:13-37
 	android:foregroundServiceType
-		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:158:13-55
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:171:13-55
 	android:name
-		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:156:13-57
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:169:13-57
 property#android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE
-ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:159:13-161:50
+ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:13-174:50
 	android:value
-		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:161:17-47
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:174:17-47
 	android:name
-		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:160:17-76
+		ADDED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:173:17-76
 uses-sdk
 INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml

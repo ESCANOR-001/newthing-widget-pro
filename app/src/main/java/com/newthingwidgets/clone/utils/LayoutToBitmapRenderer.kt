@@ -34,7 +34,8 @@ object LayoutToBitmapRenderer {
         "Battery Square" to WidgetLayoutInfo(R.layout.square_battery_widget, 2, 2),
         "Battery Bolt" to WidgetLayoutInfo(R.layout.battery_bolt_widget, 2, 2),
         "Battery Status" to WidgetLayoutInfo(R.layout.battery_status_widget, 2, 2),
-        "Battery Meter" to WidgetLayoutInfo(R.layout.battery_meter_widget, 2, 2)
+        "Battery Meter" to WidgetLayoutInfo(R.layout.battery_meter_widget, 2, 2),
+        "Battery Dot Matrix" to WidgetLayoutInfo(R.layout.battery_dot_matrix_widget, 2, 2)
         // Battery 3 and Battery 4 use static drawables
     )
 
@@ -128,6 +129,7 @@ object LayoutToBitmapRenderer {
             "Battery Bolt" -> populateBatteryBoltWidget(view, context)
             "Battery Status" -> populateBatteryStatusWidget(view)
             "Battery Meter" -> populateBatteryMeterWidget(view, context)
+            "Battery Dot Matrix" -> populateBatteryDotMatrixWidget(view, context)
         }
     }
 
@@ -396,6 +398,67 @@ object LayoutToBitmapRenderer {
         
         // Draw percent sign
         canvas.drawText(percentSign, mainWidth.toFloat() + 4, mainBounds.height().toFloat() + 10, percentPaint)
+        
+        return bitmap
+    }
+
+    /**
+     * Populate Battery Dot Matrix widget with demo data
+     */
+    private fun populateBatteryDotMatrixWidget(view: View, context: Context) {
+        // Create dot matrix bitmap for preview
+        val dotMatrixBitmap = createDotMatrixPreviewBitmap(context, DEMO_BATTERY_PCT)
+        view.findViewById<ImageView>(R.id.dot_matrix_image)?.setImageBitmap(dotMatrixBitmap)
+    }
+
+    /**
+     * Create dot matrix bitmap for preview (10 columns × 10 rows = 100 dots)
+     */
+    private fun createDotMatrixPreviewBitmap(context: Context, batteryPct: Int): Bitmap {
+        val columns = 10
+        val rows = 10
+        
+        val density = context.resources.displayMetrics.density
+        val dotRadius = 8f * density
+        val dotSpacing = 18f * density
+        
+        // Calculate bitmap dimensions
+        val width = (columns * dotSpacing).toInt()
+        val height = (rows * dotSpacing).toInt()
+        
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        
+        // Paint for filled dots (red)
+        val filledPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = context.getColor(R.color.red_color)
+            style = android.graphics.Paint.Style.FILL
+        }
+        
+        // Paint for empty dots (gray)
+        val emptyPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF404040.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        
+        // Calculate how many dots should be EMPTY (from top)
+        val emptyDots = 100 - batteryPct
+        
+        // Draw dots row by row, empty from top, filled from bottom
+        var dotIndex = 0
+        for (row in 0 until rows) {
+            for (col in 0 until columns) {
+                val cx = (col * dotSpacing) + (dotSpacing / 2)
+                val cy = (row * dotSpacing) + (dotSpacing / 2)
+                
+                val paint = if (dotIndex < emptyDots) emptyPaint else filledPaint
+                canvas.drawCircle(cx, cy, dotRadius, paint)
+                
+                dotIndex++
+            }
+        }
         
         return bitmap
     }

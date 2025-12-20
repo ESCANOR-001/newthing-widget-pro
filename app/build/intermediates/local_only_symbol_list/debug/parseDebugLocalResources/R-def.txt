@@ -136,6 +136,9 @@ drawable deepseek
 drawable dial
 drawable digital_clock_rounded_info
 drawable discord
+drawable dot_matrix_bg
+drawable dot_matrix_empty
+drawable dot_matrix_filled
 drawable dot_white
 drawable facebook
 drawable file_manager
@@ -236,6 +239,8 @@ id charging_icon
 id charging_status
 id clear_search
 id custom_title
+id dot_matrix_card
+id dot_matrix_image
 id fragment_container
 id icon1
 id icon2
@@ -303,6 +308,7 @@ layout app_launcher_calendar_widget
 layout app_launcher_clock_widget
 layout app_launcher_widget
 layout battery_bolt_widget
+layout battery_dot_matrix_widget
 layout battery_meter_widget
 layout battery_status_widget
 layout charging_widget
@@ -327,6 +333,7 @@ xml analog5_widget_info
 xml analog_clock_widget_info
 xml app_launcher_widget_info
 xml battery_bolt_widget_info
+xml battery_dot_matrix_widget_info
 xml battery_meter_widget_info
 xml battery_status_widget_info
 xml charging_widget_info

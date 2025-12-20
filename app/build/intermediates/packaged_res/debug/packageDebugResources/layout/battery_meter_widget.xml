@@ -63,7 +63,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 2 (11-20%) -->
@@ -73,7 +73,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 3 (21-30%) -->
@@ -83,7 +83,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 4 (31-40%) -->
@@ -93,7 +93,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 5 (41-50%) -->
@@ -103,7 +103,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 6 (51-60%) -->
@@ -113,7 +113,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 7 (61-70%) -->
@@ -123,7 +123,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 8 (71-80%) -->
@@ -133,7 +133,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 9 (81-90%) -->
@@ -143,7 +143,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginEnd="3dp"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
                 <!-- Segment 10 (91-100%) -->
@@ -152,7 +152,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/battery_meter_segment_empty" />
 
             </LinearLayout>

@@ -104,9 +104,8 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Battery Status", "2x2", R.drawable.bat_preview),
                 // Battery Meter with horizontal segments
                 WidgetItem("Battery Meter", "2x2", R.drawable.bat_preview),
-                // Battery widgets
-                WidgetItem("Battery 3", "2x2", R.drawable.bat_dot),
-                WidgetItem("Battery 4", "2x2", R.drawable.bat_5)
+                // Battery Dot Matrix with dot grid
+                WidgetItem("Battery Dot Matrix", "2x2", R.drawable.bat_preview)
             )
             else -> listOf(
                 // Clocks
