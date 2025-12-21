@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.newthingwidgets.clone.R
 import com.newthingwidgets.clone.WidgetItem
 import com.newthingwidgets.clone.widgets.AnalogClockWidgetProvider
+import androidx.core.content.edit
 
 class WidgetListAdapter(
     private val widgets: List<WidgetItem>
@@ -62,6 +63,22 @@ class WidgetListAdapter(
                     // Battery Dot Matrix with dot grid
                     ComponentName(context, com.newthingwidgets.clone.widgets.BatteryDotMatrixWidgetProvider::class.java)
                 }
+                widget.name == "Date Time Matrix" -> {
+                    // Date Time Matrix calendar widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.DateTimeMatrixWidgetProvider::class.java)
+                }
+                widget.name == "Date Clock Widget" -> {
+                    // Date Clock Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.DateClockWidgetProvider::class.java)
+                }
+                widget.name == "Calendar Widget" -> {
+                    // Calendar Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.CalendarWidgetProvider::class.java)
+                }
+                widget.name == "Dot Matrix Clock" -> {
+                    // Dot Matrix Clock Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.DotMatrixClockWidgetProvider::class.java)
+                }
                 else -> {
                     // Analog clock widgets
                     ComponentName(context, AnalogClockWidgetProvider::class.java)
@@ -80,10 +97,10 @@ class WidgetListAdapter(
                             
                             // Store pending config in SharedPreferences with app name
                             val prefs = context.getSharedPreferences("PendingWidgetConfig", android.content.Context.MODE_PRIVATE)
-                            prefs.edit()
-                                .putString("pending_app_name", widget.name)
-                                .putInt("pending_drawable", appInfo.drawableRes)
-                                .apply()
+                            prefs.edit {
+                                putString("pending_app_name", widget.name)
+                                    .putInt("pending_drawable", appInfo.drawableRes)
+                            }
                             
                             appWidgetManager.requestPinAppWidget(componentName, null, null)
                         }
@@ -133,7 +150,7 @@ class WidgetListAdapter(
                     } else {
                         widgetPreview.setImageResource(widget.previewDrawable)
                     }
-                } catch (e: Exception) {
+                } catch (_: Exception) {
                     // Fallback to static drawable if rendering fails
                     widgetPreview.setImageResource(widget.previewDrawable)
                 }

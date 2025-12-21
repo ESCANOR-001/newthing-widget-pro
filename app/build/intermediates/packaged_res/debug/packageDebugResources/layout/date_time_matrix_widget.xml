@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:padding="8dp">
+
+    <!-- Main card background -->
+    <LinearLayout
+        android:id="@+id/datetime_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/date_time_matrix_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <!-- Day of week (e.g., "Wed") - rendered as bitmap -->
+        <ImageView
+            android:id="@+id/day_of_week_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="30dp"
+            android:contentDescription="Day of week"
+            tools:ignore="ContentDescription" />
+
+        <!-- Time (e.g., "12:12am") - rendered as bitmap in red -->
+        <ImageView
+            android:id="@+id/time_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="Time"
+            tools:ignore="ContentDescription" />
+
+        <!-- Month (e.g., "February") - rendered as bitmap -->
+        <ImageView
+            android:id="@+id/month_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="Month"
+            tools:ignore="ContentDescription" />
+
+        <!-- Date with suffix (e.g., "19th") - rendered as bitmap -->
+        <ImageView
+            android:id="@+id/date_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="Date"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+</FrameLayout>

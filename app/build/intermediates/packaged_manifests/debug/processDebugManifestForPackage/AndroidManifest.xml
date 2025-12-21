@@ -186,6 +186,91 @@
                 android:resource="@xml/battery_dot_matrix_widget_info" />
         </receiver>
 
+        <!-- Calendar Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
+            android:exported="true"
+            android:label="Calendar Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/calendar_widget_info" />
+        </receiver>
+
+        <!-- Date Time Matrix Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.DateTimeMatrixWidgetProvider"
+            android:exported="true"
+            android:label="Date Time Matrix Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/date_time_matrix_widget_info" />
+        </receiver>
+
+        <!-- Date Clock Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.DateClockWidgetProvider"
+            android:exported="true"
+            android:label="Date Clock Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/date_clock_widget_info" />
+        </receiver>
+
+        <!-- Calendar Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
+            android:exported="true"
+            android:label="Calendar Widget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/calendar_widget_info" />
+        </receiver>
+
+        <!-- Dot Matrix Clock Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.DotMatrixClockWidgetProvider"
+            android:exported="true"
+            android:label="Dot Matrix Clock" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dot_matrix_clock_widget_info" />
+        </receiver>
+
         <!-- Universal Widget Update Service -->
         <service
             android:name="com.newthingwidgets.clone.services.WidgetUpdateService"

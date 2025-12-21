@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="8dp">
+
+    <!-- Main card background -->
+    <RelativeLayout
+        android:id="@+id/clock_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/date_time_matrix_bg"
+        android:padding="16dp">
+
+        <!-- AM/PM pill (top-left) -->
+        <TextView
+            android:id="@+id/ampm_pill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ampm_pill_bg"
+            android:fontFamily="sans-serif"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:text="AM"
+            android:textColor="#1A1A1A"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="AM" />
+
+        <!-- Large time in background (right side) - rendered as bitmap for Nothing font -->
+        <ImageView
+            android:id="@+id/time_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Time"
+            tools:ignore="ContentDescription" />
+
+        <!-- Date (e.g., "NOVEMBER 25") - bottom left -->
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif"
+            android:text="NOVEMBER 25"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:text="NOVEMBER 25" />
+
+        <!-- Day of week (e.g., "Monday") - above date -->
+        <TextView
+            android:id="@+id/day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/date_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Monday"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="normal"
+            tools:text="Monday" />
+
+    </RelativeLayout>
+
+</FrameLayout>

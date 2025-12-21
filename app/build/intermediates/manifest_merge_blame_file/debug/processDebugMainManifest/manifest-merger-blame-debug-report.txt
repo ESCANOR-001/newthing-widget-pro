@@ -62,7 +62,7 @@
 37-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 38
 39    <application
-39-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-177:19
+39-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-257:19
 40        android:allowBackup="true"
 40-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:29:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -326,88 +326,253 @@
 186-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
 187        </receiver>
 188
-189        <!-- Universal Widget Update Service -->
-190        <service
-190-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:168:9-175:19
-191            android:name="com.newthingwidgets.clone.services.WidgetUpdateService"
-191-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:169:13-57
-192            android:exported="false"
-192-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:170:13-37
-193            android:foregroundServiceType="specialUse" >
-193-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:171:13-55
-194            <property
-194-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:13-174:50
-195                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-195-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:173:17-76
-196                android:value="widget_updates" />
-196-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:174:17-47
-197        </service>
-198
-199        <provider
-199-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-200            android:name="androidx.startup.InitializationProvider"
-200-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-201            android:authorities="com.newthingwidgets.clone.androidx-startup"
-201-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-202            android:exported="false" >
-202-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-203            <meta-data
-203-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-204                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-204-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-205                android:value="androidx.startup" />
-205-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-206            <meta-data
-206-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-207                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-207-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-208                android:value="androidx.startup" />
-208-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-209            <meta-data
-209-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-210                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-210-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-211                android:value="androidx.startup" />
-211-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-212        </provider>
-213
-214        <receiver
-214-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-215            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-215-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-216            android:directBootAware="false"
-216-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-217            android:enabled="true"
-217-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-218            android:exported="true"
-218-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-219            android:permission="android.permission.DUMP" >
-219-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-220            <intent-filter>
-220-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-221                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-221-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-221-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-222            </intent-filter>
-223            <intent-filter>
-223-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-224                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-224-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-224-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-225            </intent-filter>
-226            <intent-filter>
-226-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-227                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-227-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-227-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-228            </intent-filter>
-229            <intent-filter>
-229-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-230                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
-231            </intent-filter>
-232        </receiver>
-233    </application>
+189        <!-- Calendar Widget Provider -->
+190        <receiver
+190-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:168:9-181:20
+191            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
+191-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:169:13-59
+192            android:exported="true"
+192-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:170:13-36
+193            android:label="Calendar Widget" >
+193-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:171:13-44
+194            <intent-filter>
+194-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:13-177:29
+195                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+195-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
+195-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
+196                <action android:name="android.intent.action.DATE_CHANGED" />
+196-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:17-77
+196-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:25-74
+197                <action android:name="android.intent.action.TIME_SET" />
+197-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
+197-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
+198                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+198-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
+198-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
+199            </intent-filter>
+200
+201            <meta-data
+201-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
+202                android:name="android.appwidget.provider"
+202-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
+203                android:resource="@xml/calendar_widget_info" />
+203-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
+204        </receiver>
+205
+206        <!-- Date Time Matrix Widget Provider -->
+207        <receiver
+207-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:184:9-197:20
+208            android:name="com.newthingwidgets.clone.widgets.DateTimeMatrixWidgetProvider"
+208-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:185:13-65
+209            android:exported="true"
+209-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:186:13-36
+210            android:label="Date Time Matrix Widget" >
+210-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:187:13-52
+211            <intent-filter>
+211-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:13-193:29
+212                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+212-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
+212-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
+213                <action android:name="android.intent.action.TIME_TICK" />
+213-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:17-74
+213-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:25-71
+214                <action android:name="android.intent.action.TIME_SET" />
+214-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
+214-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
+215                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+215-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
+215-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
+216            </intent-filter>
+217
+218            <meta-data
+218-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
+219                android:name="android.appwidget.provider"
+219-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
+220                android:resource="@xml/date_time_matrix_widget_info" />
+220-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
+221        </receiver>
+222
+223        <!-- Date Clock Widget Provider -->
+224        <receiver
+224-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:200:9-213:20
+225            android:name="com.newthingwidgets.clone.widgets.DateClockWidgetProvider"
+225-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:201:13-60
+226            android:exported="true"
+226-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:202:13-36
+227            android:label="Date Clock Widget" >
+227-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:203:13-46
+228            <intent-filter>
+228-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:13-193:29
+229                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+229-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
+229-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
+230                <action android:name="android.intent.action.TIME_TICK" />
+230-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:17-74
+230-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:25-71
+231                <action android:name="android.intent.action.TIME_SET" />
+231-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
+231-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
+232                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+232-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
+232-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
+233            </intent-filter>
 234
-235</manifest>
+235            <meta-data
+235-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
+236                android:name="android.appwidget.provider"
+236-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
+237                android:resource="@xml/date_clock_widget_info" />
+237-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
+238        </receiver>
+239
+240        <!-- Calendar Widget Provider -->
+241        <receiver
+241-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:168:9-181:20
+242            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
+242-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:169:13-59
+243            android:exported="true"
+243-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:170:13-36
+244            android:label="Calendar Widget" >
+244-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:171:13-44
+245            <intent-filter>
+245-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:13-177:29
+246                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+246-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
+246-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
+247                <action android:name="android.intent.action.DATE_CHANGED" />
+247-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:17-77
+247-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:25-74
+248                <action android:name="android.intent.action.TIME_SET" />
+248-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
+248-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
+249                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+249-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
+249-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
+250            </intent-filter>
+251
+252            <meta-data
+252-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
+253                android:name="android.appwidget.provider"
+253-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
+254                android:resource="@xml/calendar_widget_info" />
+254-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
+255        </receiver>
+256
+257        <!-- Dot Matrix Clock Widget Provider -->
+258        <receiver
+258-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:232:9-245:20
+259            android:name="com.newthingwidgets.clone.widgets.DotMatrixClockWidgetProvider"
+259-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:233:13-65
+260            android:exported="true"
+260-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:234:13-36
+261            android:label="Dot Matrix Clock" >
+261-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:235:13-45
+262            <intent-filter>
+262-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:13-193:29
+263                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+263-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
+263-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
+264                <action android:name="android.intent.action.TIME_TICK" />
+264-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:17-74
+264-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:25-71
+265                <action android:name="android.intent.action.TIME_SET" />
+265-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
+265-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
+266                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+266-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
+266-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
+267            </intent-filter>
+268
+269            <meta-data
+269-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
+270                android:name="android.appwidget.provider"
+270-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
+271                android:resource="@xml/dot_matrix_clock_widget_info" />
+271-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
+272        </receiver>
+273
+274        <!-- Universal Widget Update Service -->
+275        <service
+275-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:248:9-255:19
+276            android:name="com.newthingwidgets.clone.services.WidgetUpdateService"
+276-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:249:13-57
+277            android:exported="false"
+277-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:250:13-37
+278            android:foregroundServiceType="specialUse" >
+278-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:251:13-55
+279            <property
+279-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:252:13-254:50
+280                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+280-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:253:17-76
+281                android:value="widget_updates" />
+281-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:254:17-47
+282        </service>
+283
+284        <provider
+284-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+285            android:name="androidx.startup.InitializationProvider"
+285-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+286            android:authorities="com.newthingwidgets.clone.androidx-startup"
+286-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+287            android:exported="false" >
+287-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+288            <meta-data
+288-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+289                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+289-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+290                android:value="androidx.startup" />
+290-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+291            <meta-data
+291-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+292                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+292-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+293                android:value="androidx.startup" />
+293-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+294            <meta-data
+294-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+295                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+295-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+296                android:value="androidx.startup" />
+296-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+297        </provider>
+298
+299        <receiver
+299-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+300            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+300-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+301            android:directBootAware="false"
+301-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+302            android:enabled="true"
+302-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+303            android:exported="true"
+303-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+304            android:permission="android.permission.DUMP" >
+304-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+305            <intent-filter>
+305-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+306                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+306-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+306-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+307            </intent-filter>
+308            <intent-filter>
+308-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+309                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+309-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+309-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+310            </intent-filter>
+311            <intent-filter>
+311-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+312                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+312-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+312-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+313            </intent-filter>
+314            <intent-filter>
+314-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+315                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+315-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+315-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+316            </intent-filter>
+317        </receiver>
+318    </application>
+319
+320</manifest>

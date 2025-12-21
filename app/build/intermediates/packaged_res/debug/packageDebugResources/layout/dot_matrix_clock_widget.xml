@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center">
+
+    <!-- Main card background -->
+    <LinearLayout
+        android:id="@+id/clock_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/weekly_calendar_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Day of week (e.g., "SUNDAY") - sans-serif, white, centered -->
+        <TextView
+            android:id="@+id/day_of_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.1"
+            android:text="SUNDAY"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            tools:text="SUNDAY" />
+
+        <!-- Large time (Nothing font, red) - rendered as bitmap -->
+        <ImageView
+            android:id="@+id/time_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Time"
+            tools:ignore="ContentDescription" />
+
+        <!-- Date (e.g., "21 DEC 2025") - sans-serif, white, centered -->
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.1"
+            android:text="21 DEC 2025"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            tools:text="21 DEC 2025" />
+
+    </LinearLayout>
+
+</FrameLayout>

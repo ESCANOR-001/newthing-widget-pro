@@ -14,16 +14,18 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
         private const val VIEW_TYPE_NEWLY_ADDED = 0
         private const val VIEW_TYPE_APPS = 1
         private const val VIEW_TYPE_BATTERY = 2
+        private const val VIEW_TYPE_CALENDAR = 3
     }
 
-    // Show Newly Added, Apps, and Battery cards
-    private val itemCount = 3
+    // Show Newly Added, Apps, Battery, and Calendar cards
+    private val itemCount = 4
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
             0 -> VIEW_TYPE_NEWLY_ADDED
             1 -> VIEW_TYPE_APPS
             2 -> VIEW_TYPE_BATTERY
+            3 -> VIEW_TYPE_CALENDAR
             else -> VIEW_TYPE_NEWLY_ADDED
         }
     }
@@ -39,6 +41,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.item_battery_card, parent, false)
                 BatteryViewHolder(view)
+            }
+            VIEW_TYPE_CALENDAR -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_calendar_card, parent, false)
+                CalendarViewHolder(view)
             }
             else -> {
                 val view = LayoutInflater.from(parent.context)
@@ -78,6 +85,16 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                     context.startActivity(intent)
                 }
             }
+            is CalendarViewHolder -> {
+                holder.bind()
+                holder.itemView.setOnClickListener { view ->
+                    val context = view.context
+                    val intent = Intent(context, WidgetDetailActivity::class.java).apply {
+                        putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Calendar")
+                    }
+                    context.startActivity(intent)
+                }
+            }
         }
     }
 
@@ -103,6 +120,28 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             } catch (e: Exception) {
                 // Fallback to static drawable
                 batteryPreview.setImageResource(R.drawable.bat_preview)
+            }
+        }
+    }
+    
+    class CalendarViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val calendarPreview: android.widget.ImageView = itemView.findViewById(R.id.calendar_preview)
+        
+        fun bind() {
+            // Dynamically render Calendar widget as preview
+            val context = itemView.context
+            try {
+                val bitmap = com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.renderWidgetPreview(
+                    context,
+                    "Calendar Widget",
+                    targetSizeDp = 150
+                )
+                if (bitmap != null) {
+                    calendarPreview.setImageBitmap(bitmap)
+                }
+            } catch (e: Exception) {
+                // Fallback to static drawable
+                calendarPreview.setImageResource(R.drawable.cal_01)
             }
         }
     }

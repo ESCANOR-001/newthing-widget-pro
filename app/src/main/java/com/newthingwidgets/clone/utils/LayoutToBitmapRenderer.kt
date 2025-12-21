@@ -35,8 +35,12 @@ object LayoutToBitmapRenderer {
         "Battery Bolt" to WidgetLayoutInfo(R.layout.battery_bolt_widget, 2, 2),
         "Battery Status" to WidgetLayoutInfo(R.layout.battery_status_widget, 2, 2),
         "Battery Meter" to WidgetLayoutInfo(R.layout.battery_meter_widget, 2, 2),
-        "Battery Dot Matrix" to WidgetLayoutInfo(R.layout.battery_dot_matrix_widget, 2, 2)
-        // Battery 3 and Battery 4 use static drawables
+        "Battery Dot Matrix" to WidgetLayoutInfo(R.layout.battery_dot_matrix_widget, 2, 2),
+        "Date Time Matrix" to WidgetLayoutInfo(R.layout.date_time_matrix_widget, 2, 2),
+        "Date Clock Widget" to WidgetLayoutInfo(R.layout.date_clock_widget, 3, 2),
+        "Weekly Calendar Widget" to WidgetLayoutInfo(R.layout.weekly_calendar_widget, 2, 2),
+        "Calendar Widget" to WidgetLayoutInfo(R.layout.calendar_widget, 2, 2),
+        "Dot Matrix Clock" to WidgetLayoutInfo(R.layout.dot_matrix_clock_widget, 2, 2)
     )
 
     // Base cell size in dp - use larger size to render elements at proper proportions
@@ -130,6 +134,11 @@ object LayoutToBitmapRenderer {
             "Battery Status" -> populateBatteryStatusWidget(view)
             "Battery Meter" -> populateBatteryMeterWidget(view, context)
             "Battery Dot Matrix" -> populateBatteryDotMatrixWidget(view, context)
+            "Date Time Matrix" -> populateDateTimeMatrixWidget(view, context)
+            "Date Clock Widget" -> populateDateClockWidget(view, context)
+            "Weekly Calendar Widget" -> populateWeeklyCalendarWidget(view, context)
+            "Calendar Widget" -> populateWeeklyCalendarWidget(view, context)
+            "Dot Matrix Clock" -> populateDotMatrixClockWidget(view, context)
         }
     }
 
@@ -461,5 +470,254 @@ object LayoutToBitmapRenderer {
         }
         
         return bitmap
+    }
+
+    /**
+     * Populate Date Time Matrix widget with demo data
+     */
+    private fun populateDateTimeMatrixWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        
+        // Demo data - show example date/time
+        val dayOfWeek = "Wed"
+        val time = "12:12am"
+        val month = "February"
+        val dateWithSuffix = "19th"
+        
+        // Load custom font
+        val typeface = try {
+            androidx.core.content.res.ResourcesCompat.getFont(context, R.font.nothing_5_7)
+        } catch (e: Exception) {
+            null
+        }
+        
+        // Create bitmaps for each text element
+        val whiteColor = 0xFFFFFFFF.toInt()
+        val redColor = context.getColor(R.color.red_color)
+        
+        val dayBitmap = createPreviewTextBitmap(dayOfWeek, 28f * density, whiteColor, typeface)
+        val timeBitmap = createPreviewTextBitmap(time, 42f * density, redColor, typeface)
+        val monthBitmap = createPreviewTextBitmap(month, 28f * density, whiteColor, typeface)
+        val dateBitmap = createPreviewTextBitmap(dateWithSuffix, 28f * density, whiteColor, typeface)
+        
+        // Set bitmaps to ImageViews
+        view.findViewById<ImageView>(R.id.day_of_week_image)?.setImageBitmap(dayBitmap)
+        view.findViewById<ImageView>(R.id.time_image)?.setImageBitmap(timeBitmap)
+        view.findViewById<ImageView>(R.id.month_image)?.setImageBitmap(monthBitmap)
+        view.findViewById<ImageView>(R.id.date_image)?.setImageBitmap(dateBitmap)
+    }
+
+    /**
+     * Create text bitmap for preview with specified font
+     */
+    private fun createPreviewTextBitmap(
+        text: String,
+        textSize: Float,
+        textColor: Int,
+        typeface: android.graphics.Typeface?
+    ): Bitmap {
+        val paint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            this.textSize = textSize
+            color = textColor
+            this.typeface = typeface
+        }
+        
+        // Measure text
+        val bounds = android.graphics.Rect()
+        paint.getTextBounds(text, 0, text.length, bounds)
+        val textWidth = paint.measureText(text).toInt()
+        val textHeight = bounds.height()
+        
+        // Create bitmap with padding
+        val padding = 4
+        val bitmap = Bitmap.createBitmap(
+            (textWidth + padding * 2).coerceAtLeast(1),
+            (textHeight + padding * 2).coerceAtLeast(1),
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        
+        // Draw text
+        canvas.drawText(text, padding.toFloat(), textHeight.toFloat() + padding, paint)
+        
+        return bitmap
+    }
+
+    /**
+     * Populate Date Clock Widget with demo data
+     */
+    private fun populateDateClockWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        
+        // Demo data
+        val amPm = "PM"
+        val time = "6:26"
+        val dayOfWeek = "Monday"
+        val dateText = "NOVEMBER 25"
+        
+        // Set text views
+        view.findViewById<TextView>(R.id.ampm_pill)?.text = amPm
+        view.findViewById<TextView>(R.id.day_text)?.text = dayOfWeek
+        view.findViewById<TextView>(R.id.date_text)?.text = dateText
+        
+        // Create time bitmap with Nothing font and reduced opacity red
+        val typeface = try {
+            androidx.core.content.res.ResourcesCompat.getFont(context, R.font.nothing_5_7)
+        } catch (e: Exception) {
+            null
+        }
+        
+        val timeColor = 0x66E53935.toInt()  // 40% opacity red
+        val textSize = 80f * density
+        
+        val paint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            this.textSize = textSize
+            color = timeColor
+            this.typeface = typeface
+        }
+        
+        val bounds = android.graphics.Rect()
+        paint.getTextBounds(time, 0, time.length, bounds)
+        val textWidth = paint.measureText(time).toInt()
+        val textHeight = bounds.height()
+        
+        val padding = (8 * density).toInt()
+        val bitmap = Bitmap.createBitmap(
+            (textWidth + padding * 2).coerceAtLeast(1),
+            (textHeight + padding * 2).coerceAtLeast(1),
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        canvas.drawText(time, padding.toFloat(), textHeight.toFloat() + padding, paint)
+        
+        view.findViewById<ImageView>(R.id.time_image)?.setImageBitmap(bitmap)
+    }
+
+    /**
+     * Populate Weekly Calendar Widget with demo data (full month view)
+     */
+    private fun populateWeeklyCalendarWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        
+        // Demo data - December 21
+        val monthName = "December"
+        val currentDay = 21
+        val daysInMonth = 31
+        val firstDayOffset = 0 // December 2024 starts on Sunday (0 offset)
+        
+        // Create month bitmap with Nothing font
+        val typeface = try {
+            androidx.core.content.res.ResourcesCompat.getFont(context, R.font.nothing_5_7)
+        } catch (e: Exception) {
+            null
+        }
+        
+        val whiteColor = 0xFFFFFFFF.toInt()
+        val textSize = 36f * density
+        
+        val paint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            this.textSize = textSize
+            color = whiteColor
+            this.typeface = typeface
+        }
+        
+        val bounds = android.graphics.Rect()
+        paint.getTextBounds(monthName, 0, monthName.length, bounds)
+        val textWidth = paint.measureText(monthName).toInt()
+        val textHeight = bounds.height()
+        
+        val padding = (4 * density).toInt()
+        val bitmap = Bitmap.createBitmap(
+            (textWidth + padding * 2).coerceAtLeast(1),
+            (textHeight + padding * 2).coerceAtLeast(1),
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        canvas.drawText(monthName, padding.toFloat(), textHeight.toFloat() + padding, paint)
+        
+        view.findViewById<ImageView>(R.id.month_image)?.setImageBitmap(bitmap)
+        
+        // Set day number (red)
+        view.findViewById<TextView>(R.id.day_number)?.text = currentDay.toString()
+        
+        // Populate 31 grid cells (only show current month days)
+        val dayIds = listOf(
+            R.id.day_1, R.id.day_2, R.id.day_3, R.id.day_4, R.id.day_5, R.id.day_6, R.id.day_7,
+            R.id.day_8, R.id.day_9, R.id.day_10, R.id.day_11, R.id.day_12, R.id.day_13, R.id.day_14,
+            R.id.day_15, R.id.day_16, R.id.day_17, R.id.day_18, R.id.day_19, R.id.day_20, R.id.day_21,
+            R.id.day_22, R.id.day_23, R.id.day_24, R.id.day_25, R.id.day_26, R.id.day_27, R.id.day_28,
+            R.id.day_29, R.id.day_30, R.id.day_31
+        )
+        
+        for (i in 0 until 31) {
+            val dayView = view.findViewById<TextView>(dayIds[i])
+            val dayNum = i + 1
+            
+            if (dayNum <= daysInMonth) {
+                dayView?.text = dayNum.toString()
+                if (dayNum == currentDay) {
+                    dayView?.setBackgroundResource(R.drawable.current_day_bg)
+                    dayView?.setTextColor(0xFF1A1A1A.toInt())
+                } else {
+                    dayView?.setTextColor(whiteColor)
+                }
+            } else {
+                dayView?.text = ""
+            }
+        }
+    }
+
+    /**
+     * Populate Dot Matrix Clock Widget with demo data
+     */
+    private fun populateDotMatrixClockWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        
+        // Demo data
+        val dayOfWeek = "SUNDAY"
+        val time = "10:51"
+        val date = "21 DEC 2025"
+        
+        // Set day of week
+        view.findViewById<TextView>(R.id.day_of_week)?.text = dayOfWeek
+        
+        // Set date
+        view.findViewById<TextView>(R.id.date_text)?.text = date
+        
+        // Create time bitmap with Nothing font
+        val typeface = try {
+            androidx.core.content.res.ResourcesCompat.getFont(context, R.font.nothing_5_7)
+        } catch (e: Exception) {
+            null
+        }
+        
+        val redColor = 0xFFE53935.toInt()
+        val textSize = 72f * density
+        
+        val paint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            this.textSize = textSize
+            color = redColor
+            this.typeface = typeface
+        }
+        
+        val bounds = android.graphics.Rect()
+        paint.getTextBounds(time, 0, time.length, bounds)
+        val textWidth = paint.measureText(time).toInt()
+        val textHeight = bounds.height()
+        
+        val padding = (8 * density).toInt()
+        val bitmap = Bitmap.createBitmap(
+            (textWidth + padding * 2).coerceAtLeast(1),
+            (textHeight + padding * 2).coerceAtLeast(1),
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        canvas.drawText(time, padding.toFloat(), textHeight.toFloat() + padding, paint)
+        
+        view.findViewById<ImageView>(R.id.time_image)?.setImageBitmap(bitmap)
     }
 }

@@ -107,6 +107,16 @@ class WidgetDetailActivity : AppCompatActivity() {
                 // Battery Dot Matrix with dot grid
                 WidgetItem("Battery Dot Matrix", "2x2", R.drawable.bat_preview)
             )
+            "Calendar" -> listOf(
+                // Date Time Matrix with day, time, month, date
+                WidgetItem("Date Time Matrix", "2x2", R.drawable.cal_01),
+                // Date Clock Widget with AM/PM, large time, day, date
+                WidgetItem("Date Clock Widget", "3x2", R.drawable.cal_01),
+                // Calendar Widget with month grid
+                WidgetItem("Calendar Widget", "2x2", R.drawable.cal_01),
+                // Dot Matrix Clock with large time display
+                WidgetItem("Dot Matrix Clock", "2x2", R.drawable.cal_01)
+            )
             else -> listOf(
                 // Clocks
                 WidgetItem("Analog Clock 2", "2x2", R.drawable.analog_2),
