@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Minute Hand (Gray, Thin, Long with back extension) - Extends across center -->
+    <!-- Width: 5dp, Long end goes UP toward 12, short back end past center -->
+    <path
+        android:fillColor="#808080"
+        android:pathData="M82.5,85 L82.5,30 A2.5,2.5 0 0 1 87.5,30 L87.5,85 A2.5,2.5 0 0 1 82.5,85 Z"/>
+</vector>

@@ -35,544 +35,633 @@
 22-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:18:5-81
 22-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:18:22-78
 23
-24    <!-- Declare intent queries for launching apps -->
-25    <queries>
-25-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:21:5-26:15
-26        <intent>
-26-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:22:9-25:18
-27            <action android:name="android.intent.action.MAIN" />
-27-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:23:13-65
-27-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:23:21-62
-28
-29            <category android:name="android.intent.category.LAUNCHER" />
-29-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:24:13-73
-29-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:24:23-70
-30        </intent>
-31    </queries>
+24    <!-- Required for precise clock widget updates -->
+25    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+25-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:21:5-79
+25-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:21:22-76
+26    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+26-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:22:5-74
+26-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:22:22-71
+27
+28    <!-- Declare intent queries for launching apps -->
+29    <queries>
+29-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:25:5-30:15
+30        <intent>
+30-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:26:9-29:18
+31            <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:27:13-65
+31-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:27:21-62
 32
-33    <permission
-33-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
-34        android:name="com.newthingwidgets.clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-34-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-35        android:protectionLevel="signature" />
-35-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+33            <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:13-73
+33-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:23-70
+34        </intent>
+35    </queries>
 36
-37    <uses-permission android:name="com.newthingwidgets.clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-37-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-37-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
-38
-39    <application
-39-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:5-257:19
-40        android:allowBackup="true"
-40-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:29:9-35
-41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-41-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
-42        android:debuggable="true"
-43        android:extractNativeLibs="false"
-44        android:label="@string/app_name"
-44-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:30:9-41
-45        android:supportsRtl="true"
-45-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:31:9-35
-46        android:testOnly="true"
-47        android:theme="@style/AppTheme" >
-47-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:32:9-40
-48        <activity
-48-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:34:9-42:20
-49            android:name="com.newthingwidgets.clone.MainActivity"
-49-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:35:13-41
-50            android:exported="true"
-50-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:36:13-36
-51            android:theme="@style/AppTheme" >
-51-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:37:13-44
-52            <intent-filter>
-52-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:38:13-41:29
-53                <action android:name="android.intent.action.MAIN" />
-53-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:23:13-65
-53-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:23:21-62
-54
-55                <category android:name="android.intent.category.LAUNCHER" />
-55-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:24:13-73
-55-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:24:23-70
-56            </intent-filter>
-57        </activity>
-58        <activity
-58-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:44:9-47:47
-59            android:name="com.newthingwidgets.clone.WidgetDetailActivity"
-59-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:45:13-49
-60            android:exported="false"
-60-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:46:13-37
-61            android:theme="@style/AppTheme" />
-61-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:47:13-44
-62
-63        <!-- Analog Clock Widget Provider -->
-64        <receiver
-64-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:50:9-60:20
-65            android:name="com.newthingwidgets.clone.widgets.AnalogClockWidgetProvider"
-65-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:51:13-62
-66            android:exported="true"
-66-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:52:13-36
-67            android:label="Analog Clock" >
-67-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:53:13-41
-68            <intent-filter>
-68-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-69                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-69-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-69-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-70            </intent-filter>
-71
-72            <meta-data
-72-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-73                android:name="android.appwidget.provider"
-73-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-74                android:resource="@xml/analog_clock_widget_info" />
-74-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-75        </receiver>
-76
-77        <!-- App Launcher Widget Provider -->
-78        <receiver
-78-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:9-77:20
-79            android:name="com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider"
-79-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:64:13-62
-80            android:exported="true"
-80-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:65:13-36
-81            android:label="App Launcher" >
-81-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:66:13-41
-82            <intent-filter>
-82-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:67:13-73:29
-83                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-83-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-83-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-84                <action android:name="com.newthingwidgets.clone.ACTION_LAUNCH_APP" />
-84-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:69:17-86
-84-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:69:25-83
-85                <action android:name="android.intent.action.DATE_CHANGED" />
-85-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:17-77
-85-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:25-74
-86                <action android:name="android.intent.action.TIME_SET" />
-86-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
-86-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
-87                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-87-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
-87-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
-88            </intent-filter>
-89
-90            <meta-data
-90-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-91                android:name="android.appwidget.provider"
-91-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-92                android:resource="@xml/app_launcher_widget_info" />
-92-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-93        </receiver>
-94
-95        <!-- Charging Widget Provider -->
-96        <receiver
-96-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:80:9-90:20
-97            android:name="com.newthingwidgets.clone.widgets.ChargingWidgetProvider"
-97-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:81:13-59
-98            android:exported="true"
-98-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:82:13-36
-99            android:label="Charging Widget" >
-99-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:83:13-44
-100            <intent-filter>
-100-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-101                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-101-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-101-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-102            </intent-filter>
-103
-104            <meta-data
-104-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-105                android:name="android.appwidget.provider"
-105-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-106                android:resource="@xml/charging_widget_info" />
-106-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-107        </receiver>
-108
-109        <!-- Battery State Receiver for Charging Widget updates -->
-110        <receiver
-110-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:93:9-100:20
-111            android:name="com.newthingwidgets.clone.widgets.BatteryStateReceiver"
-111-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:94:13-57
-112            android:exported="true" >
-112-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:95:13-36
-113            <intent-filter>
-113-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:96:13-99:29
-114                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-114-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:97:17-87
-114-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:97:25-84
-115                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-115-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:98:17-90
-115-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:98:25-87
-116            </intent-filter>
-117        </receiver>
-118
-119        <!-- Square Battery Widget Provider -->
-120        <receiver
-120-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:103:9-113:20
-121            android:name="com.newthingwidgets.clone.widgets.SquareBatteryWidgetProvider"
-121-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:104:13-64
-122            android:exported="true"
-122-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:105:13-36
-123            android:label="Square Battery Widget" >
-123-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:106:13-50
-124            <intent-filter>
-124-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-125                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-125-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-125-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-126            </intent-filter>
-127
-128            <meta-data
-128-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-129                android:name="android.appwidget.provider"
-129-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-130                android:resource="@xml/square_battery_widget_info" />
-130-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-131        </receiver>
-132
-133        <!-- Battery Bolt Widget Provider -->
-134        <receiver
-134-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:116:9-126:20
-135            android:name="com.newthingwidgets.clone.widgets.BatteryBoltWidgetProvider"
-135-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:117:13-62
-136            android:exported="true"
-136-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:118:13-36
-137            android:label="Battery Bolt Widget" >
-137-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:119:13-48
-138            <intent-filter>
-138-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-139                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-139-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-139-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-140            </intent-filter>
-141
-142            <meta-data
-142-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-143                android:name="android.appwidget.provider"
-143-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-144                android:resource="@xml/battery_bolt_widget_info" />
-144-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-145        </receiver>
-146
-147        <!-- Battery Status Widget Provider -->
-148        <receiver
-148-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:129:9-139:20
-149            android:name="com.newthingwidgets.clone.widgets.BatteryStatusWidgetProvider"
-149-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:130:13-64
-150            android:exported="true"
-150-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:131:13-36
-151            android:label="Battery Status Widget" >
-151-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:132:13-50
-152            <intent-filter>
-152-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-153                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-153-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-153-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-154            </intent-filter>
-155
-156            <meta-data
-156-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-157                android:name="android.appwidget.provider"
-157-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-158                android:resource="@xml/battery_status_widget_info" />
-158-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-159        </receiver>
-160
-161        <!-- Battery Meter Widget Provider -->
-162        <receiver
-162-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:142:9-152:20
-163            android:name="com.newthingwidgets.clone.widgets.BatteryMeterWidgetProvider"
-163-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:143:13-63
-164            android:exported="true"
-164-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:144:13-36
-165            android:label="Battery Meter Widget" >
-165-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:145:13-49
-166            <intent-filter>
-166-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-167                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-167-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-167-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-168            </intent-filter>
-169
-170            <meta-data
-170-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-171                android:name="android.appwidget.provider"
-171-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-172                android:resource="@xml/battery_meter_widget_info" />
-172-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-173        </receiver>
-174
-175        <!-- Battery Dot Matrix Widget Provider -->
-176        <receiver
-176-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:155:9-165:20
-177            android:name="com.newthingwidgets.clone.widgets.BatteryDotMatrixWidgetProvider"
-177-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:156:13-67
-178            android:exported="true"
-178-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:157:13-36
-179            android:label="Battery Dot Matrix Widget" >
-179-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:158:13-54
-180            <intent-filter>
-180-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:13-56:29
-181                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-181-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-181-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-182            </intent-filter>
-183
-184            <meta-data
-184-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-185                android:name="android.appwidget.provider"
-185-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-186                android:resource="@xml/battery_dot_matrix_widget_info" />
-186-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-187        </receiver>
-188
-189        <!-- Calendar Widget Provider -->
-190        <receiver
-190-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:168:9-181:20
-191            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
-191-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:169:13-59
-192            android:exported="true"
-192-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:170:13-36
-193            android:label="Calendar Widget" >
-193-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:171:13-44
-194            <intent-filter>
-194-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:13-177:29
-195                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-195-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-195-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-196                <action android:name="android.intent.action.DATE_CHANGED" />
-196-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:17-77
-196-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:25-74
-197                <action android:name="android.intent.action.TIME_SET" />
-197-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
-197-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
-198                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-198-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
-198-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
-199            </intent-filter>
-200
-201            <meta-data
-201-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-202                android:name="android.appwidget.provider"
-202-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-203                android:resource="@xml/calendar_widget_info" />
-203-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-204        </receiver>
-205
-206        <!-- Date Time Matrix Widget Provider -->
-207        <receiver
-207-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:184:9-197:20
-208            android:name="com.newthingwidgets.clone.widgets.DateTimeMatrixWidgetProvider"
-208-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:185:13-65
-209            android:exported="true"
-209-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:186:13-36
-210            android:label="Date Time Matrix Widget" >
-210-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:187:13-52
-211            <intent-filter>
-211-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:13-193:29
-212                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-212-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-212-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-213                <action android:name="android.intent.action.TIME_TICK" />
-213-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:17-74
-213-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:25-71
-214                <action android:name="android.intent.action.TIME_SET" />
-214-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
-214-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
-215                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-215-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
-215-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
-216            </intent-filter>
-217
-218            <meta-data
-218-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-219                android:name="android.appwidget.provider"
-219-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-220                android:resource="@xml/date_time_matrix_widget_info" />
-220-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-221        </receiver>
-222
-223        <!-- Date Clock Widget Provider -->
-224        <receiver
-224-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:200:9-213:20
-225            android:name="com.newthingwidgets.clone.widgets.DateClockWidgetProvider"
-225-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:201:13-60
-226            android:exported="true"
-226-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:202:13-36
-227            android:label="Date Clock Widget" >
-227-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:203:13-46
-228            <intent-filter>
-228-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:13-193:29
-229                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-229-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-229-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-230                <action android:name="android.intent.action.TIME_TICK" />
-230-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:17-74
-230-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:25-71
-231                <action android:name="android.intent.action.TIME_SET" />
-231-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
-231-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
-232                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-232-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
-232-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
-233            </intent-filter>
-234
-235            <meta-data
-235-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-236                android:name="android.appwidget.provider"
-236-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-237                android:resource="@xml/date_clock_widget_info" />
-237-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-238        </receiver>
-239
-240        <!-- Calendar Widget Provider -->
-241        <receiver
-241-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:168:9-181:20
-242            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
-242-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:169:13-59
-243            android:exported="true"
-243-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:170:13-36
-244            android:label="Calendar Widget" >
-244-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:171:13-44
-245            <intent-filter>
-245-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:13-177:29
-246                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-246-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-246-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-247                <action android:name="android.intent.action.DATE_CHANGED" />
-247-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:17-77
-247-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:25-74
-248                <action android:name="android.intent.action.TIME_SET" />
-248-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
-248-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
-249                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-249-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
-249-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
-250            </intent-filter>
-251
-252            <meta-data
-252-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-253                android:name="android.appwidget.provider"
-253-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-254                android:resource="@xml/calendar_widget_info" />
-254-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-255        </receiver>
-256
-257        <!-- Dot Matrix Clock Widget Provider -->
-258        <receiver
-258-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:232:9-245:20
-259            android:name="com.newthingwidgets.clone.widgets.DotMatrixClockWidgetProvider"
-259-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:233:13-65
-260            android:exported="true"
-260-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:234:13-36
-261            android:label="Dot Matrix Clock" >
-261-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:235:13-45
-262            <intent-filter>
-262-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:13-193:29
-263                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-263-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:17-84
-263-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:25-81
-264                <action android:name="android.intent.action.TIME_TICK" />
-264-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:17-74
-264-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:25-71
-265                <action android:name="android.intent.action.TIME_SET" />
-265-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:17-73
-265-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:25-70
-266                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-266-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:17-81
-266-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:72:25-78
-267            </intent-filter>
-268
-269            <meta-data
-269-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-59:68
-270                android:name="android.appwidget.provider"
-270-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:17-58
-271                android:resource="@xml/dot_matrix_clock_widget_info" />
-271-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-65
-272        </receiver>
-273
-274        <!-- Universal Widget Update Service -->
-275        <service
-275-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:248:9-255:19
-276            android:name="com.newthingwidgets.clone.services.WidgetUpdateService"
-276-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:249:13-57
-277            android:exported="false"
-277-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:250:13-37
-278            android:foregroundServiceType="specialUse" >
-278-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:251:13-55
-279            <property
-279-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:252:13-254:50
-280                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
-280-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:253:17-76
-281                android:value="widget_updates" />
-281-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:254:17-47
-282        </service>
-283
-284        <provider
-284-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-285            android:name="androidx.startup.InitializationProvider"
-285-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-286            android:authorities="com.newthingwidgets.clone.androidx-startup"
-286-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-287            android:exported="false" >
-287-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-288            <meta-data
-288-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-289                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-289-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-290                android:value="androidx.startup" />
-290-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-291            <meta-data
-291-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
-292                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-292-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
-293                android:value="androidx.startup" />
-293-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
-294            <meta-data
-294-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
-295                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-295-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
-296                android:value="androidx.startup" />
-296-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
-297        </provider>
-298
-299        <receiver
-299-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
-300            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-300-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
-301            android:directBootAware="false"
-301-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
-302            android:enabled="true"
-302-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
-303            android:exported="true"
-303-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
-304            android:permission="android.permission.DUMP" >
-304-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
-305            <intent-filter>
-305-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
-306                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-306-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
-306-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
-307            </intent-filter>
-308            <intent-filter>
-308-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
-309                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-309-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
-309-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
-310            </intent-filter>
-311            <intent-filter>
-311-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
-312                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-312-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
-312-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
-313            </intent-filter>
+37    <permission
+37-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+38        android:name="com.newthingwidgets.clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+38-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+39        android:protectionLevel="signature" />
+39-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+40
+41    <uses-permission android:name="com.newthingwidgets.clone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+41-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+41-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+42
+43    <application
+43-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:32:5-303:19
+44        android:allowBackup="true"
+44-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:33:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.12.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\4ab0d780c0069bf913c9cfcf8d15471d\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+46        android:debuggable="true"
+47        android:extractNativeLibs="false"
+48        android:label="@string/app_name"
+48-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:34:9-41
+49        android:supportsRtl="true"
+49-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:35:9-35
+50        android:testOnly="true"
+51        android:theme="@style/AppTheme" >
+51-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:36:9-40
+52        <activity
+52-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:38:9-46:20
+53            android:name="com.newthingwidgets.clone.MainActivity"
+53-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:39:13-41
+54            android:exported="true"
+54-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:40:13-36
+55            android:theme="@style/AppTheme" >
+55-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:41:13-44
+56            <intent-filter>
+56-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:42:13-45:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:27:13-65
+57-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:27:21-62
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:13-73
+59-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:28:23-70
+60            </intent-filter>
+61        </activity>
+62        <activity
+62-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:48:9-51:47
+63            android:name="com.newthingwidgets.clone.WidgetDetailActivity"
+63-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:49:13-49
+64            android:exported="false"
+64-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:50:13-37
+65            android:theme="@style/AppTheme" />
+65-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:51:13-44
+66
+67        <!-- Analog Clock Widget Provider -->
+68        <receiver
+68-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:54:9-64:20
+69            android:name="com.newthingwidgets.clone.widgets.AnalogClockWidgetProvider"
+69-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:55:13-62
+70            android:exported="true"
+70-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:56:13-36
+71            android:label="Analog Clock" >
+71-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:57:13-41
+72            <intent-filter>
+72-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+73                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+73-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+73-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+74            </intent-filter>
+75
+76            <meta-data
+76-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+77                android:name="android.appwidget.provider"
+77-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+78                android:resource="@xml/analog_clock_widget_info" />
+78-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+79        </receiver>
+80
+81        <!-- App Launcher Widget Provider -->
+82        <receiver
+82-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:67:9-81:20
+83            android:name="com.newthingwidgets.clone.widgets.AppLauncherWidgetProvider"
+83-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:68:13-62
+84            android:exported="true"
+84-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:69:13-36
+85            android:label="App Launcher" >
+85-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:70:13-41
+86            <intent-filter>
+86-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:71:13-77:29
+87                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+87-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+87-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+88                <action android:name="com.newthingwidgets.clone.ACTION_LAUNCH_APP" />
+88-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:73:17-86
+88-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:73:25-83
+89                <action android:name="android.intent.action.DATE_CHANGED" />
+89-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:74:17-77
+89-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:74:25-74
+90                <action android:name="android.intent.action.TIME_SET" />
+90-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+90-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+91                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+91-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+91-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+92            </intent-filter>
+93
+94            <meta-data
+94-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+95                android:name="android.appwidget.provider"
+95-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+96                android:resource="@xml/app_launcher_widget_info" />
+96-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+97        </receiver>
+98
+99        <!-- Charging Widget Provider -->
+100        <receiver
+100-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:84:9-94:20
+101            android:name="com.newthingwidgets.clone.widgets.ChargingWidgetProvider"
+101-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:85:13-59
+102            android:exported="true"
+102-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:86:13-36
+103            android:label="Charging Widget" >
+103-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:87:13-44
+104            <intent-filter>
+104-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+105                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+105-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+105-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+106            </intent-filter>
+107
+108            <meta-data
+108-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+109                android:name="android.appwidget.provider"
+109-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+110                android:resource="@xml/charging_widget_info" />
+110-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+111        </receiver>
+112
+113        <!-- Battery State Receiver for Charging Widget updates -->
+114        <receiver
+114-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:97:9-104:20
+115            android:name="com.newthingwidgets.clone.widgets.BatteryStateReceiver"
+115-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:98:13-57
+116            android:exported="true" >
+116-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:99:13-36
+117            <intent-filter>
+117-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:100:13-103:29
+118                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+118-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:101:17-87
+118-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:101:25-84
+119                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+119-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:102:17-90
+119-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:102:25-87
+120            </intent-filter>
+121        </receiver>
+122
+123        <!-- Square Battery Widget Provider -->
+124        <receiver
+124-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:107:9-117:20
+125            android:name="com.newthingwidgets.clone.widgets.SquareBatteryWidgetProvider"
+125-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:108:13-64
+126            android:exported="true"
+126-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:109:13-36
+127            android:label="Square Battery Widget" >
+127-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:110:13-50
+128            <intent-filter>
+128-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+129                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+129-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+129-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+130            </intent-filter>
+131
+132            <meta-data
+132-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+133                android:name="android.appwidget.provider"
+133-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+134                android:resource="@xml/square_battery_widget_info" />
+134-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+135        </receiver>
+136
+137        <!-- Battery Bolt Widget Provider -->
+138        <receiver
+138-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:120:9-130:20
+139            android:name="com.newthingwidgets.clone.widgets.BatteryBoltWidgetProvider"
+139-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:121:13-62
+140            android:exported="true"
+140-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:122:13-36
+141            android:label="Battery Bolt Widget" >
+141-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:123:13-48
+142            <intent-filter>
+142-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+143                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+143-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+143-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+144            </intent-filter>
+145
+146            <meta-data
+146-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+147                android:name="android.appwidget.provider"
+147-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+148                android:resource="@xml/battery_bolt_widget_info" />
+148-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+149        </receiver>
+150
+151        <!-- Battery Status Widget Provider -->
+152        <receiver
+152-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:133:9-143:20
+153            android:name="com.newthingwidgets.clone.widgets.BatteryStatusWidgetProvider"
+153-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:134:13-64
+154            android:exported="true"
+154-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:135:13-36
+155            android:label="Battery Status Widget" >
+155-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:136:13-50
+156            <intent-filter>
+156-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+157                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+157-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+157-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+158            </intent-filter>
+159
+160            <meta-data
+160-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+161                android:name="android.appwidget.provider"
+161-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+162                android:resource="@xml/battery_status_widget_info" />
+162-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+163        </receiver>
+164
+165        <!-- Battery Meter Widget Provider -->
+166        <receiver
+166-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:146:9-156:20
+167            android:name="com.newthingwidgets.clone.widgets.BatteryMeterWidgetProvider"
+167-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:147:13-63
+168            android:exported="true"
+168-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:148:13-36
+169            android:label="Battery Meter Widget" >
+169-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:149:13-49
+170            <intent-filter>
+170-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+171                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+171-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+171-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+172            </intent-filter>
+173
+174            <meta-data
+174-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+175                android:name="android.appwidget.provider"
+175-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+176                android:resource="@xml/battery_meter_widget_info" />
+176-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+177        </receiver>
+178
+179        <!-- Battery Dot Matrix Widget Provider -->
+180        <receiver
+180-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:159:9-169:20
+181            android:name="com.newthingwidgets.clone.widgets.BatteryDotMatrixWidgetProvider"
+181-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:160:13-67
+182            android:exported="true"
+182-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:161:13-36
+183            android:label="Battery Dot Matrix Widget" >
+183-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:162:13-54
+184            <intent-filter>
+184-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+185                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+185-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+185-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+186            </intent-filter>
+187
+188            <meta-data
+188-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+189                android:name="android.appwidget.provider"
+189-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+190                android:resource="@xml/battery_dot_matrix_widget_info" />
+190-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+191        </receiver>
+192
+193        <!-- Calendar Widget Provider -->
+194        <receiver
+194-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:9-185:20
+195            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
+195-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:173:13-59
+196            android:exported="true"
+196-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:174:13-36
+197            android:label="Calendar Widget" >
+197-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:175:13-44
+198            <intent-filter>
+198-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:176:13-181:29
+199                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+199-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+199-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+200                <action android:name="android.intent.action.DATE_CHANGED" />
+200-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:74:17-77
+200-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:74:25-74
+201                <action android:name="android.intent.action.TIME_SET" />
+201-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+201-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+202                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+202-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+202-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+203            </intent-filter>
+204
+205            <meta-data
+205-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+206                android:name="android.appwidget.provider"
+206-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+207                android:resource="@xml/calendar_widget_info" />
+207-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+208        </receiver>
+209
+210        <!-- Date Time Matrix Widget Provider -->
+211        <receiver
+211-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:188:9-201:20
+212            android:name="com.newthingwidgets.clone.widgets.DateTimeMatrixWidgetProvider"
+212-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:189:13-65
+213            android:exported="true"
+213-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:190:13-36
+214            android:label="Date Time Matrix Widget" >
+214-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:191:13-52
+215            <intent-filter>
+215-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:192:13-197:29
+216                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+216-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+216-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+217                <action android:name="android.intent.action.TIME_TICK" />
+217-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:17-74
+217-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:25-71
+218                <action android:name="android.intent.action.TIME_SET" />
+218-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+218-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+219                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+219-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+219-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+220            </intent-filter>
+221
+222            <meta-data
+222-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+223                android:name="android.appwidget.provider"
+223-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+224                android:resource="@xml/date_time_matrix_widget_info" />
+224-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+225        </receiver>
+226
+227        <!-- Date Clock Widget Provider -->
+228        <receiver
+228-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:204:9-217:20
+229            android:name="com.newthingwidgets.clone.widgets.DateClockWidgetProvider"
+229-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:205:13-60
+230            android:exported="true"
+230-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:206:13-36
+231            android:label="Date Clock Widget" >
+231-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:207:13-46
+232            <intent-filter>
+232-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:192:13-197:29
+233                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+233-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+233-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+234                <action android:name="android.intent.action.TIME_TICK" />
+234-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:17-74
+234-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:25-71
+235                <action android:name="android.intent.action.TIME_SET" />
+235-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+235-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+236                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+236-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+236-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+237            </intent-filter>
+238
+239            <meta-data
+239-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+240                android:name="android.appwidget.provider"
+240-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+241                android:resource="@xml/date_clock_widget_info" />
+241-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+242        </receiver>
+243
+244        <!-- Calendar Widget Provider -->
+245        <receiver
+245-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:172:9-185:20
+246            android:name="com.newthingwidgets.clone.widgets.CalendarWidgetProvider"
+246-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:173:13-59
+247            android:exported="true"
+247-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:174:13-36
+248            android:label="Calendar Widget" >
+248-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:175:13-44
+249            <intent-filter>
+249-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:176:13-181:29
+250                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+250-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+250-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+251                <action android:name="android.intent.action.DATE_CHANGED" />
+251-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:74:17-77
+251-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:74:25-74
+252                <action android:name="android.intent.action.TIME_SET" />
+252-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+252-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+253                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+253-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+253-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+254            </intent-filter>
+255
+256            <meta-data
+256-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+257                android:name="android.appwidget.provider"
+257-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+258                android:resource="@xml/calendar_widget_info" />
+258-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+259        </receiver>
+260
+261        <!-- Dot Matrix Clock Widget Provider -->
+262        <receiver
+262-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:236:9-249:20
+263            android:name="com.newthingwidgets.clone.widgets.DotMatrixClockWidgetProvider"
+263-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:237:13-65
+264            android:exported="true"
+264-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:238:13-36
+265            android:label="Dot Matrix Clock" >
+265-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:239:13-45
+266            <intent-filter>
+266-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:192:13-197:29
+267                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+267-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+267-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+268                <action android:name="android.intent.action.TIME_TICK" />
+268-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:17-74
+268-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:25-71
+269                <action android:name="android.intent.action.TIME_SET" />
+269-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+269-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+270                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+270-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+270-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+271            </intent-filter>
+272
+273            <meta-data
+273-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+274                android:name="android.appwidget.provider"
+274-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+275                android:resource="@xml/dot_matrix_clock_widget_info" />
+275-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+276        </receiver>
+277
+278        <!-- Minimalist Analog Clock Widget Provider -->
+279        <receiver
+279-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:252:9-265:20
+280            android:name="com.newthingwidgets.clone.widgets.MinimalistClockWidgetProvider"
+280-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:253:13-66
+281            android:exported="true"
+281-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:254:13-36
+282            android:label="Minimalist Analog Clock" >
+282-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:255:13-52
+283            <intent-filter>
+283-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:192:13-197:29
+284                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+284-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+284-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+285                <action android:name="android.intent.action.TIME_TICK" />
+285-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:17-74
+285-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:194:25-71
+286                <action android:name="android.intent.action.TIME_SET" />
+286-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:17-73
+286-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:75:25-70
+287                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+287-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:17-81
+287-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:76:25-78
+288            </intent-filter>
+289
+290            <meta-data
+290-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+291                android:name="android.appwidget.provider"
+291-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+292                android:resource="@xml/minimalist_clock_widget_info" />
+292-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+293        </receiver>
+294
+295        <!-- Classic Analog Clock Widget Provider -->
+296        <receiver
+296-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:268:9-278:20
+297            android:name="com.newthingwidgets.clone.widgets.ClassicClockWidgetProvider"
+297-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:269:13-63
+298            android:exported="true"
+298-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:270:13-36
+299            android:label="Classic Analog Clock" >
+299-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:271:13-49
+300            <intent-filter>
+300-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+301                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+301-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+301-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
+302            </intent-filter>
+303
+304            <meta-data
+304-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+305                android:name="android.appwidget.provider"
+305-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+306                android:resource="@xml/classic_clock_widget_info" />
+306-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+307        </receiver>
+308
+309        <!-- Hybrid Clock Widget Provider -->
+310        <receiver
+310-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:281:9-291:20
+311            android:name="com.newthingwidgets.clone.widgets.HybridClockWidgetProvider"
+311-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:282:13-62
+312            android:exported="true"
+312-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:283:13-36
+313            android:label="Hybrid Clock Widget" >
+313-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:284:13-48
 314            <intent-filter>
-314-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
-315                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-315-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
-315-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+314-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:58:13-60:29
+315                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+315-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:17-84
+315-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:59:25-81
 316            </intent-filter>
-317        </receiver>
-318    </application>
-319
-320</manifest>
+317
+318            <meta-data
+318-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:61:13-63:68
+319                android:name="android.appwidget.provider"
+319-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:62:17-58
+320                android:resource="@xml/hybrid_clock_widget_info" />
+320-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:63:17-65
+321        </receiver>
+322
+323        <!-- Universal Widget Update Service -->
+324        <service
+324-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:294:9-301:19
+325            android:name="com.newthingwidgets.clone.services.WidgetUpdateService"
+325-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:295:13-57
+326            android:exported="false"
+326-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:296:13-37
+327            android:foregroundServiceType="specialUse" >
+327-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:297:13-55
+328            <property
+328-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:298:13-300:50
+329                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+329-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:299:17-76
+330                android:value="widget_updates" />
+330-->C:\Users\ADMIN\Downloads\NewThing Widgets Pro v2.4\NothingWidgets\newthing-widget-pro\app\src\main\AndroidManifest.xml:300:17-47
+331        </service>
+332
+333        <provider
+333-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+334            android:name="androidx.startup.InitializationProvider"
+334-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+335            android:authorities="com.newthingwidgets.clone.androidx-startup"
+335-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+336            android:exported="false" >
+336-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+337            <meta-data
+337-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+338                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+338-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+339                android:value="androidx.startup" />
+339-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\6535dace1aa2444d5663525c175a26fc\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+340            <meta-data
+340-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+341                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+341-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+342                android:value="androidx.startup" />
+342-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\c51a24aa5e3865dc99c0ec98a03113ff\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+343            <meta-data
+343-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+344                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+344-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+345                android:value="androidx.startup" />
+345-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+346        </provider>
+347
+348        <receiver
+348-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+349            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+349-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+350            android:directBootAware="false"
+350-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+351            android:enabled="true"
+351-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+352            android:exported="true"
+352-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+353            android:permission="android.permission.DUMP" >
+353-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+354            <intent-filter>
+354-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+355                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+355-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+355-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+356            </intent-filter>
+357            <intent-filter>
+357-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+358                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+358-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+358-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+359            </intent-filter>
+360            <intent-filter>
+360-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+361                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+361-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+361-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+362            </intent-filter>
+363            <intent-filter>
+363-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+364                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+364-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+364-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ADMIN\.gradle\caches\9.0-milestone-1\transforms\ccb18880e0cce925c2ab8bcd3a75a22c\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+365            </intent-filter>
+366        </receiver>
+367    </application>
+368
+369</manifest>

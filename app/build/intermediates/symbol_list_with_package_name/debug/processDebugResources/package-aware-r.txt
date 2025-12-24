@@ -3096,6 +3096,10 @@ drawable chatgpt_ai
 drawable chatgpt_ai_voice
 drawable chatgpt_r
 drawable chrome
+drawable classic_clock_dial
+drawable classic_clock_hour
+drawable classic_clock_minute
+drawable classic_clock_second
 drawable clock
 drawable clock2
 drawable clock_analog_day_hour
@@ -3134,7 +3138,11 @@ drawable google_lens
 drawable google_search
 drawable hour_face_6
 drawable hybrid_5
+drawable hybrid_clock_dial
+drawable hybrid_clock_hour
 drawable hybrid_clock_info
+drawable hybrid_clock_minute
+drawable hybrid_clock_second
 drawable ic_arrow_back_black_24
 drawable ic_back
 drawable ic_battery_charging
@@ -3196,6 +3204,11 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable message
+drawable minimalist_clock_bg
+drawable minimalist_clock_dial
+drawable minimalist_clock_hour
+drawable minimalist_clock_minute
+drawable minimalist_clock_second
 drawable minute_face_6
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
@@ -3415,7 +3428,6 @@ id calendar_preview
 id callMeasure
 id cancel_button
 id card_apps
-id card_battery
 id card_recently_added
 id carryVelocity
 id center
@@ -3439,6 +3451,8 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id clock_card
+id clock_face
+id clock_preview
 id clockwise
 id closest
 id collapseActionView
@@ -3606,6 +3620,7 @@ id jumpToStart
 id label_apps
 id label_battery
 id label_calendar
+id label_clock
 id label_newly_added
 id labeled
 id layout
@@ -4050,6 +4065,7 @@ layout battery_meter_widget
 layout battery_status_widget
 layout calendar_widget
 layout charging_widget
+layout classic_clock_widget
 layout custom_dialog
 layout date_clock_widget
 layout date_time_matrix_widget
@@ -4070,11 +4086,13 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dot_matrix_clock_widget
 layout fragment_widgets
+layout hybrid_clock_widget
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_apps_card
 layout item_battery_card
 layout item_calendar_card
+layout item_clock_card
 layout item_newly_added_card
 layout item_widget_category
 layout item_widget_preview
@@ -4097,6 +4115,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout minimalist_clock_widget
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -5595,8 +5614,11 @@ xml battery_meter_widget_info
 xml battery_status_widget_info
 xml calendar_widget_info
 xml charging_widget_info
+xml classic_clock_widget_info
 xml date_clock_widget_info
 xml date_time_matrix_widget_info
 xml dot_matrix_clock_widget_info
+xml hybrid_clock_widget_info
+xml minimalist_clock_widget_info
 xml square_battery_widget_info
 xml weekly_calendar_widget_info

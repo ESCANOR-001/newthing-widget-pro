@@ -79,6 +79,18 @@ class WidgetListAdapter(
                     // Dot Matrix Clock Widget
                     ComponentName(context, com.newthingwidgets.clone.widgets.DotMatrixClockWidgetProvider::class.java)
                 }
+                widget.name == "Minimalist Analog Clock" -> {
+                    // Minimalist Analog Clock Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.MinimalistClockWidgetProvider::class.java)
+                }
+                widget.name == "Classic Analog Clock" -> {
+                    // Classic Analog Clock Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.ClassicClockWidgetProvider::class.java)
+                }
+                widget.name == "Hybrid Clock Widget" -> {
+                    // Hybrid Clock Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.HybridClockWidgetProvider::class.java)
+                }
                 else -> {
                     // Analog clock widgets
                     ComponentName(context, AnalogClockWidgetProvider::class.java)

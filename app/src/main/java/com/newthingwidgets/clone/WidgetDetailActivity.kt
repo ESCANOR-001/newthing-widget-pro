@@ -113,9 +113,17 @@ class WidgetDetailActivity : AppCompatActivity() {
                 // Date Clock Widget with AM/PM, large time, day, date
                 WidgetItem("Date Clock Widget", "3x2", R.drawable.cal_01),
                 // Calendar Widget with month grid
-                WidgetItem("Calendar Widget", "2x2", R.drawable.cal_01),
+                WidgetItem("Calendar Widget", "2x2", R.drawable.cal_01)
+            )
+            "Clock" -> listOf(
                 // Dot Matrix Clock with large time display
-                WidgetItem("Dot Matrix Clock", "2x2", R.drawable.cal_01)
+                WidgetItem("Dot Matrix Clock", "2x2", R.drawable.analog_2),
+                // Minimalist Analog Clock
+                WidgetItem("Minimalist Analog Clock", "2x2", R.drawable.analog_2),
+                // Classic Analog Clock with tick marks and dot grid
+                WidgetItem("Classic Analog Clock", "2x2", R.drawable.analog_2),
+                // Hybrid Clock with squircle shape
+                WidgetItem("Hybrid Clock Widget", "2x2", R.drawable.analog_2)
             )
             else -> listOf(
                 // Clocks

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Second Indicator - Red dot positioned at edge, ~70% from center -->
+    <!-- Size: 8dp radius circle at Y=22 (near top edge) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M85,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+</vector>

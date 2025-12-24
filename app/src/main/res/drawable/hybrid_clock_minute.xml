@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Minute Hand - Solid White, Thin, Long -->
+    <!-- Tapered shape pointing UP from center -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M83.5,85 L84,20 A1.5,1.5 0 0 1 86,20 L86.5,85 A1.5,1.5 0 0 1 83.5,85 Z"/>
+</vector>

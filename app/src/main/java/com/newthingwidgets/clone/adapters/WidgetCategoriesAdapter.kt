@@ -15,10 +15,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
         private const val VIEW_TYPE_APPS = 1
         private const val VIEW_TYPE_BATTERY = 2
         private const val VIEW_TYPE_CALENDAR = 3
+        private const val VIEW_TYPE_CLOCK = 4
     }
 
-    // Show Newly Added, Apps, Battery, and Calendar cards
-    private val itemCount = 4
+    // Show Newly Added, Apps, Battery, Calendar, and Clock cards
+    private val itemCount = 5
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
@@ -26,6 +27,7 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             1 -> VIEW_TYPE_APPS
             2 -> VIEW_TYPE_BATTERY
             3 -> VIEW_TYPE_CALENDAR
+            4 -> VIEW_TYPE_CLOCK
             else -> VIEW_TYPE_NEWLY_ADDED
         }
     }
@@ -46,6 +48,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.item_calendar_card, parent, false)
                 CalendarViewHolder(view)
+            }
+            VIEW_TYPE_CLOCK -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_clock_card, parent, false)
+                ClockViewHolder(view)
             }
             else -> {
                 val view = LayoutInflater.from(parent.context)
@@ -91,6 +98,16 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                     val context = view.context
                     val intent = Intent(context, WidgetDetailActivity::class.java).apply {
                         putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Calendar")
+                    }
+                    context.startActivity(intent)
+                }
+            }
+            is ClockViewHolder -> {
+                holder.bind()
+                holder.itemView.setOnClickListener { view ->
+                    val context = view.context
+                    val intent = Intent(context, WidgetDetailActivity::class.java).apply {
+                        putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Clock")
                     }
                     context.startActivity(intent)
                 }
@@ -142,6 +159,28 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             } catch (e: Exception) {
                 // Fallback to static drawable
                 calendarPreview.setImageResource(R.drawable.cal_01)
+            }
+        }
+    }
+    
+    class ClockViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val clockPreview: android.widget.ImageView = itemView.findViewById(R.id.clock_preview)
+        
+        fun bind() {
+            // Dynamically render Dot Matrix Clock widget as preview
+            val context = itemView.context
+            try {
+                val bitmap = com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.renderWidgetPreview(
+                    context,
+                    "Dot Matrix Clock",
+                    targetSizeDp = 150
+                )
+                if (bitmap != null) {
+                    clockPreview.setImageBitmap(bitmap)
+                }
+            } catch (e: Exception) {
+                // Fallback to static drawable
+                clockPreview.setImageResource(R.drawable.analog_2)
             }
         }
     }

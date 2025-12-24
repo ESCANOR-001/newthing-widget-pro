@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Hour Hand (White, Short, Tapered) - Wider at base, pointed at tip -->
+    <!-- Center at 85,85 - pointing UP -->
+    <path
+        android:fillColor="#f1f1f1"
+        android:pathData="M87.91,76.74V37.11A2.91,2.91 0,0 0,85 34.2h0a2.91,2.91 0,0 0,-2.91 2.91V76.74a8.75,8.75 0,1 0,5.82 0Z"/>
+</vector>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Second Hand - Red with Oval/Pill near tip -->
+    <!-- Thin line from center extending up, with oval near tip -->
+    
+    <!-- Main thin line -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M84.25,85 L84.25,25 A0.75,0.75 0 0 1 85.75,25 L85.75,85 A0.75,0.75 0 0 1 84.25,85 Z"/>
+    
+    <!-- Red Oval/Pill near tip -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M81,40 L81,25 A4,4 0 0 1 89,25 L89,40 A4,4 0 0 1 81,40 Z"/>
+    
+    <!-- Center pivot (small red circle with white outline) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M85,85m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1"
+        android:fillColor="#00000000"
+        android:pathData="M85,85m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+</vector>

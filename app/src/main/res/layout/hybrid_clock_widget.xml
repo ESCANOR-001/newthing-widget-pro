@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <!-- ImageView for preview rendering in app -->
+    <ImageView
+        android:id="@+id/clock_face"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Clock preview"
+        android:visibility="gone" />
+
+    <!-- Native AnalogClock - automatically updates with smooth second hand -->
+    <AnalogClock
+        android:id="@+id/analog_clock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:dial="@drawable/hybrid_clock_dial"
+        android:hand_hour="@drawable/hybrid_clock_hour"
+        android:hand_minute="@drawable/hybrid_clock_minute"
+        android:hand_second="@drawable/hybrid_clock_second" />
+
+</RelativeLayout>

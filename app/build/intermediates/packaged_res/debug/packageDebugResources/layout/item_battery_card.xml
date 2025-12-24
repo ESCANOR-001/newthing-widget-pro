@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="?attr/materialCardViewFilledStyle"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="180dp"
     android:layout_marginStart="14dp"
     android:layout_marginEnd="14dp"
     android:layout_marginBottom="14dp"
@@ -13,7 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="0dp">
 
         <!-- Left side - Battery label -->
@@ -31,26 +32,16 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Right side dark card with battery widget preview -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_battery"
-            android:layout_width="185dp"
-            android:layout_height="185dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
+        <ImageView
+            android:id="@+id/battery_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bat_5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <!-- Battery widget preview image - constrained to match original -->
-            <ImageView
-                android:id="@+id/battery_preview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bat_5" />
-
-        </com.google.android.material.card.MaterialCardView>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -40,7 +40,10 @@ object LayoutToBitmapRenderer {
         "Date Clock Widget" to WidgetLayoutInfo(R.layout.date_clock_widget, 3, 2),
         "Weekly Calendar Widget" to WidgetLayoutInfo(R.layout.weekly_calendar_widget, 2, 2),
         "Calendar Widget" to WidgetLayoutInfo(R.layout.calendar_widget, 2, 2),
-        "Dot Matrix Clock" to WidgetLayoutInfo(R.layout.dot_matrix_clock_widget, 2, 2)
+        "Dot Matrix Clock" to WidgetLayoutInfo(R.layout.dot_matrix_clock_widget, 2, 2),
+        "Minimalist Analog Clock" to WidgetLayoutInfo(R.layout.minimalist_clock_widget, 2, 2),
+        "Classic Analog Clock" to WidgetLayoutInfo(R.layout.classic_clock_widget, 2, 2),
+        "Hybrid Clock Widget" to WidgetLayoutInfo(R.layout.hybrid_clock_widget, 2, 2)
     )
 
     // Base cell size in dp - use larger size to render elements at proper proportions
@@ -139,6 +142,9 @@ object LayoutToBitmapRenderer {
             "Weekly Calendar Widget" -> populateWeeklyCalendarWidget(view, context)
             "Calendar Widget" -> populateWeeklyCalendarWidget(view, context)
             "Dot Matrix Clock" -> populateDotMatrixClockWidget(view, context)
+            "Minimalist Analog Clock" -> populateMinimalistClockWidget(view, context)
+            "Classic Analog Clock" -> populateClassicClockWidget(view, context)
+            "Hybrid Clock Widget" -> populateHybridClockWidget(view, context)
         }
     }
 
@@ -719,5 +725,306 @@ object LayoutToBitmapRenderer {
         canvas.drawText(time, padding.toFloat(), textHeight.toFloat() + padding, paint)
         
         view.findViewById<ImageView>(R.id.time_image)?.setImageBitmap(bitmap)
+    }
+
+    /**
+     * Populate Minimalist Analog Clock Widget with demo data
+     */
+    private fun populateMinimalistClockWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        val size = (150 * density).toInt()
+        
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        
+        val centerX = size / 2f
+        val centerY = size / 2f
+        val radius = kotlin.math.min(centerX, centerY) - 4f
+        
+        // Demo time: 10:10:15
+        val hours = 10
+        val minutes = 10
+        val seconds = 15
+        
+        // Draw dark circular background
+        val bgPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF1A1A1A.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        canvas.drawCircle(centerX, centerY, radius, bgPaint)
+        
+        // Calculate angles
+        val hourAngle = Math.toRadians(((hours % 12) * 30.0 + minutes * 0.5) - 90)
+        val minuteAngle = Math.toRadians((minutes * 6.0 + seconds * 0.1) - 90)
+        val secondAngle = Math.toRadians((seconds * 6.0) - 90)
+        
+        // Draw minute hand FIRST (gray, thinner, extends across)
+        val minutePaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF888888.toInt()
+            strokeWidth = radius * 0.035f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val minuteLength = radius * 0.80f
+        val minuteEndX = centerX + (minuteLength * kotlin.math.cos(minuteAngle)).toFloat()
+        val minuteEndY = centerY + (minuteLength * kotlin.math.sin(minuteAngle)).toFloat()
+        val minuteBackLength = radius * 0.12f
+        val minuteBackX = centerX - (minuteBackLength * kotlin.math.cos(minuteAngle)).toFloat()
+        val minuteBackY = centerY - (minuteBackLength * kotlin.math.sin(minuteAngle)).toFloat()
+        canvas.drawLine(minuteBackX, minuteBackY, minuteEndX, minuteEndY, minutePaint)
+        
+        // Draw hour hand ON TOP (white, thick, no back extension)
+        val hourPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFFFFFFF.toInt()
+            strokeWidth = radius * 0.07f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val hourLength = radius * 0.40f
+        val hourStartOffset = radius * 0.05f
+        val hourStartX = centerX + (hourStartOffset * kotlin.math.cos(hourAngle)).toFloat()
+        val hourStartY = centerY + (hourStartOffset * kotlin.math.sin(hourAngle)).toFloat()
+        val hourEndX = centerX + (hourLength * kotlin.math.cos(hourAngle)).toFloat()
+        val hourEndY = centerY + (hourLength * kotlin.math.sin(hourAngle)).toFloat()
+        canvas.drawLine(hourStartX, hourStartY, hourEndX, hourEndY, hourPaint)
+        
+        // Draw second indicator (red dot)
+        val secondPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFE53935.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        val secondDotRadius = radius * 0.045f
+        val secondDistance = radius * 0.80f
+        val secondX = centerX + (secondDistance * kotlin.math.cos(secondAngle)).toFloat()
+        val secondY = centerY + (secondDistance * kotlin.math.sin(secondAngle)).toFloat()
+        canvas.drawCircle(secondX, secondY, secondDotRadius, secondPaint)
+        
+        // Draw center pivot point (small red circle)
+        val centerPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFE53935.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        val centerRadius = radius * 0.04f
+        canvas.drawCircle(centerX, centerY, centerRadius, centerPaint)
+        
+        view.findViewById<ImageView>(R.id.clock_face)?.setImageBitmap(bitmap)
+    }
+
+    /**
+     * Populate Classic Analog Clock Widget with demo data
+     */
+    private fun populateClassicClockWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        val size = (150 * density).toInt()
+        
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        
+        val centerX = size / 2f
+        val centerY = size / 2f
+        val radius = kotlin.math.min(centerX, centerY) - 4f
+        
+        // Demo time: 10:10:15
+        val hours = 10
+        val minutes = 10
+        val seconds = 15
+        
+        // Draw dark circular background
+        val bgPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF1A1A1A.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        canvas.drawCircle(centerX, centerY, radius, bgPaint)
+        
+        // Draw inner ring
+        val ringPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF2A2A2A.toInt()
+            style = android.graphics.Paint.Style.STROKE
+            strokeWidth = radius * 0.08f
+        }
+        canvas.drawCircle(centerX, centerY, radius * 0.92f, ringPaint)
+        
+        // Draw tick marks at 12, 3, 6, 9
+        val tickPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF666666.toInt()
+            strokeWidth = 2f * density
+            strokeCap = android.graphics.Paint.Cap.ROUND
+        }
+        for (i in 0 until 4) {
+            val angle = Math.toRadians((i * 90.0) - 90)
+            val innerR = radius * 0.75f
+            val outerR = radius * 0.85f
+            val x1 = centerX + (innerR * kotlin.math.cos(angle)).toFloat()
+            val y1 = centerY + (innerR * kotlin.math.sin(angle)).toFloat()
+            val x2 = centerX + (outerR * kotlin.math.cos(angle)).toFloat()
+            val y2 = centerY + (outerR * kotlin.math.sin(angle)).toFloat()
+            canvas.drawLine(x1, y1, x2, y2, tickPaint)
+        }
+        
+        // Calculate angles
+        val hourAngle = Math.toRadians(((hours % 12) * 30.0 + minutes * 0.5) - 90)
+        val minuteAngle = Math.toRadians((minutes * 6.0 + seconds * 0.1) - 90)
+        val secondAngle = Math.toRadians((seconds * 6.0) - 90)
+        
+        // Draw minute hand (white, thin, long)
+        val minutePaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFFFFFFF.toInt()
+            strokeWidth = radius * 0.03f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val minuteLength = radius * 0.70f
+        val minuteEndX = centerX + (minuteLength * kotlin.math.cos(minuteAngle)).toFloat()
+        val minuteEndY = centerY + (minuteLength * kotlin.math.sin(minuteAngle)).toFloat()
+        canvas.drawLine(centerX, centerY, minuteEndX, minuteEndY, minutePaint)
+        
+        // Draw hour hand (white, thick, short)
+        val hourPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFFFFFFF.toInt()
+            strokeWidth = radius * 0.06f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val hourLength = radius * 0.45f
+        val hourEndX = centerX + (hourLength * kotlin.math.cos(hourAngle)).toFloat()
+        val hourEndY = centerY + (hourLength * kotlin.math.sin(hourAngle)).toFloat()
+        canvas.drawLine(centerX, centerY, hourEndX, hourEndY, hourPaint)
+        
+        // Draw second hand (red, thin)
+        val secondPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFE53935.toInt()
+            strokeWidth = radius * 0.015f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val secondLength = radius * 0.75f
+        val secondEndX = centerX + (secondLength * kotlin.math.cos(secondAngle)).toFloat()
+        val secondEndY = centerY + (secondLength * kotlin.math.sin(secondAngle)).toFloat()
+        val secondBackLength = radius * 0.15f
+        val secondBackX = centerX - (secondBackLength * kotlin.math.cos(secondAngle)).toFloat()
+        val secondBackY = centerY - (secondBackLength * kotlin.math.sin(secondAngle)).toFloat()
+        canvas.drawLine(secondBackX, secondBackY, secondEndX, secondEndY, secondPaint)
+        
+        // Draw center pivot (red)
+        val centerPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFE53935.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        canvas.drawCircle(centerX, centerY, radius * 0.04f, centerPaint)
+        
+        view.findViewById<ImageView>(R.id.clock_face)?.setImageBitmap(bitmap)
+    }
+
+    /**
+     * Populate Hybrid Clock Widget with demo data
+     */
+    private fun populateHybridClockWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        val size = (150 * density).toInt()
+        
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        
+        val centerX = size / 2f
+        val centerY = size / 2f
+        val minDim = kotlin.math.min(centerX, centerY)
+        
+        // Demo time: 10:10:30
+        val hours = 10
+        val minutes = 10
+        val seconds = 30
+        
+        // Draw rounded square background
+        val bgPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFF1A1A1A.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        val cornerRadius = minDim * 0.15f
+        canvas.drawRoundRect(0f, 0f, size.toFloat(), size.toFloat(), cornerRadius, cornerRadius, bgPaint)
+        
+        // Draw hour tick marks at 12, 3, 6, 9
+        val tickPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFFFFFFF.toInt()
+            strokeWidth = 2f * density
+            strokeCap = android.graphics.Paint.Cap.ROUND
+        }
+        val innerR = minDim * 0.75f
+        val outerR = minDim * 0.90f
+        for (i in 0 until 4) {
+            val angle = Math.toRadians((i * 90.0) - 90)
+            val x1 = centerX + (innerR * kotlin.math.cos(angle)).toFloat()
+            val y1 = centerY + (innerR * kotlin.math.sin(angle)).toFloat()
+            val x2 = centerX + (outerR * kotlin.math.cos(angle)).toFloat()
+            val y2 = centerY + (outerR * kotlin.math.sin(angle)).toFloat()
+            canvas.drawLine(x1, y1, x2, y2, tickPaint)
+        }
+        
+        // Calculate angles
+        val hourAngle = Math.toRadians(((hours % 12) * 30.0 + minutes * 0.5) - 90)
+        val minuteAngle = Math.toRadians((minutes * 6.0 + seconds * 0.1) - 90)
+        val secondAngle = Math.toRadians((seconds * 6.0) - 90)
+        
+        // Draw minute hand (solid white)
+        val minutePaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFFFFFFF.toInt()
+            strokeWidth = minDim * 0.02f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val minuteLength = minDim * 0.70f
+        val minuteEndX = centerX + (minuteLength * kotlin.math.cos(minuteAngle)).toFloat()
+        val minuteEndY = centerY + (minuteLength * kotlin.math.sin(minuteAngle)).toFloat()
+        canvas.drawLine(centerX, centerY, minuteEndX, minuteEndY, minutePaint)
+        
+        // Draw hour hand (outline/hollow)
+        val hourPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFFFFFFF.toInt()
+            strokeWidth = minDim * 0.03f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val hourLength = minDim * 0.45f
+        val hourEndX = centerX + (hourLength * kotlin.math.cos(hourAngle)).toFloat()
+        val hourEndY = centerY + (hourLength * kotlin.math.sin(hourAngle)).toFloat()
+        canvas.drawLine(centerX, centerY, hourEndX, hourEndY, hourPaint)
+        
+        // Draw second hand (red)
+        val secondPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFE53935.toInt()
+            strokeWidth = minDim * 0.015f
+            strokeCap = android.graphics.Paint.Cap.ROUND
+            style = android.graphics.Paint.Style.STROKE
+        }
+        val secondLength = minDim * 0.70f
+        val secondEndX = centerX + (secondLength * kotlin.math.cos(secondAngle)).toFloat()
+        val secondEndY = centerY + (secondLength * kotlin.math.sin(secondAngle)).toFloat()
+        canvas.drawLine(centerX, centerY, secondEndX, secondEndY, secondPaint)
+        
+        // Draw center pivot (red with white outline)
+        val centerPaint = android.graphics.Paint().apply {
+            isAntiAlias = true
+            color = 0xFFE53935.toInt()
+            style = android.graphics.Paint.Style.FILL
+        }
+        canvas.drawCircle(centerX, centerY, minDim * 0.04f, centerPaint)
+        
+        view.findViewById<ImageView>(R.id.clock_face)?.setImageBitmap(bitmap)
     }
 }

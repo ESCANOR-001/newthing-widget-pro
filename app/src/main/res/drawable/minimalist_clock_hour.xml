@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="500dp"
+    android:width="500dp"
+    android:viewportWidth="170"
+    android:viewportHeight="170">
+    <!-- Hour Hand (White, Thick, Short) - Rounded ends, pointing UP from center -->
+    <!-- Width: 10dp, Length: ~35 units from center (85) toward top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,85 L80,48 A5,5 0 0 1 90,48 L90,85 A5,5 0 0 1 80,85 Z"/>
+</vector>
