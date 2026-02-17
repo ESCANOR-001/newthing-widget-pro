@@ -7,6 +7,6 @@
     <!-- Second Indicator - Red dot positioned at edge, ~70% from center -->
     <!-- Size: 8dp radius circle at Y=22 (near top edge) -->
     <path
-        android:fillColor="#E53935"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M85,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
 </vector>

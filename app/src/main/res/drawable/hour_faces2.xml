@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="389.0dip" android:width="389.0dip" android:viewportWidth="389.0" android:viewportHeight="389.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@color/clock_second_hand_color" android:pathData="M203.35,182.72V138c0,-5.3 -4,-9.6 -8.85,-9.6s-8.85,4.3 -8.85,9.6v44.75a14.75,14.75 0,1 0,17.7 0Z" />
+</vector>
+

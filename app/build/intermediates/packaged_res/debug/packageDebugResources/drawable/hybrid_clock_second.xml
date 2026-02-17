@@ -9,17 +9,17 @@
     
     <!-- Main thin line -->
     <path
-        android:fillColor="#E53935"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M84.25,85 L84.25,25 A0.75,0.75 0 0 1 85.75,25 L85.75,85 A0.75,0.75 0 0 1 84.25,85 Z"/>
     
     <!-- Red Oval/Pill near tip -->
     <path
-        android:fillColor="#E53935"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M81,40 L81,25 A4,4 0 0 1 89,25 L89,40 A4,4 0 0 1 81,40 Z"/>
     
     <!-- Center pivot (small red circle with white outline) -->
     <path
-        android:fillColor="#E53935"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M85,85m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
     <path
         android:strokeColor="#FFFFFF"

@@ -6,10 +6,10 @@
     android:viewportHeight="170">
     <!-- Background Circle -->
     <path
-        android:fillColor="#1d1d1d"
+        android:fillColor="@color/clock_face_bg_color"
         android:pathData="M85,85m-85,0a85,85 0,1 1,170 0a85,85 0,1 1,-170 0"/>
     <!-- Central Red Dot -->
     <path
-        android:fillColor="#ff0049"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M85,85m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0"/>
 </vector>

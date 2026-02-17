@@ -122,40 +122,14 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Minimalist Analog Clock", "2x2", R.drawable.analog_2),
                 // Classic Analog Clock with tick marks and dot grid
                 WidgetItem("Classic Analog Clock", "2x2", R.drawable.analog_2),
-                // Hybrid Clock with squircle shape
-                WidgetItem("Hybrid Clock Widget", "2x2", R.drawable.analog_2)
+                // Square Analog Clock
+                WidgetItem("Square Analog Clock", "2x2", R.drawable.analog_5),
+                // Glow Circle Analog Clock (from analog12 style)
+                WidgetItem("Glow Circle Analog Clock", "2x2", R.drawable.analog_2),
+                // Drop Pulse Analog Clock
+                WidgetItem("Drop Pulse Analog Clock", "2x2", R.drawable.drop_pulse_analog_clock_preview)
             )
-            else -> listOf(
-                // Clocks
-                WidgetItem("Analog Clock 2", "2x2", R.drawable.analog_2),
-                WidgetItem("Analog Clock 5", "2x2", R.drawable.analog_5),
-                WidgetItem("Analog Clock 6", "2x2", R.drawable.analog_6),
-                WidgetItem("Hybrid Clock 4", "2x2", R.drawable.hybrid_clock_info),
-                WidgetItem("Hybrid Clock 5", "2x2", R.drawable.hybrid_5),
-                WidgetItem("Digital Clock 1", "2x2", R.drawable.digital_clock_rounded_info),
-                
-                // Calendar
-                WidgetItem("Calendar 3", "2x2", R.drawable.cal_01),
-                WidgetItem("Calendar 4", "2x2", R.drawable.open_cal),
-                
-                // Battery
-                WidgetItem("Battery 2", "2x2", R.drawable.bat_preview),
-                WidgetItem("Battery 4", "2x2", R.drawable.battery_01),
-                
-                // Folder
-                WidgetItem("Folder 3", "2x2", R.drawable.square_folder),
-                WidgetItem("Folder 4", "2x2", R.drawable.rounded_folder),
-                
-                // Search
-                WidgetItem("Search 1", "2x2", R.drawable.google_search),
-                WidgetItem("Search 2", "2x2", R.drawable.search_box),
-                
-                // Weather
-                WidgetItem("Weather 3", "2x2", R.drawable.weather_squar),
-                
-                // Alarm
-                WidgetItem("Alarm Clock", "2x2", R.drawable.alarm_widget_p)
-            )
+            else -> emptyList()
         }
     }
 }
@@ -165,4 +139,3 @@ data class WidgetItem(
     val size: String,
     val previewDrawable: Int
 )
-

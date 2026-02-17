@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="0.0dip" android:color="@color/black" />
+            <solid android:color="@color/clock_face_bg_color"/>
+            <corners android:radius="1000.0dip" />
+        </shape>
+    </item>
+</layer-list>

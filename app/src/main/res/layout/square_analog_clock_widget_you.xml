@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme.Overlay" android:gravity="center" android:id="@+id/ana_3" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/background_image_improve"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rounded_bg_20_rect"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/background_image_improve_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rounded_bg_20_rect_light"
+        android:visibility="gone" />
+    <AnalogClock android:id="@+id/simpleAnalogClock" android:background="@drawable/rounded_for_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:dial="@drawable/clock_bgs23" android:hand_hour="@drawable/hours_23" android:hand_minute="@drawable/minutes_23" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:hand_second="@drawable/second_23" />
+
+    <ImageView
+        android:id="@+id/background_border"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/rounded_with_border" />
+</RelativeLayout>
+

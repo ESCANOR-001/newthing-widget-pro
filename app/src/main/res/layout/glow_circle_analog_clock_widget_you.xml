@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ana_12"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:padding="0.0dip"
+    android:theme="@style/AppTheme.Overlay">
+
+    <ImageView
+        android:id="@+id/background_image_improve"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rounded_bg_20"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/background_image_improve_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rounded_bg_20_light_r"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rounder_glow_bg8_36" />
+
+    <ImageView
+        android:id="@+id/background_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/dail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/analog_round5" />
+
+    <ImageView
+        android:id="@+id/custom_hour_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/hour_faces2" />
+
+    <AnalogClock
+        android:id="@+id/simpleAnalogClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:dial="@drawable/analog_round5in"
+        android:hand_hour="@drawable/hour_faces22"
+        android:hand_minute="@drawable/minute_face_greens2"
+        android:hand_second="@drawable/seconds2" />
+</RelativeLayout>
+

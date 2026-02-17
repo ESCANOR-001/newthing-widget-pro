@@ -6,6 +6,6 @@
     android:viewportHeight="170">
     <!-- Second Hand (Red, Thin) - Thin line pointing UP -->
     <path
-        android:fillColor="#ff0049"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M83.5,85 L83.5,20 A1.5,1.5 0 0 1 86.5,20 L86.5,85 Z"/>
 </vector>

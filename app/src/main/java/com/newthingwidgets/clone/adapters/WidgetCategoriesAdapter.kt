@@ -11,24 +11,22 @@ import com.newthingwidgets.clone.WidgetDetailActivity
 class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
-        private const val VIEW_TYPE_NEWLY_ADDED = 0
-        private const val VIEW_TYPE_APPS = 1
-        private const val VIEW_TYPE_BATTERY = 2
-        private const val VIEW_TYPE_CALENDAR = 3
-        private const val VIEW_TYPE_CLOCK = 4
+        private const val VIEW_TYPE_APPS = 0
+        private const val VIEW_TYPE_BATTERY = 1
+        private const val VIEW_TYPE_CALENDAR = 2
+        private const val VIEW_TYPE_CLOCK = 3
     }
 
-    // Show Newly Added, Apps, Battery, Calendar, and Clock cards
-    private val itemCount = 5
+    // Show Apps, Battery, Calendar, and Clock cards
+    private val itemCount = 4
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
-            0 -> VIEW_TYPE_NEWLY_ADDED
-            1 -> VIEW_TYPE_APPS
-            2 -> VIEW_TYPE_BATTERY
-            3 -> VIEW_TYPE_CALENDAR
-            4 -> VIEW_TYPE_CLOCK
-            else -> VIEW_TYPE_NEWLY_ADDED
+            0 -> VIEW_TYPE_APPS
+            1 -> VIEW_TYPE_BATTERY
+            2 -> VIEW_TYPE_CALENDAR
+            3 -> VIEW_TYPE_CLOCK
+            else -> VIEW_TYPE_APPS
         }
     }
 
@@ -56,23 +54,14 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             }
             else -> {
                 val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.item_newly_added_card, parent, false)
-                NewlyAddedViewHolder(view)
+                    .inflate(R.layout.item_apps_card, parent, false)
+                AppsViewHolder(view)
             }
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is NewlyAddedViewHolder -> {
-                holder.itemView.setOnClickListener { view ->
-                    val context = view.context
-                    val intent = Intent(context, WidgetDetailActivity::class.java).apply {
-                        putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Newly Added")
-                    }
-                    context.startActivity(intent)
-                }
-            }
             is AppsViewHolder -> {
                 holder.itemView.setOnClickListener { view ->
                     val context = view.context
@@ -117,7 +106,6 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
 
     override fun getItemCount(): Int = itemCount
 
-    class NewlyAddedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     class AppsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     class BatteryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val batteryPreview: android.widget.ImageView = itemView.findViewById(R.id.battery_preview)

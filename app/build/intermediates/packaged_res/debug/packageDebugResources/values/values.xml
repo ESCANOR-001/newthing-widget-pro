@@ -19,7 +19,13 @@
     <color name="bg_color_3">#3A3B3D</color>
     <color name="bg_color_inverse">#f1f1f1</color>
     <color name="bg_color_ui">#ececec</color>
+    <color name="black">#000000</color>
+    <color name="black75">#BF000000</color>
     <color name="card_ui">#2c2b2d</color>
+    <color name="clock_face_bg_color">#1A1A1A</color>
+    <color name="clock_hour_hand_color">#f1f1f1</color>
+    <color name="clock_minute_hand_color">#6b696c</color>
+    <color name="clock_second_hand_color">#cd1b1f</color>
     <color name="md_theme_background">#1d1d1d</color>
     <color name="md_theme_error">#ba1a1a</color>
     <color name="md_theme_errorContainer">#ffdad6</color>
@@ -69,6 +75,7 @@
     <color name="red_color">#E22E31</color>
     <color name="red_light">#f1f1f1</color>
     <color name="redf">#E22E31</color>
+    <color name="white">#FFFFFF</color>
     <string name="app_name">NEWTHING WIDGETS PRO</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="clock">Clock Widget</string>
@@ -139,6 +146,17 @@
         <item name="cardUI">@color/card_ui</item>
         <item name="redColor">@color/redf</item>
         <item name="redColorLight">@color/red_light</item>
+    </style>
+    <style name="AppTheme.Overlay" parent="ThemeOverlay.Material3.Light">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:windowActivityTransitions">true</item>
     </style>
     <style name="TextAppearance.MyApp.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
         <item name="android:fontFamily">@font/nothing_5_7</item>

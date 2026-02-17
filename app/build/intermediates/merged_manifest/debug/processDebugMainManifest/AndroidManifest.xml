@@ -320,6 +320,48 @@
                 android:resource="@xml/hybrid_clock_widget_info" />
         </receiver>
 
+        <!-- Square Analog Clock Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.SquareAnalogClockWidgetProvider"
+            android:exported="true"
+            android:label="Square Analog Clock" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/square_analog_clock_widget_info" />
+        </receiver>
+
+        <!-- Glow Circle Analog Clock Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.GlowCircleAnalogClockWidgetProvider"
+            android:exported="true"
+            android:label="Glow Circle Analog Clock" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/glow_circle_analog_clock_widget_info" />
+        </receiver>
+
+        <!-- Drop Pulse Analog Clock Widget Provider -->
+        <receiver
+            android:name="com.newthingwidgets.clone.widgets.DropPulseAnalogClockWidgetProvider"
+            android:exported="true"
+            android:label="Drop Pulse Analog Clock" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/drop_pulse_analog_clock_widget_info" />
+        </receiver>
+
         <!-- Universal Widget Update Service -->
         <service
             android:name="com.newthingwidgets.clone.services.WidgetUpdateService"

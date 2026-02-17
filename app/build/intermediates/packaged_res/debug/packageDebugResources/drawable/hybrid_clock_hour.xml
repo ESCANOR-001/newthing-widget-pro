@@ -8,7 +8,7 @@
     <!-- Rounded rectangle shape with stroke, pointing UP from center -->
     <!-- Center at 85,85 -->
     <path
-        android:strokeColor="#FFFFFF"
+        android:strokeColor="@color/clock_hour_hand_color"
         android:strokeWidth="3"
         android:fillColor="#00000000"
         android:pathData="M82,85 L82,45 A3,3 0 0 1 88,45 L88,85 A3,3 0 0 1 82,85 Z"/>

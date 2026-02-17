@@ -10,6 +10,9 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.newthingwidgets.clone.R
+import androidx.core.graphics.createBitmap
+import java.util.Calendar
+import java.util.Locale
 
 /**
  * Utility class to render layout XML files as Bitmap images
@@ -43,7 +46,9 @@ object LayoutToBitmapRenderer {
         "Dot Matrix Clock" to WidgetLayoutInfo(R.layout.dot_matrix_clock_widget, 2, 2),
         "Minimalist Analog Clock" to WidgetLayoutInfo(R.layout.minimalist_clock_widget, 2, 2),
         "Classic Analog Clock" to WidgetLayoutInfo(R.layout.classic_clock_widget, 2, 2),
-        "Hybrid Clock Widget" to WidgetLayoutInfo(R.layout.hybrid_clock_widget, 2, 2)
+        "Square Analog Clock" to WidgetLayoutInfo(R.layout.square_analog_clock_widget_you, 2, 2),
+        "Glow Circle Analog Clock" to WidgetLayoutInfo(R.layout.glow_circle_analog_clock_widget_you, 2, 2),
+        "Drop Pulse Analog Clock" to WidgetLayoutInfo(R.layout.drop_pulse_analog_clock_widget_you, 2, 2)
     )
 
     // Base cell size in dp - use larger size to render elements at proper proportions
@@ -94,11 +99,7 @@ object LayoutToBitmapRenderer {
         view.layout(0, 0, view.measuredWidth, view.measuredHeight)
 
         // Create bitmap and canvas at full render size
-        val fullBitmap = Bitmap.createBitmap(
-            view.measuredWidth,
-            view.measuredHeight,
-            Bitmap.Config.ARGB_8888
-        )
+        val fullBitmap = createBitmap(view.measuredWidth, view.measuredHeight)
         val canvas = Canvas(fullBitmap)
 
         // Draw the view onto the canvas
@@ -144,7 +145,9 @@ object LayoutToBitmapRenderer {
             "Dot Matrix Clock" -> populateDotMatrixClockWidget(view, context)
             "Minimalist Analog Clock" -> populateMinimalistClockWidget(view, context)
             "Classic Analog Clock" -> populateClassicClockWidget(view, context)
-            "Hybrid Clock Widget" -> populateHybridClockWidget(view, context)
+            "Square Analog Clock" -> populateSquareAnalogClockWidget(view, context)
+            "Glow Circle Analog Clock" -> populateGlowCircleAnalogClockWidget(view, context)
+            "Drop Pulse Analog Clock" -> populateDropPulseAnalogClockWidget(view, context)
         }
     }
 
@@ -762,7 +765,7 @@ object LayoutToBitmapRenderer {
         // Draw minute hand FIRST (gray, thinner, extends across)
         val minutePaint = android.graphics.Paint().apply {
             isAntiAlias = true
-            color = 0xFF888888.toInt()
+            color = 0xFF6B696C.toInt()
             strokeWidth = radius * 0.035f
             strokeCap = android.graphics.Paint.Cap.ROUND
             style = android.graphics.Paint.Style.STROKE
@@ -794,7 +797,7 @@ object LayoutToBitmapRenderer {
         // Draw second indicator (red dot)
         val secondPaint = android.graphics.Paint().apply {
             isAntiAlias = true
-            color = 0xFFE53935.toInt()
+            color = 0xFFCD1B1F.toInt()
             style = android.graphics.Paint.Style.FILL
         }
         val secondDotRadius = radius * 0.045f
@@ -806,7 +809,7 @@ object LayoutToBitmapRenderer {
         // Draw center pivot point (small red circle)
         val centerPaint = android.graphics.Paint().apply {
             isAntiAlias = true
-            color = 0xFFE53935.toInt()
+            color = 0xFFCD1B1F.toInt()
             style = android.graphics.Paint.Style.FILL
         }
         val centerRadius = radius * 0.04f
@@ -874,10 +877,10 @@ object LayoutToBitmapRenderer {
         val minuteAngle = Math.toRadians((minutes * 6.0 + seconds * 0.1) - 90)
         val secondAngle = Math.toRadians((seconds * 6.0) - 90)
         
-        // Draw minute hand (white, thin, long)
+        // Draw minute hand (gray, thin, long)
         val minutePaint = android.graphics.Paint().apply {
             isAntiAlias = true
-            color = 0xFFFFFFFF.toInt()
+            color = 0xFF6B696C.toInt()
             strokeWidth = radius * 0.03f
             strokeCap = android.graphics.Paint.Cap.ROUND
             style = android.graphics.Paint.Style.STROKE
@@ -903,7 +906,7 @@ object LayoutToBitmapRenderer {
         // Draw second hand (red, thin)
         val secondPaint = android.graphics.Paint().apply {
             isAntiAlias = true
-            color = 0xFFE53935.toInt()
+            color = 0xFFCD1B1F.toInt()
             strokeWidth = radius * 0.015f
             strokeCap = android.graphics.Paint.Cap.ROUND
             style = android.graphics.Paint.Style.STROKE
@@ -919,7 +922,7 @@ object LayoutToBitmapRenderer {
         // Draw center pivot (red)
         val centerPaint = android.graphics.Paint().apply {
             isAntiAlias = true
-            color = 0xFFE53935.toInt()
+            color = 0xFFCD1B1F.toInt()
             style = android.graphics.Paint.Style.FILL
         }
         canvas.drawCircle(centerX, centerY, radius * 0.04f, centerPaint)
@@ -928,103 +931,43 @@ object LayoutToBitmapRenderer {
     }
 
     /**
-     * Populate Hybrid Clock Widget with demo data
+     * Populate Square Analog Clock Widget with demo data
+     * Note: This widget uses a standard AnalogClock view which renders automatically,
+     * so no manual population is needed. The layout will display the current time.
      */
-    private fun populateHybridClockWidget(view: View, context: Context) {
-        val density = context.resources.displayMetrics.density
-        val size = (150 * density).toInt()
-        
-        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
-        
-        val centerX = size / 2f
-        val centerY = size / 2f
-        val minDim = kotlin.math.min(centerX, centerY)
-        
-        // Demo time: 10:10:30
-        val hours = 10
-        val minutes = 10
-        val seconds = 30
-        
-        // Draw rounded square background
-        val bgPaint = android.graphics.Paint().apply {
-            isAntiAlias = true
-            color = 0xFF1A1A1A.toInt()
-            style = android.graphics.Paint.Style.FILL
-        }
-        val cornerRadius = minDim * 0.15f
-        canvas.drawRoundRect(0f, 0f, size.toFloat(), size.toFloat(), cornerRadius, cornerRadius, bgPaint)
-        
-        // Draw hour tick marks at 12, 3, 6, 9
-        val tickPaint = android.graphics.Paint().apply {
-            isAntiAlias = true
-            color = 0xFFFFFFFF.toInt()
-            strokeWidth = 2f * density
-            strokeCap = android.graphics.Paint.Cap.ROUND
-        }
-        val innerR = minDim * 0.75f
-        val outerR = minDim * 0.90f
-        for (i in 0 until 4) {
-            val angle = Math.toRadians((i * 90.0) - 90)
-            val x1 = centerX + (innerR * kotlin.math.cos(angle)).toFloat()
-            val y1 = centerY + (innerR * kotlin.math.sin(angle)).toFloat()
-            val x2 = centerX + (outerR * kotlin.math.cos(angle)).toFloat()
-            val y2 = centerY + (outerR * kotlin.math.sin(angle)).toFloat()
-            canvas.drawLine(x1, y1, x2, y2, tickPaint)
-        }
-        
-        // Calculate angles
-        val hourAngle = Math.toRadians(((hours % 12) * 30.0 + minutes * 0.5) - 90)
-        val minuteAngle = Math.toRadians((minutes * 6.0 + seconds * 0.1) - 90)
-        val secondAngle = Math.toRadians((seconds * 6.0) - 90)
-        
-        // Draw minute hand (solid white)
-        val minutePaint = android.graphics.Paint().apply {
-            isAntiAlias = true
-            color = 0xFFFFFFFF.toInt()
-            strokeWidth = minDim * 0.02f
-            strokeCap = android.graphics.Paint.Cap.ROUND
-            style = android.graphics.Paint.Style.STROKE
-        }
-        val minuteLength = minDim * 0.70f
-        val minuteEndX = centerX + (minuteLength * kotlin.math.cos(minuteAngle)).toFloat()
-        val minuteEndY = centerY + (minuteLength * kotlin.math.sin(minuteAngle)).toFloat()
-        canvas.drawLine(centerX, centerY, minuteEndX, minuteEndY, minutePaint)
-        
-        // Draw hour hand (outline/hollow)
-        val hourPaint = android.graphics.Paint().apply {
-            isAntiAlias = true
-            color = 0xFFFFFFFF.toInt()
-            strokeWidth = minDim * 0.03f
-            strokeCap = android.graphics.Paint.Cap.ROUND
-            style = android.graphics.Paint.Style.STROKE
-        }
-        val hourLength = minDim * 0.45f
-        val hourEndX = centerX + (hourLength * kotlin.math.cos(hourAngle)).toFloat()
-        val hourEndY = centerY + (hourLength * kotlin.math.sin(hourAngle)).toFloat()
-        canvas.drawLine(centerX, centerY, hourEndX, hourEndY, hourPaint)
-        
-        // Draw second hand (red)
-        val secondPaint = android.graphics.Paint().apply {
-            isAntiAlias = true
-            color = 0xFFE53935.toInt()
-            strokeWidth = minDim * 0.015f
-            strokeCap = android.graphics.Paint.Cap.ROUND
-            style = android.graphics.Paint.Style.STROKE
-        }
-        val secondLength = minDim * 0.70f
-        val secondEndX = centerX + (secondLength * kotlin.math.cos(secondAngle)).toFloat()
-        val secondEndY = centerY + (secondLength * kotlin.math.sin(secondAngle)).toFloat()
-        canvas.drawLine(centerX, centerY, secondEndX, secondEndY, secondPaint)
-        
-        // Draw center pivot (red with white outline)
-        val centerPaint = android.graphics.Paint().apply {
-            isAntiAlias = true
-            color = 0xFFE53935.toInt()
-            style = android.graphics.Paint.Style.FILL
-        }
-        canvas.drawCircle(centerX, centerY, minDim * 0.04f, centerPaint)
-        
-        view.findViewById<ImageView>(R.id.clock_face)?.setImageBitmap(bitmap)
+    private fun populateSquareAnalogClockWidget(view: View, context: Context) {
+        // AnalogClock view in square_analog_clock_widget.xml renders automatically
+        // No manual population needed - the AnalogClock will show the current time
     }
+
+    /**
+     * Populate Glow Circle Analog Clock Widget with demo data
+     * This widget also uses a native AnalogClock view, so nothing extra is required.
+     */
+    private fun populateGlowCircleAnalogClockWidget(view: View, context: Context) {
+        // AnalogClock view in glow_circle_analog_clock_widget_you.xml renders automatically
+        // The glow/background comes from drawable resources; no manual data binding needed.
+    }
+
+    private fun populateDropPulseAnalogClockWidget(view: View, context: Context) {
+        val density = context.resources.displayMetrics.density
+        val typeface = try {
+            androidx.core.content.res.ResourcesCompat.getFont(context, R.font.nothing_5_7)
+        } catch (e: Exception) {
+            null
+        }
+
+        // Keep picker preview static; realtime behavior is only for the home-screen widget.
+        val hourBitmap = createPreviewTextBitmap(
+            text = "11",
+            textSize = 32f * density,
+            textColor = 0xFFFFFFFF.toInt(),
+            typeface = typeface
+        )
+        view.findViewById<ImageView>(R.id.hour_image)?.setImageBitmap(hourBitmap)
+
+        // Fixed sample angle for preview.
+        view.findViewById<ImageView>(R.id.drop_pointer)?.rotation = 276f
+    }
+
 }

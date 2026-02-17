@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/clock"
+    android:minWidth="40.0dip"
+    android:minHeight="40.0dip"
+    android:updatePeriodMillis="86400000"
+    android:initialLayout="@layout/square_analog_clock_widget_you"
+    android:resizeMode="horizontal|vertical"
+    android:initialKeyguardLayout="@layout/square_analog_clock_widget_you"
+    android:widgetCategory="home_screen|keyguard"
+    android:previewLayout="@layout/square_analog_clock_widget"
+    android:targetCellWidth="2"
+    android:targetCellHeight="2"/>
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:height="778dp" android:width="778dp" android:viewportWidth="389" android:viewportHeight="389">
-    <path android:fillColor="?attr/bgColor" android:pathData="M194.5,194.5m-194.5,0a194.5,194.5 0,1 1,389 0a194.5,194.5 0,1 1,-389 0"/>
+    <path android:fillColor="@color/clock_face_bg_color" android:pathData="M194.5,194.5m-194.5,0a194.5,194.5 0,1 1,389 0a194.5,194.5 0,1 1,-389 0"/>
     <path android:fillColor="?attr/bgColor3" android:pathData="M174.43,13.08l1.98,-0.21l1.21,11.48l-1.98,0.21z"/>
     <path android:fillColor="?attr/bgColor3" android:pathData="M155.58,16.18l1.95,-0.41l2.4,11.29l-1.95,0.41z"/>
     <path android:fillColor="?attr/bgColor3" android:pathData="M137.16,21.23l1.89,-0.61l3.57,10.98l-1.89,0.61z"/>

@@ -5,10 +5,10 @@
     android:viewportWidth="170"
     android:viewportHeight="170">
     
-    <!-- Squircle Background - Dark with rounded corners -->
+    <!-- Squircle Background - Dark with rounded arc corners -->
     <path
-        android:fillColor="#1A1A1A"
-        android:pathData="M20,0 L150,0 Q170,0 170,20 L170,150 Q170,170 150,170 L20,170 Q0,170 0,150 L0,20 Q0,0 20,0 Z"/>
+        android:fillColor="@color/clock_face_bg_color"
+        android:pathData="M20,0 L150,0 A20,20 0 0 1 170,20 L170,150 A20,20 0 0 1 150,170 L20,170 A20,20 0 0 1 0,150 L0,20 A20,20 0 0 1 20,0 Z"/>
     
     <!-- Hour Ticks (White, Longer) at 12, 3, 6, 9 -->
     <!-- 12 --> <path android:fillColor="#FFFFFF" android:pathData="M84,12 L86,12 L86,28 L84,28 Z"/>
@@ -42,7 +42,8 @@
     <path android:fillColor="#555555" android:pathData="M147,58 L153,59 L153,60 L147,60 Z"/>
     <path android:fillColor="#555555" android:pathData="M149,65 L155,66 L155,67 L149,67 Z"/>
     <path android:fillColor="#555555" android:pathData="M150,72 L156,73 L156,74 L150,74 Z"/>
-    <path android:fillColor="#555555" android:pathData="M151,79 L157,80 L157,81 L151,81 Z"/>
+    <!-- Minute 14 (Red Accent) -->
+    <path android:fillColor="#D71920" android:pathData="M151,79 L157,80 L157,81 L151,81 Z"/>
     
     <!-- Between 3-4 -->
     <path android:fillColor="#555555" android:pathData="M151,89 L157,89 L157,90 L151,90 Z"/>

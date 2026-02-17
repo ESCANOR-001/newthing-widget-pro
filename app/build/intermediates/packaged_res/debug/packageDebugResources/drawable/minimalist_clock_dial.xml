@@ -6,6 +6,6 @@
     android:viewportHeight="170">
     <!-- Background Circle - Dark Gray (#1A1A1A) -->
     <path
-        android:fillColor="#1A1A1A"
+        android:fillColor="@color/clock_face_bg_color"
         android:pathData="M85,85m-85,0a85,85 0,1 1,170 0a85,85 0,1 1,-170 0"/>
 </vector>

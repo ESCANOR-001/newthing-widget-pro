@@ -87,9 +87,17 @@ class WidgetListAdapter(
                     // Classic Analog Clock Widget
                     ComponentName(context, com.newthingwidgets.clone.widgets.ClassicClockWidgetProvider::class.java)
                 }
-                widget.name == "Hybrid Clock Widget" -> {
-                    // Hybrid Clock Widget
-                    ComponentName(context, com.newthingwidgets.clone.widgets.HybridClockWidgetProvider::class.java)
+                widget.name == "Square Analog Clock" -> {
+                    // Square Analog Clock Widget
+                    ComponentName(context, com.newthingwidgets.clone.widgets.SquareAnalogClockWidgetProvider::class.java)
+                }
+                widget.name == "Glow Circle Analog Clock" -> {
+                    // Glow Circle Analog Clock Widget (analog12 style)
+                    ComponentName(context, com.newthingwidgets.clone.widgets.GlowCircleAnalogClockWidgetProvider::class.java)
+                }
+                widget.name == "Drop Pulse Analog Clock" || widget.name == "Glow Stroke Analog Clock" -> {
+                    // Drop Pulse Analog Clock Widget (legacy Glow Stroke name supported)
+                    ComponentName(context, com.newthingwidgets.clone.widgets.DropPulseAnalogClockWidgetProvider::class.java)
                 }
                 else -> {
                     // Analog clock widgets

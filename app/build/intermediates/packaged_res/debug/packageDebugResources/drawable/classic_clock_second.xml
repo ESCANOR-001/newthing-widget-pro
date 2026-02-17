@@ -7,10 +7,10 @@
     <!-- Second Hand (Red) - Thin line extended to near edge -->
     <!-- Main line from below center (110) to near edge (8) -->
     <path
-        android:fillColor="#ff0049"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M84,110 L84,8 A1,1 0 0 1 86,8 L86,110 A1,1 0 0 1 84,110 Z"/>
     <!-- Center pivot dot ONLY -->
     <path
-        android:fillColor="#ff0049"
+        android:fillColor="@color/clock_second_hand_color"
         android:pathData="M85,85m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
 </vector>

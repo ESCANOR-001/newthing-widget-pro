@@ -7,6 +7,6 @@
     <!-- Hour Hand (White, Thick, Short) - Rounded ends, pointing UP from center -->
     <!-- Width: 10dp, Length: ~35 units from center (85) toward top -->
     <path
-        android:fillColor="#FFFFFF"
+        android:fillColor="@color/clock_hour_hand_color"
         android:pathData="M80,85 L80,48 A5,5 0 0 1 90,48 L90,85 A5,5 0 0 1 80,85 Z"/>
 </vector>

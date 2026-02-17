@@ -1373,6 +1373,8 @@ color bg_color_2_dark
 color bg_color_3
 color bg_color_inverse
 color bg_color_ui
+color black
+color black75
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1388,6 +1390,10 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color clock_face_bg_color
+color clock_hour_hand_color
+color clock_minute_hand_color
+color clock_second_hand_color
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2160,6 +2166,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -3043,6 +3050,8 @@ drawable analog_5
 drawable analog_6
 drawable analog_clock_1
 drawable analog_round
+drawable analog_round5
+drawable analog_round5in
 drawable app_widget_circular_bg
 drawable asset_31_ic
 drawable avd_hide_password
@@ -3105,8 +3114,10 @@ drawable clock2
 drawable clock_analog_day_hour
 drawable clock_analog_simple_minute
 drawable clock_analog_simple_second
+drawable clock_bgs23
 drawable clock_dial
 drawable clock_face_6
+drawable clock_face_stroke5
 drawable clock_hand_hour
 drawable clock_hand_minute
 drawable clock_hand_second
@@ -3128,6 +3139,8 @@ drawable dot_matrix_bg
 drawable dot_matrix_empty
 drawable dot_matrix_filled
 drawable dot_white
+drawable drop_pulse_analog_clock_preview
+drawable drop_pulse_minute_hand
 drawable facebook
 drawable file_manager
 drawable gallery
@@ -3137,6 +3150,12 @@ drawable google
 drawable google_lens
 drawable google_search
 drawable hour_face_6
+drawable hour_faces2
+drawable hour_faces22
+drawable hours_1
+drawable hours_12
+drawable hours_2
+drawable hours_23
 drawable hybrid_5
 drawable hybrid_clock_dial
 drawable hybrid_clock_hour
@@ -3210,6 +3229,8 @@ drawable minimalist_clock_hour
 drawable minimalist_clock_minute
 drawable minimalist_clock_second
 drawable minute_face_6
+drawable minute_face_greens2
+drawable minutes_23
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3277,11 +3298,20 @@ drawable playstore
 drawable progress_bar_fill
 drawable progress_bar_track
 drawable reddit
+drawable rounded_bg_20
+drawable rounded_bg_20_light_r
+drawable rounded_bg_20_rect
+drawable rounded_bg_20_rect_light
 drawable rounded_folder
 drawable rounded_for_all
 drawable rounded_for_all_r
+drawable rounded_for_all_with_border
+drawable rounded_with_border
+drawable rounder_glow_bg8_36
 drawable search_box
+drawable second_23
 drawable second_6
+drawable seconds2
 drawable settings
 drawable snapchat
 drawable spotify
@@ -3382,6 +3412,8 @@ id allStates
 id always
 id amazon_icon
 id ampm_pill
+id ana_12
+id ana_3
 id analog_clock
 id animateToEnd
 id animateToStart
@@ -3395,6 +3427,10 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id background_border
+id background_image
+id background_image_improve
+id background_image_improve_light
 id barrier
 id baseline
 id battery_card
@@ -3412,7 +3448,6 @@ id bestChoice
 id blocking
 id bolt_icon
 id bottom
-id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3452,6 +3487,7 @@ id clip_horizontal
 id clip_vertical
 id clock_card
 id clock_face
+id clock_marks
 id clock_preview
 id clockwise
 id closest
@@ -3471,8 +3507,10 @@ id cradle
 id currentState
 id custom
 id customPanel
+id custom_hour_hand
 id custom_title
 id cut
+id dail
 id date_image
 id date_picker_actions
 id date_text
@@ -3541,6 +3579,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drop_pointer
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3591,6 +3630,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hour_image
 id icon
 id icon1
 id icon2
@@ -3634,6 +3674,7 @@ id listMode
 id list_item
 id m3_side_sheet
 id main
+id mainc
 id marquee
 id mascot_image
 id masked
@@ -4053,8 +4094,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_widget_detail
-layout analog2_widget
-layout analog5_widget
 layout analog_clock_widget
 layout app_launcher_calendar_widget
 layout app_launcher_clock_widget
@@ -4085,7 +4124,11 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dot_matrix_clock_widget
+layout drop_pulse_analog_clock_widget
+layout drop_pulse_analog_clock_widget_you
 layout fragment_widgets
+layout glow_circle_analog_clock_widget
+layout glow_circle_analog_clock_widget_you
 layout hybrid_clock_widget
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -4157,6 +4200,8 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout square_analog_clock_widget
+layout square_analog_clock_widget_you
 layout square_battery_widget
 layout support_simple_spinner_dropdown_item
 layout weekly_calendar_widget
@@ -4344,6 +4389,7 @@ style Animation_Material3_SideSheetDialog_Left
 style Animation_Material3_SideSheetDialog_Right
 style Animation_MaterialComponents_BottomSheetDialog
 style AppTheme
+style AppTheme_Overlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -5604,8 +5650,6 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
-xml analog2_widget_info
-xml analog5_widget_info
 xml analog_clock_widget_info
 xml app_launcher_widget_info
 xml battery_bolt_widget_info
@@ -5618,7 +5662,10 @@ xml classic_clock_widget_info
 xml date_clock_widget_info
 xml date_time_matrix_widget_info
 xml dot_matrix_clock_widget_info
+xml drop_pulse_analog_clock_widget_info
+xml glow_circle_analog_clock_widget_info
 xml hybrid_clock_widget_info
 xml minimalist_clock_widget_info
+xml square_analog_clock_widget_info
 xml square_battery_widget_info
 xml weekly_calendar_widget_info
