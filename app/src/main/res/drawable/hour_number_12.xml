@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32dp" android:width="32dp" android:viewportWidth="32" android:viewportHeight="32"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Number 12: "1" and "2" -->
+    <path android:fillColor="#FFFFFF" android:pathData="M4,4 L8,4 L8,28 L4,28 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M12,4 L28,4 L28,8 L12,8 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M24,8 L28,8 L28,16 L24,16 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M12,16 L28,16 L28,20 L12,20 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M12,20 L16,20 L16,28 L12,28 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M12,28 L28,28 L28,32 L12,32 Z" />
+</vector>

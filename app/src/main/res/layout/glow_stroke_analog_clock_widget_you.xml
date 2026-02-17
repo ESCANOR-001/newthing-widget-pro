@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:theme="@style/AppTheme.Overlay" android:gravity="center" android:id="@id/mainc" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/background_image_improve" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_bg_20" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/background_image_improve_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_bg_20_light_r" android:layout_centerInParent="true" />
+    <AnalogClock android:id="@id/simpleAnalogClock" android:background="@drawable/rounder_glow_bg8_36" android:layout_width="wrap_content" android:layout_height="wrap_content" android:dial="@drawable/clock_face_stroke5" android:hand_hour="@drawable/glow_stroke_hour_hand" android:hand_minute="@drawable/glow_stroke_hour_hand" android:layout_centerInParent="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/background_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/glow_stroke_border" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/custom_hour_hand" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/glow_stroke_minute_hand" android:layout_centerInParent="true" />
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ImageView android:id="@id/hours1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
