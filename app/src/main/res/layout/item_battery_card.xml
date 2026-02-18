@@ -22,14 +22,14 @@
             android:id="@+id/label_battery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/poppins_regular"
             android:text="Battery"
             android:textColor="?attr/bgColorInVerse"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Right side dark card with battery widget preview -->
         <ImageView

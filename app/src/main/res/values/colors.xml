@@ -10,7 +10,8 @@
     <color name="bg_color_inverse">#f1f1f1</color>
     <color name="bg_color_ui">#ececec</color>
     <color name="card_ui">#2c2b2d</color>
-    
+    <color name="widget_bg">#1A1A1A</color>
+
     <!-- Accent Colors -->
     <color name="redf">#E22E31</color>
     <color name="red_light">#f1f1f1</color>

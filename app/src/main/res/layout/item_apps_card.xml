@@ -21,14 +21,14 @@
             android:id="@+id/label_apps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="Apps"
             android:textColor="?attr/bgColorInVerse"
             android:textSize="14sp"
-            android:fontFamily="@font/poppins_regular"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Right side dark card with app icons -->
         <com.google.android.material.card.MaterialCardView

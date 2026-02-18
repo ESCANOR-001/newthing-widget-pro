@@ -15,10 +15,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
         private const val VIEW_TYPE_BATTERY = 1
         private const val VIEW_TYPE_CALENDAR = 2
         private const val VIEW_TYPE_CLOCK = 3
+        private const val VIEW_TYPE_CUSTOM_APPS = 4
     }
 
-    // Show Apps, Battery, Calendar, and Clock cards
-    private val itemCount = 4
+    // Show Apps, Battery, Calendar, Clock, and Custom Apps cards
+    private val itemCount = 5
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
@@ -26,6 +27,7 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             1 -> VIEW_TYPE_BATTERY
             2 -> VIEW_TYPE_CALENDAR
             3 -> VIEW_TYPE_CLOCK
+            4 -> VIEW_TYPE_CUSTOM_APPS
             else -> VIEW_TYPE_APPS
         }
     }
@@ -51,6 +53,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.item_clock_card, parent, false)
                 ClockViewHolder(view)
+            }
+            VIEW_TYPE_CUSTOM_APPS -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_custom_apps_card, parent, false)
+                CustomAppsViewHolder(view)
             }
             else -> {
                 val view = LayoutInflater.from(parent.context)
@@ -97,6 +104,15 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                     val context = view.context
                     val intent = Intent(context, WidgetDetailActivity::class.java).apply {
                         putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Clock")
+                    }
+                    context.startActivity(intent)
+                }
+            }
+            is CustomAppsViewHolder -> {
+                holder.itemView.setOnClickListener { view ->
+                    val context = view.context
+                    val intent = Intent(context, WidgetDetailActivity::class.java).apply {
+                        putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Custom Apps")
                     }
                     context.startActivity(intent)
                 }
@@ -172,4 +188,6 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
             }
         }
     }
+    
+    class CustomAppsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }
