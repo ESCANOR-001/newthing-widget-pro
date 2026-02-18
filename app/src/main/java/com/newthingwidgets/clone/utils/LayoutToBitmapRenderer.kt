@@ -60,9 +60,19 @@ object LayoutToBitmapRenderer {
     // Base cell size in dp - use larger size to render elements at proper proportions
     // Actual widget cells are ~74dp, but we render at 150dp for quality, then scale down
     private const val CELL_SIZE_DP = 150
+    private const val COMBO_RENDER_WIDTH_DP = 300
+    private const val COMBO_RENDER_HEIGHT_DP = 70
 
     // Demo battery percentage for previews
     private const val DEMO_BATTERY_PCT = 75
+    private val comboWidgets = setOf(
+        "Social App Combo",
+        "Social App Combo Glass",
+        "Google App Combo",
+        "Google App Combo Glass",
+        "AI App Combo",
+        "AI App Combo Glass"
+    )
 
     /**
      * Render a layout XML as a Bitmap at proper proportions
@@ -79,12 +89,13 @@ object LayoutToBitmapRenderer {
         targetSizeDp: Int = 145
     ): Bitmap? {
         val info = widgetLayoutMap[widgetName] ?: return null
+        val isComboWidget = widgetName in comboWidgets
         
         val density = context.resources.displayMetrics.density
         
         // Calculate render size based on cell dimensions
-        val renderWidthDp = info.widthCells * CELL_SIZE_DP
-        val renderHeightDp = info.heightCells * CELL_SIZE_DP
+        val renderWidthDp = if (isComboWidget) COMBO_RENDER_WIDTH_DP else info.widthCells * CELL_SIZE_DP
+        val renderHeightDp = if (isComboWidget) COMBO_RENDER_HEIGHT_DP else info.heightCells * CELL_SIZE_DP
         
         val renderWidthPx = (renderWidthDp * density).toInt()
         val renderHeightPx = (renderHeightDp * density).toInt()
@@ -110,6 +121,11 @@ object LayoutToBitmapRenderer {
 
         // Draw the view onto the canvas
         view.draw(canvas)
+
+        // Combo widgets should be shown exactly as their layout looks.
+        if (isComboWidget) {
+            return fullBitmap
+        }
 
         // Scale down to target size while maintaining aspect ratio
         val targetPx = (targetSizeDp * density).toInt()
