@@ -5,4 +5,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="clock">Clock Widget</string>
+    <string name="custom_app">Custom App Widget</string>
+    <string name="search">Search Widget</string>
+    <string name="ai">AI Widget</string>
 </resources>

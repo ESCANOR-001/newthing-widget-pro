@@ -9,11 +9,10 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Typeface
-import android.net.Uri
 import android.widget.RemoteViews
 import androidx.core.content.res.ResourcesCompat
-import com.newthingwidgets.clone.AppPackages
 import com.newthingwidgets.clone.R
+import com.newthingwidgets.clone.utils.AppLaunchRouter
 import java.util.Calendar
 
 /**
@@ -51,7 +50,7 @@ class AppLauncherWidgetProvider : AppWidgetProvider() {
         when (intent.action) {
             ACTION_LAUNCH_APP -> {
                 val appName = intent.getStringExtra(EXTRA_APP_NAME) ?: return
-                launchOrInstallApp(context, appName)
+                AppLaunchRouter.launchOrInstallApp(context, appName)
             }
             Intent.ACTION_DATE_CHANGED, Intent.ACTION_TIME_CHANGED, Intent.ACTION_TIMEZONE_CHANGED -> {
                 // Refresh all calendar widgets when date changes
@@ -183,43 +182,6 @@ class AppLauncherWidgetProvider : AppWidgetProvider() {
             canvas.drawText(dayOfMonth, x, y, paint)
             
             return bitmap
-        }
-
-        /**
-         * Launch app using dynamic package discovery, otherwise open Play Store
-         */
-        private fun launchOrInstallApp(context: Context, appName: String) {
-            val pm = context.packageManager
-            
-            // Use dynamic package discovery to find the installed app
-            val installedPackage = AppPackages.findInstalledPackage(context, appName)
-            
-            if (installedPackage != null) {
-                // App found - launch it
-                val launchIntent = pm.getLaunchIntentForPackage(installedPackage)
-                if (launchIntent != null) {
-                    launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    context.startActivity(launchIntent)
-                    return
-                }
-            }
-            
-            // App not installed - open Play Store with default package
-            val playStorePackage = AppPackages.getPlayStorePackage(appName) ?: return
-            try {
-                val playStoreIntent = Intent(Intent.ACTION_VIEW).apply {
-                    data = Uri.parse("market://details?id=$playStorePackage")
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                }
-                context.startActivity(playStoreIntent)
-            } catch (e: Exception) {
-                // Play Store not available - open web browser
-                val webIntent = Intent(Intent.ACTION_VIEW).apply {
-                    data = Uri.parse("https://play.google.com/store/apps/details?id=$playStorePackage")
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                }
-                context.startActivity(webIntent)
-            }
         }
 
         /**

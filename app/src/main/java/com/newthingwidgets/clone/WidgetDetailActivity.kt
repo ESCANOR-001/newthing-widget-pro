@@ -38,12 +38,15 @@ class WidgetDetailActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
-        
         val categoryName = intent.getStringExtra(EXTRA_CATEGORY_NAME) ?: "Newly Added"
+        val spanCount = if (categoryName == "Custom Apps") 1 else 2
+        recyclerView.layoutManager = GridLayoutManager(this, spanCount)
         val widgets = getWidgetsForCategory(categoryName)
-        
-        recyclerView.adapter = WidgetListAdapter(widgets)
+
+        recyclerView.adapter = WidgetListAdapter(
+            widgets = widgets,
+            isCustomAppsCategory = categoryName == "Custom Apps"
+        )
     }
     
     private fun getWidgetsForCategory(categoryName: String): List<WidgetItem> {
@@ -128,6 +131,14 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Glow Circle Analog Clock", "2x2", R.drawable.analog_2),
                 // Drop Pulse Analog Clock
                 WidgetItem("Drop Pulse Analog Clock", "2x2", R.drawable.drop_pulse_analog_clock_preview)
+            )
+            "Custom Apps" -> listOf(
+                WidgetItem("Social App Combo", "4x1", R.drawable.combo_social_apps),
+                WidgetItem("Social App Combo Glass", "4x1", R.drawable.combo_social_apps2),
+                WidgetItem("Google App Combo", "4x1", R.drawable.combo_search_bar6),
+                WidgetItem("Google App Combo Glass", "4x1", R.drawable.combo_search_bar7),
+                WidgetItem("AI App Combo", "4x1", R.drawable.combo_ai_mix_3),
+                WidgetItem("AI App Combo Glass", "4x1", R.drawable.combo_ai_mix_4)
             )
             else -> emptyList()
         }

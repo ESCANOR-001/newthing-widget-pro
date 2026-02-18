@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.newthingwidgets.clone">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Required for Android 11+ to query and launch other apps -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
@@ -216,22 +215,6 @@
                 android:resource="@xml/date_clock_widget_info" />
         </receiver>
         
-        <!-- Calendar Widget Provider -->
-        <receiver
-            android:name=".widgets.CalendarWidgetProvider"
-            android:exported="true"
-            android:label="Calendar Widget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="android.intent.action.DATE_CHANGED" />
-                <action android:name="android.intent.action.TIME_SET" />
-                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-            </intent-filter>
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/calendar_widget_info" />
-        </receiver>
-        
         <!-- Dot Matrix Clock Widget Provider -->
         <receiver
             android:name=".widgets.DotMatrixClockWidgetProvider"
@@ -327,6 +310,84 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/drop_pulse_analog_clock_widget_info" />
+        </receiver>
+
+        <!-- Social App Combo Widget Provider -->
+        <receiver
+            android:name=".widgets.SocialAppComboWidgetProvider"
+            android:exported="true"
+            android:label="Social App Combo">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/social_icons_widget_info" />
+        </receiver>
+
+        <!-- Social App Combo Glass Widget Provider -->
+        <receiver
+            android:name=".widgets.SocialAppComboGlassWidgetProvider"
+            android:exported="true"
+            android:label="Social App Combo Glass">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/social_icons_widget2_info" />
+        </receiver>
+
+        <!-- Google App Combo Widget Provider -->
+        <receiver
+            android:name=".widgets.GoogleAppComboWidgetProvider"
+            android:exported="true"
+            android:label="Google App Combo">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/search_bar6_r_info" />
+        </receiver>
+
+        <!-- Google App Combo Glass Widget Provider -->
+        <receiver
+            android:name=".widgets.GoogleAppComboGlassWidgetProvider"
+            android:exported="true"
+            android:label="Google App Combo Glass">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/search_bar7_r_info" />
+        </receiver>
+
+        <!-- AI App Combo Widget Provider -->
+        <receiver
+            android:name=".widgets.AiAppComboWidgetProvider"
+            android:exported="true"
+            android:label="AI App Combo">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/ai_mix_bar3_r_info" />
+        </receiver>
+
+        <!-- AI App Combo Glass Widget Provider -->
+        <receiver
+            android:name=".widgets.AiAppComboGlassWidgetProvider"
+            android:exported="true"
+            android:label="AI App Combo Glass">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/ai_mix_bar4_r_info" />
         </receiver>
         
         <!-- Universal Widget Update Service -->

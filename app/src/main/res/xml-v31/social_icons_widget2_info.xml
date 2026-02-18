@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:description="@string/custom_app" android:minWidth="250.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="86400000" android:initialLayout="@layout/social_icons_widget2" android:previewImage="@drawable/combo_social_apps2" android:resizeMode="horizontal" android:initialKeyguardLayout="@layout/social_icons_widget2" android:widgetCategory="home_screen|keyguard" android:targetCellWidth="4" android:targetCellHeight="1"
+  xmlns:android="http://schemas.android.com/apk/res/android" />
+

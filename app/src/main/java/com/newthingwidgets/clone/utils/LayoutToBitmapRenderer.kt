@@ -48,7 +48,13 @@ object LayoutToBitmapRenderer {
         "Classic Analog Clock" to WidgetLayoutInfo(R.layout.classic_clock_widget, 2, 2),
         "Square Analog Clock" to WidgetLayoutInfo(R.layout.square_analog_clock_widget_you, 2, 2),
         "Glow Circle Analog Clock" to WidgetLayoutInfo(R.layout.glow_circle_analog_clock_widget_you, 2, 2),
-        "Drop Pulse Analog Clock" to WidgetLayoutInfo(R.layout.drop_pulse_analog_clock_widget_you, 2, 2)
+        "Drop Pulse Analog Clock" to WidgetLayoutInfo(R.layout.drop_pulse_analog_clock_widget_you, 2, 2),
+        "Social App Combo" to WidgetLayoutInfo(R.layout.social_icons_widget, 4, 1),
+        "Social App Combo Glass" to WidgetLayoutInfo(R.layout.social_icons_widget2, 4, 1),
+        "Google App Combo" to WidgetLayoutInfo(R.layout.search_bar6_r, 4, 1),
+        "Google App Combo Glass" to WidgetLayoutInfo(R.layout.search_bar7_r, 4, 1),
+        "AI App Combo" to WidgetLayoutInfo(R.layout.ai_mix_bar3_r, 4, 1),
+        "AI App Combo Glass" to WidgetLayoutInfo(R.layout.ai_mix_bar4_r, 4, 1)
     )
 
     // Base cell size in dp - use larger size to render elements at proper proportions

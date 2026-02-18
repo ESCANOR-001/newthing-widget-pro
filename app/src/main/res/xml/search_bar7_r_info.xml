@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:description="@string/search" android:minWidth="250.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="86400000" android:initialLayout="@layout/search_bar7_r" android:resizeMode="horizontal" android:initialKeyguardLayout="@layout/search_bar7_r" android:widgetCategory="home_screen|keyguard" android:previewLayout="@layout/search_bar7_layout" android:targetCellWidth="4" android:targetCellHeight="1"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

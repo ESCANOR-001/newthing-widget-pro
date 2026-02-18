@@ -99,6 +99,8 @@ object AppPackages {
         "Messenger" to AppInfo("Messenger", "com.facebook.orca", R.drawable.facebook, 
             listOf("facebook.orca")),
         "Perplexity AI" to AppInfo("Perplexity AI", "ai.perplexity.app.android", R.drawable.perplexity_ai, 
+            listOf("perplexity")),
+        "Perplexity" to AppInfo("Perplexity", "ai.perplexity.app.android", R.drawable.perplexity_ai,
             listOf("perplexity"))
     )
     

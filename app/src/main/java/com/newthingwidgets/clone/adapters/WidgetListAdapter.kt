@@ -16,12 +16,17 @@ import com.newthingwidgets.clone.widgets.AnalogClockWidgetProvider
 import androidx.core.content.edit
 
 class WidgetListAdapter(
-    private val widgets: List<WidgetItem>
+    private val widgets: List<WidgetItem>,
+    private val isCustomAppsCategory: Boolean = false
 ) : RecyclerView.Adapter<WidgetListAdapter.WidgetViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WidgetViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_widget_preview, parent, false)
+            .inflate(
+                if (isCustomAppsCategory) R.layout.item_widget_preview_custom_apps else R.layout.item_widget_preview,
+                parent,
+                false
+            )
         return WidgetViewHolder(view)
     }
 
@@ -99,6 +104,24 @@ class WidgetListAdapter(
                     // Drop Pulse Analog Clock Widget (legacy Glow Stroke name supported)
                     ComponentName(context, com.newthingwidgets.clone.widgets.DropPulseAnalogClockWidgetProvider::class.java)
                 }
+                widget.name == "Social App Combo" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.SocialAppComboWidgetProvider::class.java)
+                }
+                widget.name == "Social App Combo Glass" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.SocialAppComboGlassWidgetProvider::class.java)
+                }
+                widget.name == "Google App Combo" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.GoogleAppComboWidgetProvider::class.java)
+                }
+                widget.name == "Google App Combo Glass" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.GoogleAppComboGlassWidgetProvider::class.java)
+                }
+                widget.name == "AI App Combo" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.AiAppComboWidgetProvider::class.java)
+                }
+                widget.name == "AI App Combo Glass" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.AiAppComboGlassWidgetProvider::class.java)
+                }
                 else -> {
                     // Analog clock widgets
                     ComponentName(context, AnalogClockWidgetProvider::class.java)
@@ -154,6 +177,8 @@ class WidgetListAdapter(
         fun bind(widget: WidgetItem) {
             val context = itemView.context
             val density = context.resources.displayMetrics.density
+            val isComboWidget = widget.size == "4x1"
+            val targetPreviewSize = if (isComboWidget) 300 else 140
             
             // Check if widget has a dynamic layout preview
             if (com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.hasDynamicPreview(widget.name)) {
@@ -162,7 +187,7 @@ class WidgetListAdapter(
                     val bitmap = com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.renderWidgetPreview(
                         context,
                         widget.name,
-                        targetSizeDp = 140
+                        targetSizeDp = targetPreviewSize
                     )
                     if (bitmap != null) {
                         widgetPreview.setImageBitmap(bitmap)
@@ -189,6 +214,16 @@ class WidgetListAdapter(
                 val params = widgetPreview.layoutParams
                 params.width = iconSize
                 params.height = iconSize
+                widgetPreview.layoutParams = params
+                widgetPreview.scaleType = android.widget.ImageView.ScaleType.FIT_CENTER
+                widgetPreview.setPadding(0, 0, 0, 0)
+            } else if (isComboWidget) {
+                // For combo app widgets: keep wide banner proportions.
+                val previewWidth = (300 * density).toInt()
+                val previewHeight = (90 * density).toInt()
+                val params = widgetPreview.layoutParams
+                params.width = previewWidth
+                params.height = previewHeight
                 widgetPreview.layoutParams = params
                 widgetPreview.scaleType = android.widget.ImageView.ScaleType.FIT_CENTER
                 widgetPreview.setPadding(0, 0, 0, 0)
