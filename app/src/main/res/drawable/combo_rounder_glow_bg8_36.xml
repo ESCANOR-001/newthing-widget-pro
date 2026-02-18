@@ -3,14 +3,8 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="16.0dip" />
-        </shape>
-    </item>
-    <item>
-        <shape android:shape="rectangle">
-            <stroke android:width="0.0dip" android:color="@color/black" />
-            <gradient android:startColor="#a6303030" android:endColor="#a6000000" android:angle="270.0" android:type="linear" />
             <corners android:radius="1000.0dip" />
+            <solid android:color="@color/widget_bg"/>
         </shape>
     </item>
 </layer-list>

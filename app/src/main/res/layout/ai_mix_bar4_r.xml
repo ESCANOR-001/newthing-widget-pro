@@ -44,7 +44,6 @@
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
-            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/combo_sples_ai2" />
 
