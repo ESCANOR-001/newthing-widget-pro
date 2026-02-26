@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.newthingwidgets.clone.R
+import com.newthingwidgets.clone.widgets.ContactWidgetSpecRegistry
 import androidx.core.graphics.createBitmap
 import java.util.Calendar
 import java.util.Locale
@@ -54,7 +55,16 @@ object LayoutToBitmapRenderer {
         "Google App Combo" to WidgetLayoutInfo(R.layout.search_bar6_r, 4, 1),
         "Google App Combo Glass" to WidgetLayoutInfo(R.layout.search_bar7_r, 4, 1),
         "AI App Combo" to WidgetLayoutInfo(R.layout.ai_mix_bar3_r, 4, 1),
-        "AI App Combo Glass" to WidgetLayoutInfo(R.layout.ai_mix_bar4_r, 4, 1)
+        "AI App Combo Glass" to WidgetLayoutInfo(R.layout.ai_mix_bar4_r, 4, 1),
+        "Contact 1" to WidgetLayoutInfo(R.layout.three_contact_widget_r, 2, 2),
+        "Contact 2" to WidgetLayoutInfo(R.layout.contact_widget_provider4_r, 2, 2),
+        "Contact 3" to WidgetLayoutInfo(R.layout.contact_widget_provider3_r, 2, 2),
+        "Contact 4" to WidgetLayoutInfo(R.layout.contact_widget_provider2_r, 2, 2),
+        "Contact 5" to WidgetLayoutInfo(R.layout.contact_rounded_widget_r, 2, 2),
+        "Contact 6" to WidgetLayoutInfo(R.layout.contact_name_widget_provider, 2, 1),
+        "Message 6" to WidgetLayoutInfo(R.layout.massage_name_widget_ovel, 2, 1),
+        "WhatsApp Chat" to WidgetLayoutInfo(R.layout.whatsapp_chat_oval_widget_r, 2, 1),
+        "Telegram Chat" to WidgetLayoutInfo(R.layout.telegram_chat_oval_widget_r, 2, 1)
     )
 
     // Base cell size in dp - use larger size to render elements at proper proportions
@@ -153,6 +163,11 @@ object LayoutToBitmapRenderer {
      * Populate the inflated view with demo data to show realistic preview
      */
     private fun populateDemoData(view: View, widgetName: String, context: Context) {
+        if (ContactWidgetSpecRegistry.hasSpec(widgetName)) {
+            ContactWidgetSpecRegistry.applyPreviewContent(context, view, widgetName)
+            return
+        }
+
         when (widgetName) {
             "Charging" -> populateChargingWidget(view, context)
             "Battery Square" -> populateBatterySquareWidget(view, context)

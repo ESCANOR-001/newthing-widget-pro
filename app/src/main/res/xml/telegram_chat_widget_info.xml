@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/app_name"
+    android:minWidth="110dp"
+    android:minHeight="40dp"
+    android:updatePeriodMillis="86400000"
+    android:initialLayout="@layout/telegram_chat_oval_widget_r"
+    android:configure="com.newthingwidgets.clone.contacts.TelegramChatOvalActivityR"
+    android:resizeMode="horizontal"
+    android:initialKeyguardLayout="@layout/telegram_chat_oval_widget_r"
+    android:widgetCategory="home_screen|keyguard"
+    android:previewLayout="@layout/telegram_chat_oval_widget_r"
+    android:targetCellWidth="2"
+    android:targetCellHeight="1" />

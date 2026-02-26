@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     
     <!-- Background service permissions -->
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
@@ -46,6 +47,51 @@
         
         <activity
             android:name=".WidgetDetailActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.ContactSelectionActivity2R"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.ContactSelectionActivity3R"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.ContactSelectionActivity4R"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.ContactSelectionRoundedActivityR"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.ContactSelectionActivityM"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.MassageSelectActivityR"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.WhatsappChatOvalActivityR"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.TelegramChatOvalActivityR"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".contacts.ThreeContactSelectionActivityR"
             android:exported="false"
             android:theme="@style/AppTheme" />
         
@@ -388,6 +434,115 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/ai_mix_bar4_r_info" />
+        </receiver>
+
+        <!-- Contacts Widget Providers -->
+        <receiver
+            android:name=".widgets.Contact1WidgetProvider"
+            android:exported="true"
+            android:label="Contact 1">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/contact1_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.Contact2WidgetProvider"
+            android:exported="true"
+            android:label="Contact 2">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/contact2_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.Contact3WidgetProvider"
+            android:exported="true"
+            android:label="Contact 3">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/contact3_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.Contact4WidgetProvider"
+            android:exported="true"
+            android:label="Contact 4">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/contact4_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.Contact5WidgetProvider"
+            android:exported="true"
+            android:label="Contact 5">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/contact5_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.Contact6WidgetProvider"
+            android:exported="true"
+            android:label="Contact 6">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/contact6_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.Message6WidgetProvider"
+            android:exported="true"
+            android:label="Message 6">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/message6_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.WhatsappChatWidgetProvider"
+            android:exported="true"
+            android:label="WhatsApp Chat">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/whatsapp_chat_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".widgets.TelegramChatWidgetProvider"
+            android:exported="true"
+            android:label="Telegram Chat">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/telegram_chat_widget_info" />
         </receiver>
         
         <!-- Universal Widget Update Service -->

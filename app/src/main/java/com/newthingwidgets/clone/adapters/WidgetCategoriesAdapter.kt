@@ -12,22 +12,24 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
 
     companion object {
         private const val VIEW_TYPE_APPS = 0
-        private const val VIEW_TYPE_BATTERY = 1
-        private const val VIEW_TYPE_CALENDAR = 2
-        private const val VIEW_TYPE_CLOCK = 3
-        private const val VIEW_TYPE_CUSTOM_APPS = 4
+        private const val VIEW_TYPE_CONTACTS = 1
+        private const val VIEW_TYPE_BATTERY = 2
+        private const val VIEW_TYPE_CALENDAR = 3
+        private const val VIEW_TYPE_CLOCK = 4
+        private const val VIEW_TYPE_CUSTOM_APPS = 5
     }
 
-    // Show Apps, Battery, Calendar, Clock, and Custom Apps cards
-    private val itemCount = 5
+    // Show Apps, Contacts, Battery, Calendar, Clock, and Custom Apps cards
+    private val itemCount = 6
 
     override fun getItemViewType(position: Int): Int {
         return when (position) {
             0 -> VIEW_TYPE_APPS
-            1 -> VIEW_TYPE_BATTERY
-            2 -> VIEW_TYPE_CALENDAR
-            3 -> VIEW_TYPE_CLOCK
-            4 -> VIEW_TYPE_CUSTOM_APPS
+            1 -> VIEW_TYPE_CONTACTS
+            2 -> VIEW_TYPE_BATTERY
+            3 -> VIEW_TYPE_CALENDAR
+            4 -> VIEW_TYPE_CLOCK
+            5 -> VIEW_TYPE_CUSTOM_APPS
             else -> VIEW_TYPE_APPS
         }
     }
@@ -38,6 +40,11 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                 val view = LayoutInflater.from(parent.context)
                     .inflate(R.layout.item_apps_card, parent, false)
                 AppsViewHolder(view)
+            }
+            VIEW_TYPE_CONTACTS -> {
+                val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_contacts_card, parent, false)
+                ContactsViewHolder(view)
             }
             VIEW_TYPE_BATTERY -> {
                 val view = LayoutInflater.from(parent.context)
@@ -74,6 +81,16 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
                     val context = view.context
                     val intent = Intent(context, WidgetDetailActivity::class.java).apply {
                         putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Apps")
+                    }
+                    context.startActivity(intent)
+                }
+            }
+            is ContactsViewHolder -> {
+                holder.bind()
+                holder.itemView.setOnClickListener { view ->
+                    val context = view.context
+                    val intent = Intent(context, WidgetDetailActivity::class.java).apply {
+                        putExtra(WidgetDetailActivity.EXTRA_CATEGORY_NAME, "Contacts")
                     }
                     context.startActivity(intent)
                 }
@@ -123,6 +140,25 @@ class WidgetCategoriesAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
     override fun getItemCount(): Int = itemCount
 
     class AppsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class ContactsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val contactsPreview: android.widget.ImageView = itemView.findViewById(R.id.contacts_preview)
+
+        fun bind() {
+            val context = itemView.context
+            try {
+                val bitmap = com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.renderWidgetPreview(
+                    context,
+                    "Contact 1",
+                    targetSizeDp = 150
+                )
+                if (bitmap != null) {
+                    contactsPreview.setImageBitmap(bitmap)
+                }
+            } catch (_: Exception) {
+                contactsPreview.setImageResource(R.drawable.contact)
+            }
+        }
+    }
     class BatteryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val batteryPreview: android.widget.ImageView = itemView.findViewById(R.id.battery_preview)
         

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:theme="@style/AppTheme.Overlay" android:id="@+id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:clipToOutline="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/background_image_improve" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_bg_20_rect" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/background_image_improve_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_bg_20_rect_light" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_for_all" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/background_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_with_border" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@+id/top_contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/avatar_image_bg" android:background="@drawable/gradiant_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/avatar_image" android:background="@drawable/avatar_bg2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerInParent="true" android:clipToOutline="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/call_icon_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <ImageView android:id="@+id/call_icon2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/white_bg_icon" />
+        <ImageView android:id="@+id/call_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/call_iconsss" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/message_icon_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+        <ImageView android:id="@+id/message_icon2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/white_bg_icon" />
+        <ImageView android:id="@+id/message_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/message_icondd2" />
+    </RelativeLayout>
+</RelativeLayout>
+

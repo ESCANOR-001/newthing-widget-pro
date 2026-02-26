@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gradient android:type="linear" android:startX="88.87" android:startY="350.64" android:endX="88.87" android:endY="302.61"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:color="#0037d397" android:offset="0.0" />
+    <item android:color="#ff00bd94" android:offset="1.0" />
+</gradient>

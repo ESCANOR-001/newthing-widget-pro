@@ -71,6 +71,9 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="black75">#BF000000</color>
+    <color name="red">#cd1b1f</color>
+    <color name="contact_bg">#333333</color>
+
     
     <!-- Clock Hand Colors -->
     <color name="clock_minute_hand_color">#6b696c</color>

@@ -122,6 +122,33 @@ class WidgetListAdapter(
                 widget.name == "AI App Combo Glass" -> {
                     ComponentName(context, com.newthingwidgets.clone.widgets.AiAppComboGlassWidgetProvider::class.java)
                 }
+                widget.name == "Contact 1" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Contact1WidgetProvider::class.java)
+                }
+                widget.name == "Contact 2" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Contact2WidgetProvider::class.java)
+                }
+                widget.name == "Contact 3" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Contact3WidgetProvider::class.java)
+                }
+                widget.name == "Contact 4" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Contact4WidgetProvider::class.java)
+                }
+                widget.name == "Contact 5" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Contact5WidgetProvider::class.java)
+                }
+                widget.name == "Contact 6" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Contact6WidgetProvider::class.java)
+                }
+                widget.name == "Message 6" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.Message6WidgetProvider::class.java)
+                }
+                widget.name == "WhatsApp Chat" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.WhatsappChatWidgetProvider::class.java)
+                }
+                widget.name == "Telegram Chat" -> {
+                    ComponentName(context, com.newthingwidgets.clone.widgets.TelegramChatWidgetProvider::class.java)
+                }
                 else -> {
                     // Analog clock widgets
                     ComponentName(context, AnalogClockWidgetProvider::class.java)
@@ -178,7 +205,12 @@ class WidgetListAdapter(
             val context = itemView.context
             val density = context.resources.displayMetrics.density
             val isComboWidget = widget.size == "4x1"
-            val targetPreviewSize = if (isComboWidget) 300 else 140
+            val isWideWidget = widget.size == "2x1"
+            val targetPreviewSize = when {
+                isComboWidget -> 300
+                isWideWidget -> 170
+                else -> 140
+            }
             
             // Check if widget has a dynamic layout preview
             if (com.newthingwidgets.clone.utils.LayoutToBitmapRenderer.hasDynamicPreview(widget.name)) {
@@ -221,6 +253,16 @@ class WidgetListAdapter(
                 // For combo app widgets: keep wide banner proportions.
                 val previewWidth = (300 * density).toInt()
                 val previewHeight = (90 * density).toInt()
+                val params = widgetPreview.layoutParams
+                params.width = previewWidth
+                params.height = previewHeight
+                widgetPreview.layoutParams = params
+                widgetPreview.scaleType = android.widget.ImageView.ScaleType.FIT_CENTER
+                widgetPreview.setPadding(0, 0, 0, 0)
+            } else if (isWideWidget) {
+                // For 2x1 widgets keep horizontal shape instead of square.
+                val previewWidth = (145 * density).toInt()
+                val previewHeight = (78 * density).toInt()
                 val params = widgetPreview.layoutParams
                 params.width = previewWidth
                 params.height = previewHeight

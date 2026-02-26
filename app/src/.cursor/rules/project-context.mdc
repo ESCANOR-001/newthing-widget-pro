@@ -1,0 +1,54 @@
+---
+alwaysApply: false
+---
+# Project Cloning Context
+
+## Overview
+This project is cloning the app from `widgets.apk-decompiled` into a new app named `clone`. The goal is to replicate all widgets and their design while maintaining a different color scheme.
+
+## Source and Target
+- **Source App**: `widgets.apk-decompiled` (decompiled APK located at `C:\Users\ADMIN\Desktop\Apktool\widgets.apk-decompiled`)
+- **Target App**: `clone` (located at `app\src\main\java\com\newthingwidgets\clone`)
+
+## Key Guidelines
+
+### 1. Widget Cloning
+- Clone all widgets and their design from the source app
+- Maintain the same widget structure, layout, and functionality
+- Preserve widget behavior and interactions
+
+### 2. Color Scheme
+- **IMPORTANT**: Widget colors in the cloned app (`clone`) must be different from the source app (`widgets.apk-decompiled`)
+- When copying color resources, modify them to use a different color palette
+- Update color references in widget layouts and code to match the new color scheme
+
+### 3. Decompiled File Handling
+- The source app (`widgets.apk-decompiled`) is a decompiled version
+- **CRITICAL**: Files that start with the `$` symbol need to be renamed before using them
+- There are 874+ files with `$` prefix, primarily in `res\drawable\` (XML drawable files)
+- Examples: `$weather_largess__1.xml`, `$m3_avd_hide_password__1.xml`, `$open_incog_r__0.xml`
+- When encountering files with `$` prefix, rename them to valid identifiers (remove `$` and adjust naming) before integration
+- These are typically animated drawables or vector drawables that need valid resource names
+
+### 4. File Structure
+- Source Java files: `widgets.apk-decompiled\sources\com\appslab\darkglass\widgets\`
+- Target Kotlin files: `app\src\main\java\com\newthingwidgets\clone\widgets\`
+- When converting from Java to Kotlin, maintain the same functionality and structure
+
+### 5. Resource Files
+- Copy layout files, drawables, and other resources from `widgets.apk-decompiled\res\`
+- Update color resources to match the new color scheme
+- Ensure all resource references are updated to point to the new package structure
+
+### 6. Design Problem Resolution
+- **CRITICAL**: When the user reports a problem with design, layout, appearance, or similar issues
+- **ALWAYS** check the source app (`widgets.apk-decompiled`) first to see how it's implemented there
+- Compare the source implementation with the cloned version to identify discrepancies
+- Only after understanding the source implementation, implement fixes in the target app (`clone`)
+- This ensures design consistency and helps identify what might be missing or incorrectly cloned
+
+## Best Practices
+- Always check for `$` prefixed files before using them
+- Modify colors when copying widget resources
+- Maintain widget functionality while adapting to the new package structure
+- Test widgets after cloning to ensure they work correctly with the new color scheme

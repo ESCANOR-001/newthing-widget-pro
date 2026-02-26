@@ -96,6 +96,17 @@ class WidgetDetailActivity : AppCompatActivity() {
                 WidgetItem("Google Lens", "1x1", R.drawable.google_lens),
                 WidgetItem("Perplexity", "1x1", R.drawable.perplexity_ai)
             )
+            "Contacts" -> listOf(
+                WidgetItem("Contact 1", "2x2", R.drawable.contact),
+                WidgetItem("Contact 2", "2x2", R.drawable.contact),
+                WidgetItem("Contact 3", "2x2", R.drawable.contact),
+                WidgetItem("Contact 4", "2x2", R.drawable.contact),
+                WidgetItem("Contact 5", "2x2", R.drawable.contact),
+                WidgetItem("Contact 6", "2x1", R.drawable.dial),
+                WidgetItem("Message 6", "2x1", R.drawable.message),
+                WidgetItem("WhatsApp Chat", "2x1", R.drawable.whatsapp),
+                WidgetItem("Telegram Chat", "2x1", R.drawable.telegram_n)
+            )
             "Battery" -> listOf(
                 // Charging widget with real-time updates
                 WidgetItem("Charging", "3x2", R.drawable.charging_widget_preview),

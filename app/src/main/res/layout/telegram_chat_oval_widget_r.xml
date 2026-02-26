@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:theme="@style/AppTheme.Overlay" android:id="@+id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/background_image_improve" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_bg_20" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/background_image_improve_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_bg_20_light_r" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounder_glow_bg8_36" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/background_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/rounded_for_all_with_border" android:layout_centerInParent="true" />
+    <RelativeLayout android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@+id/telegram_icon" android:layout_width="158.0dip" android:layout_height="72.0dip" android:src="@drawable/telegram_icon2" android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@+id/top_contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/telegram_icon" android:layout_centerVertical="true" android:layout_marginStart="12.0dip">
+        <ImageView android:id="@+id/name_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CONTACT NAME" />
+    </RelativeLayout>
+</RelativeLayout>

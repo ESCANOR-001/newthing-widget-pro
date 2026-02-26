@@ -4,12 +4,7 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="28.0dip" />
-        </shape>
-    </item>
-    <item>
-        <shape android:shape="rectangle">
-            <stroke android:width="2.0dip" android:color="@color/black75" />
-            <corners android:radius="28.0dip" />
+            <solid android:color="@color/widget_bg"/>
         </shape>
     </item>
 </layer-list>
